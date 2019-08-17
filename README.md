@@ -6,9 +6,15 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Concepts](#concepts)
+- [Virtual Private Cloud (VPC)](#virtual-private-cloud-vpc)
+  - [Creating Secure Virtual Private Clouds (VPCs)](#creating-secure-virtual-private-clouds-vpcs)
+  - [Creating Secure and Scalable VPCs](#creating-secure-and-scalable-vpcs)
+  - [VPC Peering](#vpc-peering)
+  - [Secure Internet Egress Using NAT Instances](#secure-internet-egress-using-nat-instances)
+  - [Using a Transit VPC to Connect On-premises and Cloud Resources](#using-a-transit-vpc-to-connect-on-premises-and-cloud-resources)
+  - [Using CloudHub to Connect Remote Sites Together](#using-cloudhub-to-connect-remote-sites-together)
+  - [Configuring IPv6 Connectivity](#configuring-ipv6-connectivity)
 - [Getting Started](#getting-started)
-  - [Course Overview](#course-overview)
   - [Deploying Your First Terraform Configuration](#deploying-your-first-terraform-configuration)
   - [Updating Your Configuration with More Resources](#updating-your-configuration-with-more-resources)
   - [Configuring Resources After Creation](#configuring-resources-after-creation)
@@ -16,7 +22,6 @@
   - [Using Variables in Deployments](#using-variables-in-deployments)
   - [Using Modules for Common Configurations](#using-modules-for-common-configurations)
 - [Deep Dive](#deep-dive)
-  - [Course Overview](#course-overview-1)
   - [Setting the Stage](#setting-the-stage)
   - [Importing Existing Resources](#importing-existing-resources)
   - [Setting up Remote State and Workspaces](#setting-up-remote-state-and-workspaces)
@@ -29,12 +34,24 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-## Concepts
+## Virtual Private Cloud (VPC)
+
+### Creating Secure Virtual Private Clouds (VPCs)
+
+### Creating Secure and Scalable VPCs
+
+### VPC Peering
+
+### Secure Internet Egress Using NAT Instances
+
+### Using a Transit VPC to Connect On-premises and Cloud Resources
+
+### Using CloudHub to Connect Remote Sites Together
+
+### Configuring IPv6 Connectivity
 
 
 ## Getting Started
-
-### Course Overview
 
 ### Deploying Your First Terraform Configuration
 
@@ -50,8 +67,6 @@
 
 
 ## Deep Dive
-
-### Course Overview
 
 ### Setting the Stage
 
@@ -69,5 +84,6 @@
 
 
 ## References
+- [AWS Networking Deep Dive: Virtual Private Cloud (VPC)](https://app.pluralsight.com/library/courses/aws-networking-deep-dive-vpc/table-of-contents)
 - [Terraform - Getting Started](https://app.pluralsight.com/library/courses/terraform-getting-started/table-of-contents)
 - [Deep Dive - Terraform](https://app.pluralsight.com/library/courses/deep-dive-terraform/table-of-contents)
