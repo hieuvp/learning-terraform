@@ -7,13 +7,6 @@
 
 
 - [Virtual Private Cloud (VPC)](#virtual-private-cloud-vpc)
-  - [Creating Secure Virtual Private Clouds (VPCs)](#creating-secure-virtual-private-clouds-vpcs)
-  - [Creating Secure and Scalable VPCs](#creating-secure-and-scalable-vpcs)
-  - [VPC Peering](#vpc-peering)
-  - [Secure Internet Egress Using NAT Instances](#secure-internet-egress-using-nat-instances)
-  - [Using a Transit VPC to Connect On-premises and Cloud Resources](#using-a-transit-vpc-to-connect-on-premises-and-cloud-resources)
-  - [Using CloudHub to Connect Remote Sites Together](#using-cloudhub-to-connect-remote-sites-together)
-  - [Configuring IPv6 Connectivity](#configuring-ipv6-connectivity)
 - [Getting Started](#getting-started)
   - [Deploying Your First Terraform Configuration](#deploying-your-first-terraform-configuration)
   - [Updating Your Configuration with More Resources](#updating-your-configuration-with-more-resources)
@@ -34,21 +27,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-## Virtual Private Cloud (VPC)
-
-### Creating Secure Virtual Private Clouds (VPCs)
-
-### Creating Secure and Scalable VPCs
-
-### VPC Peering
-
-### Secure Internet Egress Using NAT Instances
-
-### Using a Transit VPC to Connect On-premises and Cloud Resources
-
-### Using CloudHub to Connect Remote Sites Together
-
-### Configuring IPv6 Connectivity
+## [Virtual Private Cloud (VPC)](01-vpc/README.md)
 
 
 ## Getting Started
