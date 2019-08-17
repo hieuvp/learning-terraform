@@ -13,6 +13,7 @@
 - [Using a Transit VPC to Connect On-premises and Cloud Resources](#using-a-transit-vpc-to-connect-on-premises-and-cloud-resources)
 - [Using CloudHub to Connect Remote Sites Together](#using-cloudhub-to-connect-remote-sites-together)
 - [Configuring IPv6 Connectivity](#configuring-ipv6-connectivity)
+- [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -44,3 +45,7 @@
 
 
 ## Configuring IPv6 Connectivity
+
+
+## References
+- [AWS Networking Deep Dive: Virtual Private Cloud (VPC)](https://app.pluralsight.com/library/courses/aws-networking-deep-dive-vpc/table-of-contents)
