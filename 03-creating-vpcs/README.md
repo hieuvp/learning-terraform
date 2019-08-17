@@ -1,4 +1,12 @@
-# Virtual Private Cloud (VPC)
+# Creating Virtual Private Clouds (VPCs)
+
+<div align="center"><img src="assets/scenario.png" width="900"></div>
+
+- Web front-end (**www1**) must be internet-accessible via IPv4 and IPv6.
+- Database instance (**db1**) must reside in a different subnet and not be open to the internet.
+- Database instance should have outbound-only access to the IPv4 and IPv6 internet.
+- **Charleston** office must have VPN access to the database instance.
+- **Atlanta** and **Charleston** offices must be connected via a VPN.
 
 
 ## Table of Contents
@@ -6,7 +14,6 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Creating Secure Virtual Private Clouds (VPCs)](#creating-secure-virtual-private-clouds-vpcs)
 - [Creating Secure and Scalable VPCs](#creating-secure-and-scalable-vpcs)
 - [VPC Peering](#vpc-peering)
 - [Secure Internet Egress Using NAT Instances](#secure-internet-egress-using-nat-instances)
@@ -16,17 +23,6 @@
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
-## Creating Secure Virtual Private Clouds (VPCs)
-
-<div align="center"><img src="assets/scenario.png" width="900"></div>
-
-- Web front-end (**www1**) must be internet-accessible via IPv4 and IPv6.
-- Database instance (**db1**) must reside in a different subnet and not be open to the internet.
-- Database instance should have outbound-only access to the IPv4 and IPv6 internet.
-- **Charleston** office must have VPN access to the database instance.
-- **Atlanta** and **Charleston** offices must be connected via a VPN.
 
 
 ## Creating Secure and Scalable VPCs
