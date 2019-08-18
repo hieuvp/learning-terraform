@@ -10,7 +10,7 @@
 - [What is a VPC?](#what-is-a-vpc)
 - [Internet Gateways (IGW)](#internet-gateways-igw)
 - [Route Tables (RTs)](#route-tables-rts)
-- [Network Access Control List (NACLs)](#network-access-control-list-nacls)
+- [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
 - [Availability Zones (VPC Specific)](#availability-zones-vpc-specific)
 - [References](#references)
@@ -30,7 +30,7 @@
 ## Route Tables (RTs)
 
 
-## Network Access Control List (NACLs)
+## Network Access Control Lists (NACLs)
 
 
 ## Subnets
