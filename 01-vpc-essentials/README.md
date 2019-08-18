@@ -35,6 +35,8 @@
   <em>Virtual Private Cloud</em>
 </div>
 
+<br/>
+
 When creating an AWS account, a **`Default VPC`** is created for us, including the standard components that are needed make it functional:
 
 1. An `Internet Gateway`.
