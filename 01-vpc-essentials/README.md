@@ -8,8 +8,8 @@
 
 
 - [AWS Global Infrastructure](#aws-global-infrastructure)
-- [What is a VPC?](#what-is-a-vpc)
-- [Internet Gateways (IGW)](#internet-gateways-igw)
+- [Virtual Private Cloud (VPC)](#virtual-private-cloud-vpc)
+- [Internet Gateways (IGWs)](#internet-gateways-igws)
 - [Route Tables (RTs)](#route-tables-rts)
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
@@ -27,17 +27,13 @@
 <div align="center"><img src="assets/aws-region.png" width="520"></div>
 
 
-## What is a VPC?
+## Virtual Private Cloud (VPC)
 
-<div align="center">
-  <img src="assets/vpc.png" width="500">
-  <br/>
-  <em>Virtual Private Cloud</em>
-</div>
+<div align="center"><img src="assets/vpc.png" width="500"></div>
 
 <br/>
 
-When creating an AWS account, a **`Default VPC`** is created for us, including the standard components that are needed make it functional:
+When creating an AWS account, a `Default VPC` is created for us, including the standard components that are needed make it functional:
 
 1. An `Internet Gateway`.
 1. A `Route Table` with predefined routes to the default subnets.
@@ -45,7 +41,7 @@ When creating an AWS account, a **`Default VPC`** is created for us, including t
 1. `Subnets` to provision AWS resources in (such as `EC2 Instances`).
 
 
-## Internet Gateways (IGW)
+## Internet Gateways (IGWs)
 
 
 ## Route Tables (RTs)
