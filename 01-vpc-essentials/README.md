@@ -30,15 +30,14 @@
 ## Virtual Private Cloud (VPC)
 
 <div align="center"><img src="assets/vpc.png" width="500"></div>
-
 <br/>
 
-When creating an AWS account, a `Default VPC` is created for us, including the standard components that are needed make it functional:
+When creating an AWS account, a **Default VPC** is created for us, including the standard components that are needed make it functional:
 
-1. An `Internet Gateway`.
-1. A `Route Table` with predefined routes to the default subnets.
-1. A `Network Access Control List` with predefined rules for access.
-1. `Subnets` to provision AWS resources in (such as `EC2 Instances`).
+1. An **Internet Gateway**.
+1. A **Route Table** with predefined routes to the default subnets.
+1. A **Network Access Control List** with predefined rules for access.
+1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
 
 
 ## Internet Gateways (IGWs)
