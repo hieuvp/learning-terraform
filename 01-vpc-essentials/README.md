@@ -1,5 +1,10 @@
 # VPC Essentials
 
+<div align="center">
+  <img src="assets/big-picture.png" width="900">
+  <em>The Big Picture</em>
+</div>
+
 
 ## Table of Contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
