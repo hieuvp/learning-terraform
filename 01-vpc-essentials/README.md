@@ -33,6 +33,7 @@
 
 <div align="center">
   <img src="assets/vpc.png" width="500">
+  <br/>
   <em>Virtual Private Cloud</em>
 </div>
 
