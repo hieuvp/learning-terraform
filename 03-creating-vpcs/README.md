@@ -1,5 +1,6 @@
 # Creating Virtual Private Clouds (VPCs)
 
+
 <div align="center"><img src="assets/scenario.png" width="900"></div>
 
 - Web front-end (**www1**) must be internet-accessible via IPv4 and IPv6.
