@@ -20,8 +20,8 @@
 
 ## AWS Global Infrastructure
 
-- Regions are comprised of multiple **Availability Zones**
-- Availability Zones(AZs) are where separate, physical **AWS Data Centers** are located.
+- Regions are comprised of multiple **Availability Zones**.
+- **Availability Zones** (AZs) are where separate, physical **AWS Data Centers** are located.
 
 <div align="center"><img src="assets/aws-region.png" width="520"></div>
 
