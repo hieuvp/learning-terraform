@@ -19,17 +19,25 @@
 
 ## Setting the Stage
 
+
 ## Importing Existing Resources
+
 
 ## Setting up Remote State and Workspaces
 
+
 ## Creating and Using Custom Data Sources and Templates
+
 
 ## Adding Terraform to a CICD Pipeline
 
+
 ## Integrating with Configuration Managers
+
 
 ## Recap and Next Steps
 
+
 ## References
+
 - [Deep Dive - Terraform](https://app.pluralsight.com/library/courses/deep-dive-terraform/table-of-contents)

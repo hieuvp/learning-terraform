@@ -36,4 +36,5 @@
 
 
 ## References
+
 - [Terraform - Getting Started](https://app.pluralsight.com/library/courses/terraform-getting-started/table-of-contents)
