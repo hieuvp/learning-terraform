@@ -1,9 +1,6 @@
 # VPC Essentials
 
-<div align="center">
-  <img src="assets/big-picture.png" width="900">
-  <em>The Big Picture</em>
-</div>
+<div align="center"><img src="assets/big-picture.png" width="500"></div>
 
 
 ## Table of Contents
