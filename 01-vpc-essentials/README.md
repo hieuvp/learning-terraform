@@ -29,6 +29,11 @@
 
 ## What is a VPC?
 
+VPC = Virtual Private Cloud
+When creating an AWS account, a "default" VPC is created for us
+
+<div align="center"><img src="assets/vpc.png" width="750"></div>
+
 
 ## Internet Gateways (IGW)
 
