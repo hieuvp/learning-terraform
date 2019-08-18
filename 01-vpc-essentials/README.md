@@ -24,18 +24,23 @@
 - **Regions** are comprised of multiple **Availability Zones**.
 - **Availability Zones** (AZs) are where separate, physical **AWS Data Centers** are located.
 
-<div align="center"><img src="assets/aws-region.png" width="540"></div>
+<div align="center"><img src="assets/aws-region.png" width="520"></div>
 
 
 ## What is a VPC?
-
-> When creating an AWS account, a **default** VPC is created for us.
 
 <div align="center">
   <img src="assets/vpc.png" width="500">
   <br/>
   <em>Virtual Private Cloud</em>
 </div>
+
+When creating an AWS account, a **`Default VPC`** is created for us, including the standard components that are needed make it functional:
+
+1. An `Internet Gateway`.
+1. A `Route Table` with predefined routes to the default subnets.
+1. A `Network Access Control List` with predefined rules for access.
+1. `Subnets` to provision AWS resources in (such as `EC2 Instances`).
 
 
 ## Internet Gateways (IGW)
