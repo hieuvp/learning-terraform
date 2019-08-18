@@ -10,7 +10,7 @@
 - [Importing Existing Resources](#importing-existing-resources)
 - [Setting up Remote State and Workspaces](#setting-up-remote-state-and-workspaces)
 - [Creating and Using Custom Data Sources and Templates](#creating-and-using-custom-data-sources-and-templates)
-- [Adding Terraform to a CICD Pipeline](#adding-terraform-to-a-cicd-pipeline)
+- [Adding Terraform to a CI/CD Pipeline](#adding-terraform-to-a-cicd-pipeline)
 - [Integrating with Configuration Managers](#integrating-with-configuration-managers)
 - [Recap and Next Steps](#recap-and-next-steps)
 - [References](#references)
@@ -30,7 +30,7 @@
 ## Creating and Using Custom Data Sources and Templates
 
 
-## Adding Terraform to a CICD Pipeline
+## Adding Terraform to a CI/CD Pipeline
 
 
 ## Integrating with Configuration Managers
