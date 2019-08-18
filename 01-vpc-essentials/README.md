@@ -1,5 +1,6 @@
 # VPC Essentials
 
+<div align="center"><img src="assets/big-picture.png" width="750"></div>
 
 ## Table of Contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -19,6 +20,11 @@
 
 
 ## AWS Global Infrastructure
+
+- **Regions** are comprised of multiple **Availability Zones**.
+- **Availability Zones** (AZs) are where separate, physical **AWS Data Centers** are located.
+
+<div align="center"><img src="assets/aws-region.png" width="540"></div>
 
 
 ## What is a VPC?
