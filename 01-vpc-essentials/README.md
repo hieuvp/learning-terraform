@@ -1,6 +1,6 @@
 # VPC Essentials
 
-<div align="center"><img src="assets/big-picture.png" width="650"></div>
+<div align="center"><img src="assets/big-picture.png" width="600"></div>
 
 
 ## Table of Contents
