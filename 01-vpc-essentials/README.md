@@ -39,7 +39,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 1. A **Network Access Control List** with predefined rules for access.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
 
-<div align="center"><img src="assets/vpc-dashboard.png" width="600"></div>
+<div align="center"><img src="assets/vpc-dashboard.png" width="750"></div>
 
 
 ## Internet Gateways (IGWs)
