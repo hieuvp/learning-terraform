@@ -69,9 +69,14 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Route Tables (RTs)
 
-> A route table contains a set of rules, called routes, that are used to determine where network traffic is directed. 
+> A route table contains a **set of rules**, called **routes**, that are used to **determine where network traffic is directed**. 
 
-<div align="center"><img src="assets/route-table-main.png" width="900"></div>
+<div align="center">
+  <img src="assets/rt-main.png" width="900">
+  <br/>
+  <em>Main Route Table</em>
+</div>
+
 
 ## Network Access Control Lists (NACLs)
 
