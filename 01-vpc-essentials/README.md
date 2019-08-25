@@ -66,6 +66,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 > A route table contains a **set of rules**, called **routes**, that are used to **determine where network traffic is directed**. 
 
+<br/>
 <div align="center">
   <img src="assets/rt-main.png" width="900">
   <br/>
