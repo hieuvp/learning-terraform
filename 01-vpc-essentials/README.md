@@ -87,7 +87,8 @@ Replace by another IGW example
 - You cannot delete a route table if it has "dependencies" (associated subnets)
 
 Create another route table example
-- Not deletable
+- Not deletable (why Main?)
+- Deletable RT
 
 ## Network Access Control Lists (NACLs)
 
