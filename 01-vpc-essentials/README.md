@@ -73,6 +73,21 @@ When creating an AWS account, a **Default VPC** is created for us, including the
   <em>Main Route Table</em>
 </div>
 
+Explain each lines
+- 172.31.0.0/16 -> other two lines
+- 0.0.0.0/0 -> internet line
+
+Detach IGW example
+-> Black hole
+
+Replace by another IGW example
+
+
+- Unlike an IGW, you can have multiple "active" route tables in a VPC
+- You cannot delete a route table if it has "dependencies" (associated subnets)
+
+Create another route table example
+- Not deletable
 
 ## Network Access Control Lists (NACLs)
 
