@@ -48,6 +48,8 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Internet Gateways (IGWs)
 
+<div align="center"><img src="assets/igw-attached.png" width="800"></div>
+
 
 ## Route Tables (RTs)
 
