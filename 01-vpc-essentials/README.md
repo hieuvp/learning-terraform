@@ -12,7 +12,6 @@
 - [Internet Gateways (IGWs)](#internet-gateways-igws)
   - [State `attached`](#state-attached)
   - [State `detached`](#state-detached)
-  - [State `attached`](#state-attached-1)
 - [Route Tables (RTs)](#route-tables-rts)
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
@@ -57,9 +56,10 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ### State `detached`
 
-<div align="center"><img src="assets/igw-detached.png" width="500"></div>
+<div align="center"><img src="assets/igw-detached.png" width="900"></div>
+<br/>
 
-### State `attached`
+<div align="center"><img src="assets/igw-detached-diagram.png" width="500"></div>
 
 
 ## Route Tables (RTs)
