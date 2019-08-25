@@ -73,7 +73,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
   <em>Main Route Table</em>
 </div>
 
-Explain each lines
+Explain each lines into the diagram
 - 172.31.0.0/16 -> other two lines
 - 0.0.0.0/0 -> internet line
 
