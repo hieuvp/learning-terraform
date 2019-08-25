@@ -10,6 +10,8 @@
 - [AWS Global Infrastructure](#aws-global-infrastructure)
 - [Virtual Private Cloud (VPC)](#virtual-private-cloud-vpc)
 - [Internet Gateways (IGWs)](#internet-gateways-igws)
+  - [State `attached`](#state-attached)
+  - [State `detached`](#state-detached)
 - [Route Tables (RTs)](#route-tables-rts)
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
@@ -34,7 +36,7 @@
 
 When creating an AWS account, a **Default VPC** is created for us, including the standard components that are needed make it functional:
 
-1. An **Internet Gateway**.
+1. An **Internet Gateway** attached.
 1. A **Route Table** with predefined routes to the default subnets.
 1. A **Network Access Control List** with predefined rules for access.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
@@ -47,6 +49,19 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 
 ## Internet Gateways (IGWs)
+
+- Only **one** IGW can be `attached` to a VPC at a time.
+- An IGW cannot be `detached` from a VPC while there are active AWS resources in the VPC (such as an EC2 Instance or an RDS Database).
+
+### State `attached`
+
+<div align="center"><img src="assets/igw-attached.png" width="900"></div>
+
+### State `detached`
+
+<div align="center"><img src="assets/igw-detached.png" width="900"></div>
+
+<div align="center"><img src="assets/igw-detached-diagram.png" width="500"></div>
 
 
 ## Route Tables (RTs)
