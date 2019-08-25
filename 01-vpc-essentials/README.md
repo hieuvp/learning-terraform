@@ -43,12 +43,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 <div align="center"><img src="assets/vpc-default.png" width="900"></div>
 <br/>
-
-<div align="center">
-  <img src="assets/vpc-dashboard.png" width="600">
-  <br/>
-  <em>VPC Dashboard</em>
-</div>
+<div align="center"><img src="assets/vpc-dashboard.png" width="650"></div>
 
 
 ## Internet Gateways (IGWs)
