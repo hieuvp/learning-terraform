@@ -57,9 +57,8 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 ### State `detached`
 
 <div align="center"><img src="assets/igw-detached.png" width="900"></div>
-<br/>
 
-<div align="center"><img src="assets/igw-detached-diagram.png" width="500"></div>
+<div align="center"><img src="assets/igw-detached-diagram.png" width="450"></div>
 
 
 ## Route Tables (RTs)
