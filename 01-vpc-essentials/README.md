@@ -31,7 +31,7 @@
 
 ## Virtual Private Cloud (VPC)
 
-<div align="center"><img src="assets/vpc.png" width="500"></div>
+<div align="center"><img src="assets/vpc-diagram.png" width="500"></div>
 <br/>
 
 When creating an AWS account, a **Default VPC** is created for us, including the standard components that are needed make it functional:
@@ -40,6 +40,9 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 1. A main **Route Table** with predefined routes to the default subnets.
 1. A **Network Access Control List** with predefined rules for access.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
+
+<div align="center"><img src="assets/vpc-default.png" width="900"></div>
+<br/>
 
 <div align="center">
   <img src="assets/vpc-dashboard.png" width="600">
@@ -68,6 +71,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 > A route table contains a set of rules, called routes, that are used to determine where network traffic is directed. 
 
+<div align="center"><img src="assets/route-table-main.png" width="900"></div>
 
 ## Network Access Control Lists (NACLs)
 
