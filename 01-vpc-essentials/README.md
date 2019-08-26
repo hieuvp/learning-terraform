@@ -76,9 +76,6 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 <br/>
 <div align="center"><img src="assets/rt-diagram.png" width="800"></div>
 
-Explain each lines into the diagram
-- 172.31.0.0/16 -> other two lines
-- 0.0.0.0/0 -> internet line
 
 Detach IGW example
 -> Black hole
