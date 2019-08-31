@@ -13,6 +13,7 @@
   - [State `attached`](#state-attached)
   - [State `detached`](#state-detached)
 - [Route Tables (RTs)](#route-tables-rts)
+  - [Status `blackhole`](#status-blackhole)
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
 - [Availability Zones (VPC Specific)](#availability-zones-vpc-specific)
@@ -31,21 +32,20 @@
 
 ## Virtual Private Cloud (VPC)
 
-<div align="center"><img src="assets/vpc.png" width="500"></div>
+<div align="center"><img src="assets/vpc-diagram.png" width="500"></div>
 <br/>
 
 When creating an AWS account, a **Default VPC** is created for us, including the standard components that are needed make it functional:
 
 1. An **Internet Gateway** attached.
-1. A **Route Table** with predefined routes to the default subnets.
-1. A **Network Access Control List** with predefined rules for access.
+1. A main **Route Table** with predefined routes to the default subnets.
+1. A main **Network Access Control List** with predefined rules for access.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
 
-<div align="center">
-  <img src="assets/vpc-dashboard.png" width="600">
-  <br/>
-  <em>VPC Dashboard</em>
-</div>
+<br/>
+<div align="center"><img src="assets/vpc-default.png" width="900"></div>
+<br/>
+<div align="center"><img src="assets/vpc-dashboard.png" width="650"></div>
 
 
 ## Internet Gateways (IGWs)
@@ -66,6 +66,30 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Route Tables (RTs)
 
+- A RT contains a **set of rules**, called **routes**, that are used to **determine where network traffic is directed**. 
+
+<br/>
+<div align="center">
+  <img src="assets/rt-main.png" width="900">
+  <br/>
+  <em>Main Route Table</em>
+</div>
+<br/>
+
+- Unlike an IGW, you can have multiple active RTs in a VPC.
+- You can associate multiple subnets in an RT, but one subnet cannot be associated with multiple RTs.
+- Subnets that are not explicitly associated with any RTs will be implicitly associated with the **Main RT**.
+- You cannot delete an RT if it has dependencies (associated subnets).
+
+<br/>
+<div align="center"><img src="assets/rt-diagram.png" width="800"></div>
+
+### Status `blackhole`
+
+<div align="center"><img src="assets/rt-blackhole-diagram.png" width="600"></div>
+<br/>
+<div align="center"><img src="assets/rt-blackhole.png" width="900"></div>
+
 
 ## Network Access Control Lists (NACLs)
 
@@ -80,3 +104,4 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 - [AWS Essentials](https://www.youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 - [Project Omega](https://www.lucidchart.com/documents/view/703f6119-4838-4bbb-bc7e-be2fb75e89e5/XT05XlW_ahiW)
+- [VPC Dashboard - EU (London) Region](https://eu-west-2.console.aws.amazon.com/vpc/home?region=eu-west-2)
