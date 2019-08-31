@@ -73,6 +73,9 @@ When creating an AWS account, a **Default VPC** is created for us, including the
   <em>Main Route Table</em>
 </div>
 
+- We can associate multiple subnets with the same RT, but one subnet cannot associate with multiple RTs.
+- Subnets that are not explicitly associated with any RTs will be automatically associated with the main RT.
+
 <br/>
 <div align="center"><img src="assets/rt-diagram.png" width="800"></div>
 
@@ -89,10 +92,6 @@ Replace by another IGW example
 Create another route table example
 - Not deletable (why Main?)
 - Deletable RT
-
-RTs, subnet associations
-  -> More details
-  -> Main RT vs Non-main RT
 
 https://eu-west-2.console.aws.amazon.com/console/home?region=eu-west-2
 
