@@ -90,6 +90,12 @@ Create another route table example
 - Not deletable (why Main?)
 - Deletable RT
 
+RTs, subnet associations
+  -> More details
+  -> Main RT vs Non-main RT
+
+https://eu-west-2.console.aws.amazon.com/console/home?region=eu-west-2
+
 ## Network Access Control Lists (NACLs)
 
 
