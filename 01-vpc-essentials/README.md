@@ -88,7 +88,7 @@ Detach IGW example
 
 <div align="center"><img src="assets/rt-blackhole-diagram.png" width="500"></div>
 <br/>
-<div align="center"><img src="assets/rt-blackhole.png" width="750"></div>
+<div align="center"><img src="assets/rt-blackhole.png" width="900"></div>
 
 
 Replace by another IGW example
