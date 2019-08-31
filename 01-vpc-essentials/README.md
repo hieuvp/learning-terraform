@@ -85,7 +85,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ### Status `blackhole`
 
-<div align="center"><img src="assets/rt-blackhole-diagram.png" width="500"></div>
+<div align="center"><img src="assets/rt-blackhole-diagram.png" width="600"></div>
 <br/>
 <div align="center"><img src="assets/rt-blackhole.png" width="900"></div>
 
