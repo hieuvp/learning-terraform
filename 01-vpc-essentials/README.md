@@ -77,9 +77,9 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 <br/>
 
 - Unlike an IGW, you can have multiple active RTs in a VPC.
-- You can associate multiple subnets in a RT, but one subnet cannot be associated with multiple RTs.
+- You can associate multiple subnets in an RT, but one subnet cannot be associated with multiple RTs.
 - Subnets that are not explicitly associated with any RTs will be implicitly associated with the **Main RT**.
-- You cannot delete a RT if it has dependencies (associated subnets).
+- You cannot delete an RT if it has dependencies (associated subnets).
 
 <br/>
 <div align="center"><img src="assets/rt-diagram.png" width="800"></div>
