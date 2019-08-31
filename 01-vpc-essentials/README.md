@@ -91,14 +91,6 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 <div align="center"><img src="assets/rt-blackhole.png" width="900"></div>
 
 
-Replace by another IGW example
-
-
-Create another route table example
-- Not deletable (why Main?)
-- Deletable RT
-
-
 ## Network Access Control Lists (NACLs)
 
 
