@@ -93,8 +93,6 @@ Create another route table example
 - Not deletable (why Main?)
 - Deletable RT
 
-https://eu-west-2.console.aws.amazon.com/console/home?region=eu-west-2
-
 
 ## Network Access Control Lists (NACLs)
 
@@ -109,3 +107,4 @@ https://eu-west-2.console.aws.amazon.com/console/home?region=eu-west-2
 
 - [AWS Essentials](https://www.youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 - [Project Omega](https://www.lucidchart.com/documents/view/703f6119-4838-4bbb-bc7e-be2fb75e89e5/XT05XlW_ahiW)
+- [VPC Dashboard - EU (London) Region](https://eu-west-2.console.aws.amazon.com/vpc/home?region=eu-west-2)
