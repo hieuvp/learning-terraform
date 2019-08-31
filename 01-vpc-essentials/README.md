@@ -73,8 +73,10 @@ When creating an AWS account, a **Default VPC** is created for us, including the
   <em>Main Route Table</em>
 </div>
 
-- We can associate multiple subnets with the same RT, but one subnet cannot associate with multiple RTs.
-- Subnets that are not explicitly associated with any RTs will be automatically associated with the main RT.
+- Unlike an IGW, you can have multiple **active** RTs in a VPC.
+- We can associate multiple subnets with the same RT, but one subnet cannot be associated with multiple RTs.
+- Subnets that are not explicitly associated with any RTs will be implicitly associated with the **Main RT**.
+- You cannot delete a route table if it has dependencies (associated subnets).
 
 <br/>
 <div align="center"><img src="assets/rt-diagram.png" width="800"></div>
@@ -86,14 +88,12 @@ Detach IGW example
 Replace by another IGW example
 
 
-- Unlike an IGW, you can have multiple "active" route tables in a VPC
-- You cannot delete a route table if it has "dependencies" (associated subnets)
-
 Create another route table example
 - Not deletable (why Main?)
 - Deletable RT
 
 https://eu-west-2.console.aws.amazon.com/console/home?region=eu-west-2
+
 
 ## Network Access Control Lists (NACLs)
 
