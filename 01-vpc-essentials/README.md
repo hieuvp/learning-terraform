@@ -13,6 +13,7 @@
   - [State `attached`](#state-attached)
   - [State `detached`](#state-detached)
 - [Route Tables (RTs)](#route-tables-rts)
+  - [Status `blackhole`](#status-blackhole)
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
 - [Availability Zones (VPC Specific)](#availability-zones-vpc-specific)
@@ -82,9 +83,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 <br/>
 <div align="center"><img src="assets/rt-diagram.png" width="800"></div>
 
-
-Detach IGW example
--> Black hole
+### Status `blackhole`
 
 <div align="center"><img src="assets/rt-blackhole-diagram.png" width="500"></div>
 <br/>
