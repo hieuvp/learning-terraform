@@ -86,6 +86,11 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 Detach IGW example
 -> Black hole
 
+<div align="center"><img src="assets/rt-blackhole-diagram.png" width="500"></div>
+<br/>
+<div align="center"><img src="assets/rt-blackhole.png" width="750"></div>
+
+
 Replace by another IGW example
 
 
