@@ -107,10 +107,9 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 - Rules are evaluated based on **`Rule #`** from lowest to highest.
 - The first rule evaluated that applies to the traffic type gets immediately applied and executed, regardless of any rules that come after (have a higher **`Rule #`**).
-
 - Any new NACLs you create DENY all traffic by default.
 - A subnet can only be associated with one NACL at a time.
-- An NACL allows or denies traffic from entering the subnet. Once inside the subnet, other AWS resources (e.g. **EC2 Instances**) may have an additional layer of security (security groups).
+- An NACL allows or denies traffic from entering a subnet. Once inside the subnet, other AWS resources (e.g. **EC2 Instances**) may have an additional layer of security (**Security Groups**).
 
 
 ## Subnets
