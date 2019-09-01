@@ -99,7 +99,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 <br/>
 
 - Rules are evaluated based on **`Rule #`** from lowest to highest.
-- The first rule evaluated that applies to the traffic type gets immediately applied and executed, regardless of any rules that come after (have a higher **`Rule #`**).
+- The first rule found that applies to the traffic type gets immediately applied and executed, regardless of any rules that come after (have a higher **`Rule #`**).
 
 <br/>
 <div align="center">
