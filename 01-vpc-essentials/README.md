@@ -39,7 +39,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 1. An **Internet Gateway** attached.
 1. A **Main Route Table** with predefined routes to the default subnets.
-1. A **Default Network Access Control List** with predefined rules for access and associated with the default subnets.
+1. A **Default Network Access Control List** with predefined rules for controlling access to the default subnets.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
 
 <br/>
