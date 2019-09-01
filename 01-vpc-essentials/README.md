@@ -101,9 +101,12 @@ When creating an AWS account, a **Default VPC** is created for us, including the
   <br/>
   <em>Main Network ACL</em>
 </div>
-<br/>
 
+<br/>
 <div align="center"><img src="assets/nacl-diagram.png" width="650"></div>
+
+1. Rules are evaluated based on "rule #" from lowest to highest.
+1. The first rule evaluated that applies to the traffic type gets immediately applied and executed regardless of the rules that come after (have a higher "rule #").
 
 
 ## Subnets
