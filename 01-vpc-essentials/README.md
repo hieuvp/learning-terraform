@@ -93,13 +93,13 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Network Access Control Lists (NACLs)
 
-- An NACL is an **optional layer of security** for your VPC that acts as a **firewall** for controlling traffic in and out of one or more **subnets**.
+- An NACL is an **optional layer of security** for your VPC that acts as a **firewall** for controlling traffic to flow in and out of the **subnets** with which it is associated.
 
 <div align="center"><img src="assets/nacl-diagram.png" width="650"></div>
 <br/>
 
-- Rules are evaluated based on **`Rule #`** from lowest to highest.
-- The first rule found that applies to the traffic type gets immediately applied and executed, regardless of any rules that come after (have a higher **`Rule #`**).
+- Rules are evaluated based on **`Rule #`** (a.k.a. rule number) from lowest to highest.
+- The first rule that matched to the traffic gets immediately applied and executed, regardless of any rules that come after (have a higher **`Rule #`**).
 
 <br/>
 <div align="center">
