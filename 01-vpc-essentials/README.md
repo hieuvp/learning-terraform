@@ -103,7 +103,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 </div>
 <br/>
 
-<div align="center"><img src="assets/nacl-diagram.png" width="650"></div>
+<div align="center"><img src="assets/nacl-diagram.png" width="600"></div>
 
 
 ## Subnets
