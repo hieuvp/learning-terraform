@@ -16,6 +16,7 @@
   - [Status `blackhole`](#status-blackhole)
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
+  - [Public and Private Subnets](#public-and-private-subnets)
 - [Availability Zones (VPC Specific)](#availability-zones-vpc-specific)
 - [References](#references)
 
@@ -115,6 +116,15 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 
 ## Subnets
+
+A subnet (shorthand for sub network), is a sub-section of a network.
+Generally, a subnet includes all the computers in a specific location.
+
+When you create a VPC, it spans all of the Availability Zones in the region.
+After creating a VPC, you can add one or more subnets in each Availability Zone.
+Each subnet must reside entirely within one Availability Zone and cannot span zones.
+
+### Public and Private Subnets
 
 
 ## Availability Zones (VPC Specific)
