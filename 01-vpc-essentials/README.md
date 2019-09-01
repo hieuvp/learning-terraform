@@ -39,7 +39,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 1. An **Internet Gateway** attached.
 1. A main **Route Table** with predefined routes to the default subnets.
-1. A main **Network Access Control List** with predefined rules for access.
+1. A main **Network Access Control List** with predefined rules for access and associated with the default subnets.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
 
 <br/>
@@ -93,7 +93,10 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Network Access Control Lists (NACLs)
 
+- A NACL is an **optional layer of security** for your VPC that acts as a **firewall** for controlling traffic in and out of one or more **subnets**.
+
 <div align="center"><img src="assets/nacl-diagram.png" width="600"></div>
+
 
 ## Subnets
 
