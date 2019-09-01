@@ -109,9 +109,9 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 </div>
 <br/>
 
-- Any new NACLs you create DENY all traffic by default.
-- A subnet can only be associated with one NACL at a time.
-- An NACL allows or denies traffic from entering a subnet. Once inside the subnet, other AWS resources (e.g. **EC2 Instances**) may have an additional layer of security (**Security Groups**).
+- Any new NACLs you create **DENY** all traffic by default.
+- A subnet can only be associated with **one** NACL at a time.
+- An NACL allows or denies traffic from entering a subnet. Once inside the subnet, other AWS resources (e.g. **EC2 Instances**) may have an additional layer of security, **Security Groups**.
 
 
 ## Subnets
