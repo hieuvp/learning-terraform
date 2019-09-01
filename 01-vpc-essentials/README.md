@@ -93,7 +93,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Network Access Control Lists (NACLs)
 
-- A NACL is an **optional layer of security** for your VPC that acts as a **Firewall** for controlling traffic in and out of one or more **subnets**.
+- An NACL is an **optional layer of security** for your VPC that acts as a **firewall** for controlling traffic in and out of one or more **subnets**.
 
 <div align="center"><img src="assets/nacl-diagram.png" width="650"></div>
 <br/>
