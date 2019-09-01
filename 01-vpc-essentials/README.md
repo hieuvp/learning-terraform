@@ -70,7 +70,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 <br/>
 <div align="center">
-  <img src="assets/rt-main.png" width="900">
+  <img src="assets/rt-main.png" width="850">
   <br/>
   <em>Main Route Table</em>
 </div>
@@ -97,7 +97,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 <br/>
 <div align="center">
-  <img src="assets/nacl-main.png" width="900">
+  <img src="assets/nacl-main.png" width="850">
   <br/>
   <em>Main Network ACL</em>
 </div>
