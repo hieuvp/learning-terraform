@@ -38,8 +38,8 @@
 When creating an AWS account, a **Default VPC** is created for us, including the standard components that are needed make it functional:
 
 1. An **Internet Gateway** attached.
-1. A main **Route Table** with predefined routes to the default subnets.
-1. A main **Network Access Control List** with predefined rules for access and associated with the default subnets.
+1. A **Main Route Table** with predefined routes to the default subnets.
+1. A **Default Network Access Control List** with predefined rules for access and associated with the default subnets.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
 
 <br/>
@@ -99,9 +99,9 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 <br/>
 
 <div align="center">
-  <img src="assets/nacl-main.png" width="850">
+  <img src="assets/nacl-default.png" width="850">
   <br/>
-  <em>Main Network ACL</em>
+  <em>Default Network ACL</em>
 </div>
 <br/>
 
