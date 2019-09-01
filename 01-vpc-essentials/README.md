@@ -93,6 +93,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Network Access Control Lists (NACLs)
 
+<div align="center"><img src="assets/nacl-diagram.png" width="600"></div>
 
 ## Subnets
 
