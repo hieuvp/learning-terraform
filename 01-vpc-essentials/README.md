@@ -38,8 +38,8 @@
 When creating an AWS account, a **Default VPC** is created for us, including the standard components that are needed make it functional:
 
 1. An **Internet Gateway** attached.
-1. A main **Route Table** with predefined routes to the default subnets.
-1. A main **Network Access Control List** with predefined rules for access.
+1. A **Main Route Table** with predefined routes to the default subnets.
+1. A **Default Network Access Control List** with predefined rules for controlling access of the default subnets.
 1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
 
 <br/>
@@ -70,7 +70,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 <br/>
 <div align="center">
-  <img src="assets/rt-main.png" width="900">
+  <img src="assets/rt-main.png" width="850">
   <br/>
   <em>Main Route Table</em>
 </div>
@@ -92,6 +92,26 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 
 ## Network Access Control Lists (NACLs)
+
+- An NACL is an **optional layer of security** for your VPC that acts as a **firewall** for controlling traffic to flow in and out of the **subnets** with which it is associated.
+
+<div align="center"><img src="assets/nacl-diagram.png" width="650"></div>
+<br/>
+
+- Rules are evaluated based on **`Rule #`** (a.k.a. rule number) from lowest to highest.
+- The first rule that matches to the traffic gets immediately applied and executed, regardless of any rules that come after (have a higher **`Rule #`**).
+
+<br/>
+<div align="center">
+  <img src="assets/nacl-default.png" width="850">
+  <br/>
+  <em>Default Network ACL</em>
+</div>
+<br/>
+
+- Any new NACLs you create **DENY** all traffic by default.
+- A subnet can only be associated with **one** NACL at a time.
+- An NACL allows or denies traffic from entering a subnet. Once inside the subnet, other AWS resources (e.g. **EC2 Instances**) may have an additional layer of security, **Security Groups**.
 
 
 ## Subnets
