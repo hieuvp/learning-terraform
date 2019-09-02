@@ -138,14 +138,14 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 <br/>
 <div align="center">
-  <img src="assets/subnet-public.png" width="800">
+  <img src="assets/subnet-public.png" width="900">
   <br/>
   <em>Public Subnet</em>
 </div>
 
 <br/>
 <div align="center">
-  <img src="assets/subnet-private.png" width="800">
+  <img src="assets/subnet-private.png" width="900">
   <br/>
   <em>Private Subnet</em>
 </div>
