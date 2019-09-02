@@ -18,6 +18,8 @@
 - [Subnets](#subnets)
   - [Public and Private Subnets](#public-and-private-subnets)
 - [Availability Zones](#availability-zones)
+  - [High Availability](#high-availability)
+  - [Fault Tolerance](#fault-tolerance)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -142,10 +144,7 @@ Practice
 
 ## Availability Zones
 
-You can (and should) utilize multiple Availability Zones to create redundancy in your architecture.
-This is what allows for **High Availability** and **Fault Tolerant** systems.
-
-Availability Zones are distinct locations that are engineered to be isolated from failures in other Availability Zones.
+> Availability Zones are distinct locations that are engineered to be isolated from failures in other Availability Zones.
 By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
 
 <br/>
@@ -154,13 +153,13 @@ By launching instances in separate Availability Zones, you can protect your appl
 <div align="center"><img src="assets/az-disaster.png" width="500"></div>
 <br/>
 
-High Availability
+### High Availability
 
 Create your architecture in such a way that your "system" is always available (or has the least amount of downtime as possible).
 - I can always access my data in the cloud.
 - My website never crashes and is always available to my customers.
 
-Fault Tolerant
+### Fault Tolerance
 
 The ability of your "system" to withstand failures in one (or more) of its components and still remain available.
 - One of my web servers failed, but my backup server immediately took over.
