@@ -144,8 +144,9 @@ Practice
 
 ## Availability Zones
 
-> Availability Zones are distinct locations that are engineered to be isolated from failures in other Availability Zones.
-By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
+> **Availability Zones** are distinct locations that are engineered to be isolated from failures in other **Availability Zones**.
+
+- By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
 
 <br/>
 <div align="center"><img src="assets/az-ordinary.png" width="500"></div>
@@ -155,13 +156,15 @@ By launching instances in separate Availability Zones, you can protect your appl
 
 ### High Availability
 
-Create your architecture in such a way that your "system" is always available (or has the least amount of downtime as possible).
+Create your architecture in such a way that your "system" is always available (or has the least amount of downtime as possible):
+
 - I can always access my data in the cloud.
 - My website never crashes and is always available to my customers.
 
 ### Fault Tolerance
 
-The ability of your "system" to withstand failures in one (or more) of its components and still remain available.
+The ability of your "system" to withstand failures in one (or more) of its components and still remain available:
+
 - One of my web servers failed, but my backup server immediately took over.
 - If something in my system fails, it can repair itself.
 
