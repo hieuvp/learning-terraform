@@ -148,6 +148,18 @@ This is what allows for **High Availability** and **Fault Tolerant** systems.
 Availability Zones are distinct locations that are engineered to be isolated from failures in other Availability Zones.
 By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
 
+High Availability
+
+Create your architecture in such a way that your "system" is always available (or has the least amount of downtime as possible).
+- I can always access my data in the cloud.
+- My website never crashes and is always available to my customers.
+
+Fault Tolerant
+
+The ability of your "system" to withstand failures in one (or more) of its components and still remain available.
+- One of my web servers failed, but my backup server immediately took over.
+- If something in my system fails, it can repair itself.
+
 
 ## References
 
