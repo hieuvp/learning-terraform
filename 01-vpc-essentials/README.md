@@ -146,10 +146,12 @@ Practice
 
 > AZs are distinct locations that are engineered to be isolated from failures in other AZs.
 
+<br/>
 <div align="center">
   <img src="assets/az-ordinary.png" width="500">
   <br/>
   <em>By launching instances in separate AZs</em>
+  <br/>
   <em>You can protect your applications from the failure of a single location</em>
 </div>
 <br/>
