@@ -135,6 +135,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 ### Public and Private Subnets
 
 <div align="center"><img src="assets/subnet-public-private.png" width="600"></div>
+<br/>
 
 <br/>
 <div align="center">
