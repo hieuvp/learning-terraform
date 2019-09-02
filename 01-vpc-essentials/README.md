@@ -17,7 +17,7 @@
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
   - [Public and Private Subnets](#public-and-private-subnets)
-- [Availability Zones (VPC Specific)](#availability-zones-vpc-specific)
+- [Availability Zones](#availability-zones)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -41,7 +41,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 1. An **Internet Gateway** attached.
 1. A **Main Route Table** with predefined routes to the default subnets.
 1. A **Default Network Access Control List** with predefined rules for controlling access of the default subnets.
-1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
+1. **Subnets** to provision AWS resources in (e.g. **EC2 Instances**, **RDS Instances**,...).
 
 <br/>
 <div align="center"><img src="assets/vpc-default.png" width="900"></div>
@@ -140,7 +140,7 @@ Practice
 - Screenshot private subnet
 
 
-## Availability Zones (VPC Specific)
+## Availability Zones
 
 
 ## References
