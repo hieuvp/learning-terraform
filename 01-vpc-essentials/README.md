@@ -142,6 +142,9 @@ Practice
 
 ## Availability Zones
 
+You can (and should) utilize multiple Availability Zones to create redundancy in your architecture.
+This is what allows for High Availability and Fault Tolerant systems.
+
 
 ## References
 
