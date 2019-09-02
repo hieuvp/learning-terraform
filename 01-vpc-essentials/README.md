@@ -119,7 +119,6 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 > A subnet (shorthand for subnetwork) is a subsection of a network.
 
-<br/>
 <div align="center">
   <img src="assets/subnet-default.png" width="900">
   <br/>
@@ -133,6 +132,8 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 
 ### Public and Private Subnets
+
+<div align="center"><img src="assets/subnet-public-private.png" width="600"></div>
 
 
 ## Availability Zones (VPC Specific)
