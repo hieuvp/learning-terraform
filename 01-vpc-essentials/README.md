@@ -132,14 +132,23 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 1. After creating a VPC, **you can add one or more subnets in each Availability Zone**.
 1. Each subnet **must reside entirely** within **one** Availability Zone and **cannot span zones**.
 
-
 ### Public and Private Subnets
 
 <div align="center"><img src="assets/subnet-public-private.png" width="600"></div>
 
-Practice
-- Screenshot public subnet
-- Screenshot private subnet
+<br/>
+<div align="center">
+  <img src="assets/subnet-public.png" width="800">
+  <br/>
+  <em>Public Subnet</em>
+</div>
+
+<br/>
+<div align="center">
+  <img src="assets/subnet-private.png" width="800">
+  <br/>
+  <em>Private Subnet</em>
+</div>
 
 
 ## Availability Zones
