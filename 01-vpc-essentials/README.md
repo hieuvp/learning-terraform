@@ -148,6 +148,12 @@ This is what allows for **High Availability** and **Fault Tolerant** systems.
 Availability Zones are distinct locations that are engineered to be isolated from failures in other Availability Zones.
 By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
 
+<br/>
+<div align="center"><img src="assets/az-ordinary.png" width="600"></div>
+<br/>
+<div align="center"><img src="assets/az-disaster.png" width="600"></div>
+<br/>
+
 High Availability
 
 Create your architecture in such a way that your "system" is always available (or has the least amount of downtime as possible).
