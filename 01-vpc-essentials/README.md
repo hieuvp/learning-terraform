@@ -149,9 +149,9 @@ Availability Zones are distinct locations that are engineered to be isolated fro
 By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
 
 <br/>
-<div align="center"><img src="assets/az-ordinary.png" width="600"></div>
+<div align="center"><img src="assets/az-ordinary.png" width="500"></div>
 <br/>
-<div align="center"><img src="assets/az-disaster.png" width="600"></div>
+<div align="center"><img src="assets/az-disaster.png" width="500"></div>
 <br/>
 
 High Availability
