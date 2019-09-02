@@ -143,7 +143,7 @@ Practice
 ## Availability Zones
 
 You can (and should) utilize multiple Availability Zones to create redundancy in your architecture.
-This is what allows for High Availability and Fault Tolerant systems.
+This is what allows for **High Availability** and **Fault Tolerant** systems.
 
 Availability Zones are distinct locations that are engineered to be isolated from failures in other Availability Zones.
 By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
