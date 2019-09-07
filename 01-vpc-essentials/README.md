@@ -186,9 +186,9 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 > A fault-tolerant system is extremely similar to HA, but goes one step further by guaranteeing zero downtime.
 
-- Fault Tolerance describes a computer system or technology infrastructure that is designed in such a way that when one component fails (hardware or software), a backup component takes over operations immediately so that there is no loss of service.
-- The concept of having backup components in place is called redundancy and the more backup components you have in place, the more tolerant your network is hardware and software failure.
- 
+- The concept of having backup components in place is called **redundancy**.
+- The more backup components you have in place, the more tolerant your network is hardware and software failure.
+
 
 ## References
 
