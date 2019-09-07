@@ -162,12 +162,14 @@ When creating an AWS account, a **Default VPC** is created for us, including the
   <img src="assets/az-ordinary.png" width="500">
   <br/>
   <em>By launching instances in separate AZs</em>
-  <br/>
-  <em>You can protect your applications from the failure of a single location</em>
 </div>
 <br/>
 
-<div align="center"><img src="assets/az-disaster.png" width="500"></div>
+<div align="center">
+  <img src="assets/az-disaster.png" width="500">
+  <br/>
+  <em>You can protect your applications from the failure of a single location</em>
+</div>
 <br/>
 
 ### Failover
