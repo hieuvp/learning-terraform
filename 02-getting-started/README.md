@@ -24,11 +24,19 @@ $ terraform fmt
 ```
 
 ```bash
+terraform init
+```
+
+```bash
 $ terraform plan
 ```
 
 ```bash
 $ terraform apply
+```
+
+```bash
+terraform show
 ```
 
 ```bash

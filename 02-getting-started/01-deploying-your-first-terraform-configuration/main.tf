@@ -4,6 +4,10 @@
 
 variable "aws_access_key_id" {}
 variable "aws_secret_access_key" {}
+variable "private_key_path" {}
+variable "key_pair_name" {
+  default = "ShopBack"
+}
 
 
 #################################################
@@ -22,6 +26,19 @@ provider "aws" {
 #################################################
 
 resource "aws_instance" "nginx" {
-  ami = ""
-  instance_type = ""
+  ami           = "ami-04de2b60dd25fbb2e"
+  instance_type = "t2.micro"
+  key_name      = var.key_pair_name
+
+  connection {
+    user        = "ec2-user"
+    private_key = file(var.private_key_path)
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum install nginx -y",
+      "sudo service nginx start"
+    ]
+  }
 }
