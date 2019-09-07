@@ -178,7 +178,8 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ### High Availability
 
-- A High Availability system is one that is designed to be available 99.999% of the time, or as close to it as possible.
+> A High Availability system is one that is designed to be available 99.999% of the time, or as close to it as possible.
+
 - In practice, this means creating and managing the ability to automatically failover to a secondary system if the primary system goes down for any reason as well as eliminating all single points of failure from your infrastructure.
 
 ### Fault Tolerance
