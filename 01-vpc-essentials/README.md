@@ -20,6 +20,7 @@
 - [Availability Zones](#availability-zones)
   - [High Availability](#high-availability)
   - [Fault Tolerance](#fault-tolerance)
+    - [Failover](#failover)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -182,6 +183,10 @@ The ability of the system to withstand failures in one (or more) of its componen
 
 - One of my web servers failed, but my backup server immediately took over.
 - If something in my system fails, it can repair itself.
+
+#### Failover
+
+> A backup operational mode in which the functions of a system component are assumed by secondary system components when the primary component becomes unavailable through either failure or scheduled down time.
 
 
 ## References
