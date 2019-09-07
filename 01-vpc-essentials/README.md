@@ -16,7 +16,11 @@
   - [Status `blackhole`](#status-blackhole)
 - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
 - [Subnets](#subnets)
-- [Availability Zones (VPC Specific)](#availability-zones-vpc-specific)
+  - [Public and Private Subnets](#public-and-private-subnets)
+- [Availability Zones](#availability-zones)
+  - [Failover](#failover)
+  - [High Availability](#high-availability)
+  - [Fault Tolerance](#fault-tolerance)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -40,7 +44,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 1. An **Internet Gateway** attached.
 1. A **Main Route Table** with predefined routes to the default subnets.
 1. A **Default Network Access Control List** with predefined rules for controlling access of the default subnets.
-1. **Subnets** to provision AWS resources in (such as **EC2 Instances**).
+1. **Subnets** to provision AWS resources in (e.g. **EC2 Instances**, **RDS Instances**,...).
 
 <br/>
 <div align="center"><img src="assets/vpc-default.png" width="900"></div>
@@ -51,7 +55,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 ## Internet Gateways (IGWs)
 
 - Only **one** IGW can be `attached` to a VPC at a time.
-- An IGW cannot be `detached` from a VPC while there are active AWS resources in the VPC (such as an EC2 Instance or an RDS Database).
+- An IGW cannot be `detached` from a VPC while there are active AWS resources associated with **Public IP** addresses or **Elastic IP** addresses.
 
 ### State `attached`
 
@@ -116,8 +120,74 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ## Subnets
 
+> A subnet (shorthand for subnetwork) is a subsection of a network.
 
-## Availability Zones (VPC Specific)
+<div align="center">
+  <img src="assets/subnet-default.png" width="900">
+  <br/>
+  <em>Default Subnets</em>
+</div>
+<br/>
+
+1. When you create a VPC, they span all of the Availability Zones in the region.
+1. After the creation, **you can add one or more subnets in each Availability Zone**.
+1. Each subnet **must reside entirely** within **one** Availability Zone and **cannot span zones**.
+
+### Public and Private Subnets
+
+<div align="center"><img src="assets/subnet-public-private.png" width="650"></div>
+<br/>
+
+<br/>
+<div align="center">
+  <img src="assets/subnet-public.png" width="900">
+  <br/>
+  <em>Public Subnet</em>
+</div>
+
+<br/>
+<div align="center">
+  <img src="assets/subnet-private.png" width="900">
+  <br/>
+  <em>Private Subnet</em>
+</div>
+
+
+## Availability Zones
+
+> AZs are distinct locations that are engineered to be isolated from failures in other AZs.
+
+<br/>
+<div align="center">
+  <img src="assets/az-ordinary.png" width="500">
+  <br/>
+  <em>By launching instances in separate AZs</em>
+</div>
+<br/>
+
+<div align="center">
+  <img src="assets/az-disaster.png" width="500">
+  <br/>
+  <em>You can protect your applications from the failure of a single location</em>
+</div>
+<br/>
+
+### Failover
+
+> Failover is a backup operational mode in which the functions of a system component are assumed by secondary system components when the primary component becomes unavailable through either failure or scheduled downtime.
+
+### High Availability
+
+> A high availability system is one that is designed to be available 99.999% of the time, or as close to it as possible.
+
+- In practice, this means creating and managing the ability to automatically failover to a secondary system if the primary system goes down for any reason as well as eliminating all single points of failure from your infrastructure.
+
+### Fault Tolerance
+
+> A fault-tolerant system is extremely similar to HA, but goes one step further by guaranteeing zero downtime.
+
+- The concept of having backup components in place is called **redundancy**.
+- The more backup components you have in place, the more tolerant your network is hardware and software failure.
 
 
 ## References
