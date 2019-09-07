@@ -18,9 +18,9 @@
 - [Subnets](#subnets)
   - [Public and Private Subnets](#public-and-private-subnets)
 - [Availability Zones](#availability-zones)
+  - [Failover](#failover)
   - [High Availability](#high-availability)
   - [Fault Tolerance](#fault-tolerance)
-    - [Failover](#failover)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -170,23 +170,20 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 <div align="center"><img src="assets/az-disaster.png" width="500"></div>
 <br/>
 
+### Failover
+
+- Failover is a backup operational mode in which the functions of a system component are assumed by secondary system components when the primary component becomes unavailable through either failure or scheduled down time.
+
 ### High Availability
 
-An architecture in a way that the system is always available, or has the least amount of downtime as possible.
-
-- I can always access my data in the cloud.
-- My website never crashes and is always available to my customers.
+- A High Availability system is one that is designed to be available 99.999% of the time, or as close to it as possible.
+- In practice, this means creating and managing the ability to automatically failover to a secondary system if the primary system goes down for any reason as well as eliminating all single points of failure from your infrastructure.
 
 ### Fault Tolerance
 
-The ability of the system to withstand failures in one (or more) of its components and still remain available.
-
-- One of my web servers failed, but my backup server immediately took over.
-- If something in my system fails, it can repair itself.
-
-#### Failover
-
-> A backup operational mode in which the functions of a system component are assumed by secondary system components when the primary component becomes unavailable through either failure or scheduled down time.
+- Fault Tolerance describes a computer system or technology infrastructure that is designed in such a way that when one component fails (hardware or software), a backup component takes over operations immediately so that there is no loss of service.
+- The concept of having backup components in place is called redundancy and the more backup components you have in place, the more tolerant your network is hardware and software failure.
+- A Fault Tolerant system is extremely similar to HA, but goes one step further by guaranteeing zero downtime. 
 
 
 ## References
