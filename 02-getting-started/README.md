@@ -19,6 +19,22 @@
 
 ## Deploying Your First Terraform Configuration
 
+```bash
+$ terraform fmt
+```
+
+```bash
+$ terraform plan
+```
+
+```bash
+$ terraform apply
+```
+
+```bash
+$ terraform destroy
+```
+
 
 ## Updating Your Configuration with More Resources
 
