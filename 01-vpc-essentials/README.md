@@ -54,7 +54,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 ## Internet Gateways (IGWs)
 
 - Only **one** IGW can be `attached` to a VPC at a time.
-- An IGW cannot be `detached` from a VPC while there are active AWS resources associated with **Public IPs** or **Elastic IPs**.
+- An IGW cannot be `detached` from a VPC while there are active AWS resources associated with **Public IP** addresses or **Elastic IP** addresses.
 
 ### State `attached`
 
