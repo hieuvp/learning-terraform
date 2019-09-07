@@ -174,7 +174,7 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ### Failover
 
-> Failover is a backup operational mode in which the functions of a system component are assumed by secondary system components when the primary component becomes unavailable through either failure or scheduled down time.
+> Failover is a backup operational mode in which the functions of a system component are assumed by secondary system components when the primary component becomes unavailable through either failure or scheduled downtime.
 
 ### High Availability
 
