@@ -178,16 +178,17 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 
 ### High Availability
 
-> A High Availability system is one that is designed to be available 99.999% of the time, or as close to it as possible.
+> A high availability system is one that is designed to be available 99.999% of the time, or as close to it as possible.
 
 - In practice, this means creating and managing the ability to automatically failover to a secondary system if the primary system goes down for any reason as well as eliminating all single points of failure from your infrastructure.
 
 ### Fault Tolerance
 
+> A fault-tolerant system is extremely similar to HA, but goes one step further by guaranteeing zero downtime.
+
 - Fault Tolerance describes a computer system or technology infrastructure that is designed in such a way that when one component fails (hardware or software), a backup component takes over operations immediately so that there is no loss of service.
 - The concept of having backup components in place is called redundancy and the more backup components you have in place, the more tolerant your network is hardware and software failure.
-- A Fault Tolerant system is extremely similar to HA, but goes one step further by guaranteeing zero downtime. 
-
+ 
 
 ## References
 
