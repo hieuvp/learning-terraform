@@ -6,3 +6,8 @@
 
 # Operating System
 .DS_Store
+
+.terraform/
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup

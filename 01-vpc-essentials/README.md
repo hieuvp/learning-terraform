@@ -21,6 +21,7 @@
   - [Failover](#failover)
   - [High Availability](#high-availability)
   - [Fault Tolerance](#fault-tolerance)
+- [Security Groups](#security-groups)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -190,8 +191,14 @@ When creating an AWS account, a **Default VPC** is created for us, including the
 - The more backup components you have in place, the more tolerant your network is hardware and software failure.
 
 
+## Security Groups
+
+// What do Egress and Ingress mean in the cloud?
+// https://www.aviatrix.com/learning/cloud-security-operations/egress-and-ingress/
+
+
 ## References
 
 - [AWS Essentials](https://www.youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
-- [Project Omega](https://www.lucidchart.com/documents/view/703f6119-4838-4bbb-bc7e-be2fb75e89e5/XT05XlW_ahiW)
+- [Project Omega - VPC](https://www.lucidchart.com/documents/view/703f6119-4838-4bbb-bc7e-be2fb75e89e5/XT05XlW_ahiW)
 - [VPC Dashboard - EU (London) Region](https://eu-west-2.console.aws.amazon.com/vpc/home?region=eu-west-2)
