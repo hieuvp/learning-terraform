@@ -1,13 +1,14 @@
-# JetBrains - Developer Tools for Professionals and Teams
+### JetBrains - Developer Tools for Professionals and Teams
 .idea/
 
-# Visual Studio Code - Code Editing - Redefined
+### Visual Studio Code - Code Editing - Redefined
 .vscode/
 
-# Operating System
+### Operating System
 .DS_Store
 
+### Terraform - Safely and Predictably Create, Change, and Improve Infrastructure
 .terraform/
-terraform.tfvars
 terraform.tfstate
 terraform.tfstate.backup
+terraform.tfvars
