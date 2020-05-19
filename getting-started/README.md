@@ -1,10 +1,9 @@
 # Getting Started
 
-
 ## Table of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 
 - [Syntax](#syntax)
 - [Command-line](#command-line)
@@ -25,11 +24,11 @@
 ## Deploying Your First Terraform Configuration
 
 ```bash
-$ terraform
+terraform
 ```
 
 ```bash
-$ terraform fmt
+terraform fmt
 ```
 
 ```bash
@@ -37,17 +36,17 @@ terraform validate
 ```
 
 ```bash
-$ terraform init
+terraform init
 ```
 
 ```bash
-$ terraform plan
-$ terraform plan -var-file=''
+terraform plan
+terraform plan -var-file=''
 ```
 
 ```bash
-$ terraform apply
-$ terraform apply -var-file=''
+terraform apply
+terraform apply -var-file=''
 ```
 
 ```bash
@@ -55,11 +54,11 @@ terraform show
 ```
 
 ```bash
-$ terraform destroy
+terraform destroy
 ```
 
 ```bash
-$ terraform force-unlock 3ebd64d0-6800-e83d-1fef-0867a0cef176
+terraform force-unlock 3ebd64d0-6800-e83d-1fef-0867a0cef176
 ```
 
 - IntelliJ IDE supports
@@ -81,30 +80,22 @@ $ tree -a -L 4 .
 ```
 
 ```bash
-$ tree
+tree
 ```
 
 ```bash
-$ aws ec2 describe-instances --instance-id=i-0f22cbff4f20e2d38 --region=eu-west-2
+aws ec2 describe-instances --instance-id=i-0f22cbff4f20e2d38 --region=eu-west-2
 ```
-
-
-
 
 ## Updating Your Configuration with More Resources
 
-
 ## Configuring Resources After Creation
-
 
 ## Adding a New Provider to Your Configuration
 
-
 ## Using Variables in Deployments
 
-
 ## Using Modules for Common Configurations
-
 
 ## References
 

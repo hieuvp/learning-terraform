@@ -1,6 +1,5 @@
 # Creating Virtual Private Clouds (VPCs)
 
-
 <div align="center"><img src="assets/scenario.png" width="900"></div>
 
 - Web front-end (**www1**) must be internet-accessible via IPv4 and IPv6.
@@ -9,11 +8,10 @@
 - **Charleston** office must have VPN access to the database instance.
 - **Atlanta** and **Charleston** offices must be connected via a VPN.
 
-
 ## Table of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 
 - [Creating Secure and Scalable VPCs](#creating-secure-and-scalable-vpcs)
 - [VPC Peering](#vpc-peering)
@@ -25,24 +23,17 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## Creating Secure and Scalable VPCs
-
 
 ## VPC Peering
 
-
 ## Secure Internet Egress Using NAT Instances
-
 
 ## Using a Transit VPC to Connect On-premises and Cloud Resources
 
-
 ## Using CloudHub to Connect Remote Sites Together
 
-
 ## Configuring IPv6 Connectivity
-
 
 ## References
 
