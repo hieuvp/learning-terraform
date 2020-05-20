@@ -30,32 +30,17 @@
       "inline": [
         "sudo mkdir -p /opt/packer",
         "sudo mkdir -p /opt/packer/nginx",
-        "sudo yum install -y git",
         "sudo chown -R ec2-user:ec2-user /opt"
       ]
     },
     {
       "type": "file",
-      "source": "db_client",
-      "destination": "/opt/packer/"
-    },
-    {
-      "type": "file",
-      "source": "go-exec-amd64",
-      "destination": "/opt/packer/"
-    },
-    {
-      "type": "file",
-      "source": "client.service",
-      "destination": "/opt/packer/"
+      "source": "wordpress-nginx.sh",
+      "destination": "/opt/packer/wordpress-nginx.sh"
     },
     {
       "type": "shell",
-      "inline": [
-        "git clone https://github.com/A5hleyRich/wordpress-nginx.git /opt/packer/nginx",
-        "sudo chmod a+x /opt/packer/*",
-        "sudo chown -R root:root /opt/packer/go-exec-amd64"
-      ]
+      "inline": ["/opt/packer/wordpress-nginx.sh"]
     }
   ]
 }
