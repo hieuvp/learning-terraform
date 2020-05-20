@@ -64,6 +64,6 @@
 ## References
 
 - [Terraform - Getting Started](https://app.pluralsight.com/library/courses/terraform-getting-started/table-of-contents)
-- [Deep Dive - Terraform](https://app.pluralsight.com/library/courses/deep-dive-terraform/table-of-contents)
 - [Automating Enterprise Infrastructure - Terraform and Packer](https://www.udemy.com/course/terraform-and-packer)
 - [AWS Networking Deep Dive: Virtual Private Cloud (VPC)](https://app.pluralsight.com/library/courses/aws-networking-deep-dive-vpc/table-of-contents)
+- [Deep Dive - Terraform](https://app.pluralsight.com/library/courses/deep-dive-terraform/table-of-contents)
