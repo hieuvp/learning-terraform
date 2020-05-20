@@ -6,13 +6,13 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Packer - Builders](#packer---builders)
-- [Packer - Provisioner](#packer---provisioner)
+- [Packer - Provisioners](#packer---provisioners)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Packer - Builders
 
-## Packer - Provisioner
+## Packer - Provisioners
 
 ## References
