@@ -5,12 +5,28 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [What is Packer](#what-is-packer)
 - [Packer - Builders](#packer---builders)
 - [Packer - Provisioners](#packer---provisioners)
 - [Packer - HCL Configuration Language](#packer---hcl-configuration-language)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## What is Packer
+
+Packer is an open source tool for creating identical machine images
+for multiple platforms from a single source configuration.
+Packer is lightweight, runs on every major operating system, and is highly performant,
+creating machine images for multiple platforms in parallel.
+Packer does not replace configuration management like Chef or Puppet.
+In fact, when building images,
+Packer is able to use tools like Chef or Puppet to install software onto the image.
+
+A machine image is a single static unit that contains a pre-configured operating system
+and installed software which is used to quickly create new running machines.
+Machine image formats change for each platform.
+Some examples include AMIs for EC2, VMDK/VMX files for VMware, OVF exports for VirtualBox, etc.
 
 ## Packer - Builders
 
