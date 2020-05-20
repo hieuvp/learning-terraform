@@ -54,6 +54,17 @@
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/packer-builders.sh) -->
+<!-- The below code snippet is automatically added from labs/packer-builders.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eoux pipefail
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## Packer - Provisioners
 
 > Provisioners are components of Packer that install and configure software
@@ -126,6 +137,17 @@
     }
   ]
 }
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/packer-provisioners.sh) -->
+<!-- The below code snippet is automatically added from labs/packer-provisioners.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eoux pipefail
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
