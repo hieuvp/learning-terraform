@@ -46,7 +46,7 @@ Some examples include AMIs for EC2, VMDK/VMX files for VMware, OVF exports for V
   },
   "builders": [
     {
-      "ami_name": "training-amazon-linux-{{isotime | clean_ami_name}}",
+      "ami_name": "training-amazon-linux-{{isotime | clean_resource_name}}",
       "ami_description": "Linux-AMI",
       "instance_type": "t2.micro",
       "name": "amazon-linux-ami",
@@ -78,6 +78,10 @@ Some examples include AMIs for EC2, VMDK/VMX files for VMware, OVF exports for V
 #!/usr/bin/env bash
 
 set -eoux pipefail
+
+packer validate packer-builders.json
+
+packer build packer-builders.json
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -99,7 +103,7 @@ set -eoux pipefail
   },
   "builders": [
     {
-      "ami_name": "training-amazon-linux-{{isotime | clean_ami_name}}",
+      "ami_name": "training-amazon-linux-{{isotime | clean_resource_name}}",
       "ami_description": "Linux-AMI",
       "instance_type": "t2.micro",
       "name": "amazon-linux-ami",
@@ -165,6 +169,10 @@ set -eoux pipefail
 #!/usr/bin/env bash
 
 set -eoux pipefail
+
+packer validate packer-provisioners.json
+
+packer build packer-provisioners.json
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
