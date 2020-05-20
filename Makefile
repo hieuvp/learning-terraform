@@ -5,6 +5,18 @@
 .PHONY: fmt
 fmt:
 	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/fmt-hcl.sh
+	@printf "\n"
+
+	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/fmt-json.sh
+	@printf "\n"
+
+	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/fmt-shell.sh
+	@printf "\n"
+
+	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/fmt-terraform.sh
 	@printf "\n"
 
@@ -14,6 +26,10 @@ fmt:
 
 .PHONY: lint
 lint:
+	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/lint-shell.sh
+	@printf "\n"
+
 	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/lint-terraform.sh
 	@printf "\n"
