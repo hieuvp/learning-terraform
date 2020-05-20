@@ -31,5 +31,3 @@
 ## Recap and Next Steps
 
 ## References
-
-- [Deep Dive - Terraform](https://app.pluralsight.com/library/courses/deep-dive-terraform/table-of-contents)
