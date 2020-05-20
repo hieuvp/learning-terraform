@@ -5,7 +5,7 @@
 .PHONY: fmt
 fmt:
 	@printf "\n"
-	$(MAKEFILE_SCRIPT_PATH)/fmt-hcl.sh
+	$(MAKEFILE_SCRIPT_PATH)/fmt-shell.sh
 	@printf "\n"
 
 	@printf "\n"
@@ -13,7 +13,7 @@ fmt:
 	@printf "\n"
 
 	@printf "\n"
-	$(MAKEFILE_SCRIPT_PATH)/fmt-shell.sh
+	$(MAKEFILE_SCRIPT_PATH)/fmt-hcl.sh
 	@printf "\n"
 
 	@printf "\n"
