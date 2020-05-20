@@ -7,6 +7,7 @@
 
 - [Packer - Builders](#packer---builders)
 - [Packer - Provisioners](#packer---provisioners)
+- [HCL Configuration Language](#hcl-configuration-language)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -152,6 +153,9 @@ set -eoux pipefail
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+## HCL Configuration Language
+
 ## References
 
 - [Packer Terminology](https://www.packer.io/docs/terminology)
+- [Introduction to Packer HCL2](https://www.packer.io/guides/hcl)
