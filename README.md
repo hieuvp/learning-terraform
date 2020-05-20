@@ -20,12 +20,12 @@
 ### Terraform - Getting Started
 
 1. [ ] [Course Overview](README.md)
-1. [ ] [Deploying Your First Terraform Configuration](README.md)
-1. [ ] [Updating Your Configuration with More Resources](README.md)
-1. [ ] [Configuring Resources After Creation](README.md)
-1. [ ] [Adding a New Provider to Your Configuration](README.md)
-1. [ ] [Using Variables in Deployments](README.md)
-1. [ ] [Using Modules for Common Configurations](README.md)
+1. [ ] [Deploying Your First Terraform Configuration](terraform-getting-started/deploying-your-first-terraform-configuration/README.md)
+1. [ ] [Updating Your Configuration with More Resources](terraform-getting-started/updating-your-configuration-with-more-resources/README.md)
+1. [ ] [Configuring Resources After Creation](terraform-getting-started/configuring-resources-after-creation/README.md)
+1. [ ] [Adding a New Provider to Your Configuration](terraform-getting-started/adding-a-new-provider-to-your-configuration/README.md)
+1. [ ] [Using Variables in Deployments](terraform-getting-started/using-variables-in-deployments/README.md)
+1. [ ] [Using Modules for Common Configurations](terraform-getting-started/using-modules-for-common-configurations/README.md)
 
 ### Terraform and Packer
 
