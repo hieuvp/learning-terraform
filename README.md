@@ -19,7 +19,6 @@
 
 ### Terraform - Getting Started
 
-1. [ ] [Course Overview](README.md)
 1. [ ] [Deploying Your First Terraform Configuration](terraform-getting-started/deploying-your-first-terraform-configuration/README.md)
 1. [ ] [Updating Your Configuration with More Resources](terraform-getting-started/updating-your-configuration-with-more-resources/README.md)
 1. [ ] [Configuring Resources After Creation](terraform-getting-started/configuring-resources-after-creation/README.md)
