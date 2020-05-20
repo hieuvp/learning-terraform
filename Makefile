@@ -9,7 +9,7 @@ fmt:
 	@printf "\n"
 
 	@printf "\n"
-	$(MAKEFILE_SCRIPT_PATH)/fmt-json.sh
+	prettier --ignore-path=.gitignore --write **/*.json
 	@printf "\n"
 
 	@printf "\n"
@@ -30,10 +30,6 @@ lint:
 	$(MAKEFILE_SCRIPT_PATH)/lint-shell.sh
 	@printf "\n"
 
-	@printf "\n"
-	$(MAKEFILE_SCRIPT_PATH)/lint-terraform.sh
-	@printf "\n"
-
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Git
@@ -43,6 +39,16 @@ lint:
 git-add: fmt lint
 	@printf "\n"
 	git add --all .
+	@printf "\n"
+
+.PHONY: git-pre-merge
+git-pre-merge:
+	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/lint-terraform.sh
+	@printf "\n"
+
+	@printf "\n"
+	make git-add
 	@printf "\n"
 
 
