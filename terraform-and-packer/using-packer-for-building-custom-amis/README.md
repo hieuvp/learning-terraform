@@ -5,6 +5,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [What is a Golden Image](#what-is-a-golden-image)
 - [What is Packer](#what-is-packer)
 - [Templates](#templates)
 - [Builders](#builders)
@@ -14,7 +15,56 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## What is a Golden Image
+
+A golden image provides the template which a virtual machine
+(for example, AWS EC2 instances) is created from.
+It may also be referred to as a base image or an image template.
+Think of it as a snapshot copy of an operating system that can be launched as a new virtual machine.
+
+Usually, a golden image will contain:
+
+- A Windows or Linux operating system installation
+- The latest security patches and updates
+- Configuration specific to your environment
+- Software specific to your environment
+- Security hardening settings, if required by your environment
+- Agents such as an Octopus Deploy Tentacle for deploying software,
+  or a Datadog Agent for monitoring the virtual machine
+
+The idea is that you set up an operating system to the desired state,
+save it and then you can re-use it across your infrastructure.
+
+In network virtualization,
+a golden image is an archetypal version of a cloned disk
+that can be used as a template for various kinds of virtual network hardware.
+Some refer to the golden image as a master image
+because multiple copies are used to provide a consistent process for using a disk image.
+
+Using golden images as templates,
+managers can create consistent environments
+where the end user doesn't have to know a lot about the technology in order to use it effectively.
+These kinds of systems are taking off in a big way as companies
+and enterprises replace old physical networks with virtual structures.
+
+It's a term that has made its way into the collective consciousness
+of anyone involved in creating one perfect model and then producing many duplicates from that mold.
+That's what a gold master, or golden image, is:
+The virtual mold from which you cast your distributable models.
+
+And in system administration,
+you may encounter golden images of an organization's chosen operating system,
+with the important settings baked in—the virtual private network (VPN) certificates
+are already in place,
+incoming email servers are already set in the email client, and so on.
+Similarly, you might also hear this term in the world of virtual machines (VMs),
+where a golden image of a carefully configured virtual drive
+is the source from which all new virtual machines are cloned.
+
 ## What is Packer
+
+> HashiCorp Packer has become the standard open source tool for
+> creating golden images from code.
 
 Packer is an open source tool for creating identical machine images
 for multiple platforms from a single source configuration.
