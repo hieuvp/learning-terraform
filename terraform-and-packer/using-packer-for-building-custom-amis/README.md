@@ -1,4 +1,4 @@
-# Using Terraform and Packer for building Custom AMI's
+# Using Packer for building Custom AMI's
 
 ## Table of Contents
 

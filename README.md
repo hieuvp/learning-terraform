@@ -33,7 +33,7 @@
 1. [ ] [Introduction to Infrastructure as Code (IAC) - Terraform and AWS Basics](README.md)
 1. [ ] [Building AWS Infrastructure - Bastion Host, Webserver, VPC, Modules etc.](README.md)
 1. [ ] [Managing AWS IAM Users, Groups and Roles using Terraform](README.md)
-1. [Using Terraform and Packer for building Custom AMI's](terraform-and-packer/using-terraform-and-packer-for-building-custom-amis/README.md)
+1. [Using Packer for building Custom AMI's](terraform-and-packer/using-packer-for-building-custom-amis/README.md)
 1. [ ] [Automating Vault and Consul Cluster using Terraform](README.md)
 1. [ ] [Automate Kubernetes (EKS ) Cluster using Terraform](README.md)
 
