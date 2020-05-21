@@ -1,5 +1,9 @@
 # Using Packer for building Custom AMI's
 
+golden-image-pipeline.png
+golden-image-value-stream-possibilities.png
+packer-terraform-aws.png
+
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -60,6 +64,8 @@ incoming email servers are already set in the email client, and so on.
 Similarly, you might also hear this term in the world of virtual machines (VMs),
 where a golden image of a carefully configured virtual drive
 is the source from which all new virtual machines are cloned.
+
+<div align="center"><img src="assets/tips-for-getting-started.png" width="900"></div>
 
 ## What is Packer
 
