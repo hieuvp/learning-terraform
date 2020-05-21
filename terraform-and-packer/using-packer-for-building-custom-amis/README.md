@@ -64,7 +64,7 @@ is the source from which all new virtual machines are cloned.
 ## What is Packer
 
 > HashiCorp Packer has become the standard open source tool for
-> creating golden images from code.
+> creating **golden images** from code.
 
 Packer is an open source tool for creating identical machine images
 for multiple platforms from a single source configuration.
