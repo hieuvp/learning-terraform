@@ -105,6 +105,10 @@ Templates are given to commands such as `packer build`,
 which will take the template and actually run the builds within it,
 producing any resulting machine images.
 
+Templates are JSON files which define one or more builds
+by configuring the various components of Packer.
+Packer is able to read a template and use that information to create multiple machine images in parallel.
+
 ## Builders
 
 > Builders are components of Packer that are able to create a machine image for a single platform.
