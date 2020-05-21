@@ -6,9 +6,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [What is Packer](#what-is-packer)
-- [Packer - Builders](#packer---builders)
-- [Packer - Provisioners](#packer---provisioners)
-- [Packer - HCL Configuration Language](#packer---hcl-configuration-language)
+- [Templates](#templates)
+- [Builders](#builders)
+- [Provisioners](#provisioners)
+- [HCL Configuration Language](#hcl-configuration-language)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -28,7 +29,19 @@ and installed software which is used to quickly create new running machines.
 Machine image formats change for each platform.
 Some examples include AMIs for EC2, VMDK/VMX files for VMware, OVF exports for VirtualBox, etc.
 
-## Packer - Builders
+## Templates
+
+Templates are JSON files that configure the various components of Packer
+in order to create one or more machine images.
+Templates are portable, static, and readable and writable by both humans and computers.
+This has the added benefit of being able to not only create and modify templates by hand,
+but also write scripts to dynamically create or modify templates.
+
+Templates are given to commands such as `packer build`,
+which will take the template and actually run the builds within it,
+producing any resulting machine images.
+
+## Builders
 
 > Builders are components of Packer that are able to create a machine image for a single platform.
 > Builders read in some configuration and use that to run and generate a machine image.
@@ -86,7 +99,7 @@ packer build packer-builders.json
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## Packer - Provisioners
+## Provisioners
 
 > Provisioners are components of Packer that install and configure software
 > within a running machine prior to that machine being turned into a static image.
@@ -162,7 +175,7 @@ packer build packer-provisioners.json
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## Packer - HCL Configuration Language
+## HCL Configuration Language
 
 ## References
 
