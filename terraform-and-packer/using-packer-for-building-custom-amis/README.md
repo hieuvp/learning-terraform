@@ -66,6 +66,20 @@ is the source from which all new virtual machines are cloned.
 > HashiCorp Packer has become the standard open source tool for
 > creating **golden images** from code.
 
+Learn how to use HashiCorp Packer in an Azure pipeline to maintain immutable infrastructure.
+Brad Stevens, a Cloud Technical Lead at CDW discusses golden images in this talk:
+A battle-tested virtual machine template
+that forms the foundation for all other VMs used in the infrastructure.
+Sometimes they're called base images or image templates,
+but the goal remains the same: immutable infrastructure.
+
+HashiCorp Packer has become the standard open source tool for creating golden images from code.
+In this session from Microsoft Ignite,
+you will see how to create pipelines to host golden images in Azure,
+and make them available through Azure's Shared Image Gallery.
+Simply do the configuration work once, and use it across your entire infrastructure.
+It will save you time, make you faster and reduce human error.
+
 Packer is an open source tool for creating identical machine images
 for multiple platforms from a single source configuration.
 Packer is lightweight, runs on every major operating system, and is highly performant,
@@ -231,3 +245,4 @@ packer build packer-provisioners.json
 
 - [Packer Terminology](https://www.packer.io/docs/terminology)
 - [Introduction to Packer HCL2](https://www.packer.io/guides/hcl)
+- [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
