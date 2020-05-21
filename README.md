@@ -19,19 +19,21 @@
 
 ### Terraform - Getting Started
 
+1. [ ] [Course Overview](terraform-getting-started/course-overview/README.md)
+1. [ ] [What You Need to Know About Infrastructure as Code](terraform-getting-started/what-you-need-to-know-about-infrastructure-as-code/README.md)
 1. [ ] [Deploying Your First Terraform Configuration](terraform-getting-started/deploying-your-first-terraform-configuration/README.md)
 1. [ ] [Updating Your Configuration with More Resources](terraform-getting-started/updating-your-configuration-with-more-resources/README.md)
-1. [ ] [Configuring Resources After Creation](terraform-getting-started/configuring-resources-after-creation/README.md)
+1. [ ] [Configuring a Resource After Creation](terraform-getting-started/configuring-a-resource-after-creation/README.md)
 1. [ ] [Adding a New Provider to Your Configuration](terraform-getting-started/adding-a-new-provider-to-your-configuration/README.md)
-1. [ ] [Using Variables in Deployments](terraform-getting-started/using-variables-in-deployments/README.md)
-1. [ ] [Using Modules for Common Configurations](terraform-getting-started/using-modules-for-common-configurations/README.md)
+1. [ ] [Using Variables and Functions](terraform-getting-started/using-variables-and-functions/README.md)
+1. [ ] [Using a Module for Common Configurations](terraform-getting-started/using-a-module-for-common-configurations/README.md)
 
 ### Terraform and Packer
 
 1. [ ] [Introduction to Infrastructure as Code (IAC) - Terraform and AWS Basics](README.md)
 1. [ ] [Building AWS Infrastructure - Bastion Host, Webserver, VPC, Modules etc.](README.md)
 1. [ ] [Managing AWS IAM Users, Groups and Roles using Terraform](README.md)
-1. [ ] [Using Terraform and Packer for building Custom AMI's](terraform-and-packer/using-terraform-and-packer-for-building-custom-amis/README.md)
+1. [Using Terraform and Packer for building Custom AMI's](terraform-and-packer/using-terraform-and-packer-for-building-custom-amis/README.md)
 1. [ ] [Automating Vault and Consul Cluster using Terraform](README.md)
 1. [ ] [Automate Kubernetes (EKS ) Cluster using Terraform](README.md)
 
@@ -62,7 +64,7 @@
 
 ## References
 
-- [Terraform - Getting Started](https://app.pluralsight.com/library/courses/terraform-getting-started/table-of-contents)
+- [Terraform - Getting Started](https://app.pluralsight.com/library/courses/getting-started-terraform/table-of-contents)
 - [Automating Enterprise Infrastructure - Terraform and Packer](https://www.udemy.com/course/terraform-and-packer)
 - [AWS Networking Deep Dive: Virtual Private Cloud (VPC)](https://app.pluralsight.com/library/courses/aws-networking-deep-dive-vpc/table-of-contents)
 - [Deep Dive - Terraform](https://app.pluralsight.com/library/courses/deep-dive-terraform/table-of-contents)

@@ -5,6 +5,18 @@
 .PHONY: fmt
 fmt:
 	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/fmt-shell.sh
+	@printf "\n"
+
+	@printf "\n"
+	prettier --ignore-path=.gitignore --write **/*.json
+	@printf "\n"
+
+	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/fmt-hcl.sh
+	@printf "\n"
+
+	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/fmt-terraform.sh
 	@printf "\n"
 
@@ -15,7 +27,7 @@ fmt:
 .PHONY: lint
 lint:
 	@printf "\n"
-	$(MAKEFILE_SCRIPT_PATH)/lint-terraform.sh
+	$(MAKEFILE_SCRIPT_PATH)/lint-shell.sh
 	@printf "\n"
 
 
@@ -27,6 +39,20 @@ lint:
 git-add: fmt lint
 	@printf "\n"
 	git add --all .
+	@printf "\n"
+
+.PHONY: git-pre-merge
+git-pre-merge:
+	@printf "\n"
+	make clean
+	@printf "\n"
+
+	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/lint-terraform.sh
+	@printf "\n"
+
+	@printf "\n"
+	make git-add
 	@printf "\n"
 
 
