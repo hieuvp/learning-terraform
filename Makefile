@@ -44,6 +44,10 @@ git-add: fmt lint
 .PHONY: git-pre-merge
 git-pre-merge:
 	@printf "\n"
+	make clean
+	@printf "\n"
+
+	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/lint-terraform.sh
 	@printf "\n"
 
