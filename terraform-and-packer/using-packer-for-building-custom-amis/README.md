@@ -107,6 +107,13 @@ Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
 
+- Builders
+- Communicators
+- Engine
+- Post-Processors
+- Provisioners
+- User Variables
+
 ## Builders
 
 > Builders are components of Packer that are able to create a machine image for a single platform.
