@@ -247,6 +247,6 @@ packer build packer-provisioners.json
 
 ## References
 
+- [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
 - [Packer Terminology](https://www.packer.io/docs/terminology)
 - [Introduction to Packer HCL2](https://www.packer.io/guides/hcl)
-- [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
