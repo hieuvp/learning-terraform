@@ -24,16 +24,6 @@ A golden image provides the template which a virtual machine
 It may also be referred to as a base image or an image template.
 Think of it as a snapshot copy of an operating system that can be launched as a new virtual machine.
 
-Usually, a golden image will contain:
-
-- A Windows or Linux operating system installation
-- The latest security patches and updates
-- Configuration specific to your environment
-- Software specific to your environment
-- Security hardening settings, if required by your environment
-- Agents such as an Octopus Deploy Tentacle for deploying software,
-  or a Datadog Agent for monitoring the virtual machine
-
 The idea is that you set up an operating system to the desired state,
 save it and then you can re-use it across your infrastructure.
 
@@ -65,9 +55,9 @@ is the source from which all new virtual machines are cloned.
 
 <div align="center"><img src="assets/tips-for-getting-started.png" width="900"></div>
 
-golden-image-pipeline.png
+<div align="center"><img src="assets/golden-image-pipeline.png" width="900"></div>
 
-golden-image-value-stream-possibilities.png
+<div align="center"><img src="assets/golden-image-value-stream-possibilities.png" width="900"></div>
 
 ## What is Packer
 
