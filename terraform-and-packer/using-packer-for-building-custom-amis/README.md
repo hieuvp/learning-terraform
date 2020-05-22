@@ -113,15 +113,52 @@ Packer is able to read a template and use that information to create multiple ma
 
 ### Template Builders
 
+Within the template,
+the builders section contains an array of all the builders
+that Packer should use to generate machine images for the template.
+
+Builders are responsible for creating machines and generating images from them for various platforms.
+For example, there are separate builders for EC2, VMware, VirtualBox, etc.
+Packer comes with many builders by default,
+and can also be extended to add new builders.
+
 ### Template Communicators
+
+Communicators are the mechanism Packer uses to
+upload files, execute scripts, etc. with the machine being created.
 
 ### Template Engine
 
+All strings within templates are processed by a common Packer templating engine,
+where variables and functions can be used to modify the value of a configuration parameter at runtime.
+
+The syntax of templates uses the following conventions:
+
+- Anything template related happens within double-braces: `{{ }}`.
+- Functions are specified directly within the braces, such as `{{timestamp}}`.
+- Template variables are prefixed with a period and capitalized, such as `{{.Variable}}`.
+
 ### Template Post-Processors
+
+The post-processor section within a template configures any post-processing that will be done to images built by the builders. Examples of post-processing would be compressing files, uploading artifacts, etc.
+
+Post-processors are optional. If no post-processors are defined within a template, then no post-processing will be done to the image. The resulting artifact of a build is just the image outputted by the builder.
+
+This documentation page will cover how to configure a post-processor in a template. The specific configuration options available for each post-processor, however, must be referenced from the documentation for that specific post-processor.
 
 ### Template Provisioners
 
+Within the template, the provisioners section contains an array of all the provisioners that Packer should use to install and configure software within running machines prior to turning them into machine images.
+
+Provisioners are optional. If no provisioners are defined within a template, then no software other than the defaults will be installed within the resulting machine images. This is not typical, however, since much of the value of Packer is to produce multiple identical images of pre-configured software.
+
+This documentation page will cover how to configure a provisioner in a template. The specific configuration options available for each provisioner, however, must be referenced from the documentation for that specific provisioner.
+
 ### Template User Variables
+
+User variables allow your templates to be further configured with variables from the command-line, environment variables, Vault, or files. This lets you parameterize your templates so that you can keep secret tokens, environment-specific data, and other types of information out of your templates. This maximizes the portability of the template.
+
+Using user variables expects you to know how configuration templates work. If you don't know how configuration templates work yet, please read that page first.
 
 ## Builders
 
