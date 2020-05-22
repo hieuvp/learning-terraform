@@ -1,7 +1,7 @@
-.PHONY: packer-builders
-packer-builders:
-	cd labs && ./packer-builders.sh
+.PHONY: example-builders
+example-builders:
+	cd labs && ./example-builders.sh
 
-.PHONY: packer-provisioners
-packer-provisioners:
-	cd labs && ./packer-provisioners.sh
+.PHONY: example-provisioners
+example-provisioners:
+	cd labs && ./example-provisioners.sh

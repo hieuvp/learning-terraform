@@ -184,8 +184,8 @@ If you don't know how configuration templates work yet, please read that page fi
 > Example builders include VirtualBox, VMware, and Amazon EC2.
 > Builders can be created and added to Packer in the form of plugins.
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/packer-builders.json) -->
-<!-- The below code snippet is automatically added from labs/packer-builders.json -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/example-builders.json) -->
+<!-- The below code snippet is automatically added from labs/example-builders.json -->
 
 ```json
 {
@@ -219,17 +219,17 @@ If you don't know how configuration templates work yet, please read that page fi
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/packer-builders.sh) -->
-<!-- The below code snippet is automatically added from labs/packer-builders.sh -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/example-builders.sh) -->
+<!-- The below code snippet is automatically added from labs/example-builders.sh -->
 
 ```sh
 #!/usr/bin/env bash
 
 set -eoux pipefail
 
-packer validate packer-builders.json
+packer validate example-builders.json
 
-packer build packer-builders.json
+packer build example-builders.json
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -241,8 +241,8 @@ packer build packer-builders.json
 > They perform the major work of making the image contain useful software.
 > Example provisioners include shell scripts, Chef, Puppet, etc.
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/packer-provisioners.json) -->
-<!-- The below code snippet is automatically added from labs/packer-provisioners.json -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/example-provisioners.json) -->
+<!-- The below code snippet is automatically added from labs/example-provisioners.json -->
 
 ```json
 {
@@ -295,25 +295,25 @@ packer build packer-builders.json
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/packer-provisioners.sh) -->
-<!-- The below code snippet is automatically added from labs/packer-provisioners.sh -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/example-provisioners.sh) -->
+<!-- The below code snippet is automatically added from labs/example-provisioners.sh -->
 
 ```sh
 #!/usr/bin/env bash
 
 set -eoux pipefail
 
-packer validate packer-provisioners.json
+packer validate example-provisioners.json
 
-packer build packer-provisioners.json
+packer build example-provisioners.json
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## HCL Configuration Language
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/nginx/variables.pkr.hcl) -->
-<!-- The below code snippet is automatically added from labs/nginx/variables.pkr.hcl -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx/variables.pkr.hcl) -->
+<!-- The below code snippet is automatically added from labs/wordpress-nginx/variables.pkr.hcl -->
 
 ```hcl
 
@@ -321,8 +321,8 @@ packer build packer-provisioners.json
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/nginx/build.pkr.hcl) -->
-<!-- The below code snippet is automatically added from labs/nginx/build.pkr.hcl -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx/build.pkr.hcl) -->
+<!-- The below code snippet is automatically added from labs/wordpress-nginx/build.pkr.hcl -->
 
 ```hcl
 
@@ -330,8 +330,8 @@ packer build packer-provisioners.json
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/nginx/sources.pkr.hcl) -->
-<!-- The below code snippet is automatically added from labs/nginx/sources.pkr.hcl -->
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx/sources.pkr.hcl) -->
+<!-- The below code snippet is automatically added from labs/wordpress-nginx/sources.pkr.hcl -->
 
 ```hcl
 
