@@ -35,12 +35,12 @@
     },
     {
       "type": "file",
-      "source": "wordpress-nginx.sh",
-      "destination": "/opt/packer/wordpress-nginx.sh"
+      "source": "example-wordpress-nginx.sh",
+      "destination": "/opt/packer/example-wordpress-nginx.sh"
     },
     {
       "type": "shell",
-      "inline": ["/opt/packer/wordpress-nginx.sh"]
+      "inline": ["/opt/packer/example-wordpress-nginx.sh"]
     }
   ]
 }

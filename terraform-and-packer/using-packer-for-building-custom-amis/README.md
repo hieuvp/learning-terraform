@@ -282,12 +282,12 @@ packer build example-builders.json
     },
     {
       "type": "file",
-      "source": "wordpress-nginx.sh",
-      "destination": "/opt/packer/wordpress-nginx.sh"
+      "source": "example-wordpress-nginx.sh",
+      "destination": "/opt/packer/example-wordpress-nginx.sh"
     },
     {
       "type": "shell",
-      "inline": ["/opt/packer/wordpress-nginx.sh"]
+      "inline": ["/opt/packer/example-wordpress-nginx.sh"]
     }
   ]
 }
@@ -316,7 +316,10 @@ packer build example-provisioners.json
 <!-- The below code snippet is automatically added from labs/wordpress-nginx/variables.pkr.hcl -->
 
 ```hcl
-
+variable "aws_region" {
+  type    = string
+  default = "us-east-1"
+}
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -325,7 +328,30 @@ packer build example-provisioners.json
 <!-- The below code snippet is automatically added from labs/wordpress-nginx/build.pkr.hcl -->
 
 ```hcl
+build {
+  sources = [
+    "source.amazon-ebs.example"
+  ]
 
+  provisioner "shell" {
+    inline = [
+      "sudo mkdir -p /opt/packer",
+      "sudo mkdir -p /opt/packer/nginx",
+      "sudo chown -R ec2-user:ec2-user /opt"
+    ]
+  }
+
+  provisioner "file" {
+    source      = "example-wordpress-nginx.sh"
+    destination = "/opt/packer/example-wordpress-nginx.sh"
+  }
+
+  provisioner "shell" {
+    inline = [
+      "/opt/packer/example-wordpress-nginx.sh"
+    ]
+  }
+}
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -334,7 +360,29 @@ packer build example-provisioners.json
 <!-- The below code snippet is automatically added from labs/wordpress-nginx/sources.pkr.hcl -->
 
 ```hcl
+source "amazon-ebs" "example" {
+  # name = "amazon-linux-ami"?
 
+  ami_name        = "training-amazon-linux-{{isotime | clean_resource_name}}"
+  ami_description = "Linux-AMI"
+  instance_type   = "t2.micro"
+  region          = var.aws_region
+  ssh_username    = "ec2-user"
+
+  source_ami_filter {
+    filters = {
+      virtualization-type = "hvm"
+      architecture        = "x86_64"
+      name                = "*amzn-ami-hvm-*"
+      root-device-type    = "ebs"
+
+      # "block-device-mapping.volume-type" = "gp2"?
+
+    }
+    owners      = ["amazon"]
+    most_recent = true
+  }
+}
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
