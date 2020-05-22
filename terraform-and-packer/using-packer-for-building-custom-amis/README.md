@@ -10,6 +10,12 @@
 - [What is a Golden Image](#what-is-a-golden-image)
 - [What is Packer](#what-is-packer)
 - [Templates](#templates)
+  - [Template Builders](#template-builders)
+  - [Template Communicators](#template-communicators)
+  - [Template Engine](#template-engine)
+  - [Template Post-Processors](#template-post-processors)
+  - [Template Provisioners](#template-provisioners)
+  - [Template User Variables](#template-user-variables)
 - [Builders](#builders)
 - [Provisioners](#provisioners)
 - [HCL Configuration Language](#hcl-configuration-language)
@@ -61,17 +67,15 @@ is the source from which all new virtual machines are cloned.
 
 ## What is Packer
 
-> HashiCorp Packer has become the standard open source tool for
-> creating **golden images** from code.
+> HashiCorp Packer has become the standard open source tool
+> for creating golden images from code.
 
 Learn how to use HashiCorp Packer in an Azure pipeline to maintain immutable infrastructure.
-Brad Stevens, a Cloud Technical Lead at CDW discusses golden images in this talk:
 A battle-tested virtual machine template
 that forms the foundation for all other VMs used in the infrastructure.
 Sometimes they're called base images or image templates,
 but the goal remains the same: immutable infrastructure.
 
-HashiCorp Packer has become the standard open source tool for creating golden images from code.
 In this session from Microsoft Ignite,
 you will see how to create pipelines to host golden images in Azure,
 and make them available through Azure's Shared Image Gallery.
@@ -107,12 +111,17 @@ Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
 
-- Builders
-- Communicators
-- Engine
-- Post-Processors
-- Provisioners
-- User Variables
+### Template Builders
+
+### Template Communicators
+
+### Template Engine
+
+### Template Post-Processors
+
+### Template Provisioners
+
+### Template User Variables
 
 ## Builders
 
