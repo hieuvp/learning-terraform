@@ -312,6 +312,33 @@ packer build packer-provisioners.json
 
 ## HCL Configuration Language
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/nginx/variables.pkr.hcl) -->
+<!-- The below code snippet is automatically added from labs/nginx/variables.pkr.hcl -->
+
+```hcl
+
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/nginx/build.pkr.hcl) -->
+<!-- The below code snippet is automatically added from labs/nginx/build.pkr.hcl -->
+
+```hcl
+
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/nginx/sources.pkr.hcl) -->
+<!-- The below code snippet is automatically added from labs/nginx/sources.pkr.hcl -->
+
+```hcl
+
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## References
 
 - [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
