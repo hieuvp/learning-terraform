@@ -1,6 +1,8 @@
 # Using Packer for building Custom AMI's
 
-<div align="center"><img src="assets/packer-terraform-aws.png" width="900"></div>
+<div align="center">
+  <img src="assets/packer-terraform-aws.png" width="900">
+</div>
 
 ## Table of Contents
 
