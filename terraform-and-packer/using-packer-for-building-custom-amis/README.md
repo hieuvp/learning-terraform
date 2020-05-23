@@ -228,7 +228,6 @@ If you don't know how configuration templates work yet, please read that page fi
 set -eoux pipefail
 
 packer validate example-builders.json
-
 packer build example-builders.json
 ```
 
@@ -275,8 +274,7 @@ packer build example-builders.json
     {
       "type": "shell",
       "inline": [
-        "sudo mkdir -p /opt/packer",
-        "sudo mkdir -p /opt/packer/nginx",
+        "sudo mkdir -p /opt/packer/wordpress-nginx",
         "sudo chown -R ec2-user:ec2-user /opt"
       ]
     },
@@ -304,7 +302,6 @@ packer build example-builders.json
 set -eoux pipefail
 
 packer validate example-provisioners.json
-
 packer build example-provisioners.json
 ```
 
@@ -335,8 +332,7 @@ build {
 
   provisioner "shell" {
     inline = [
-      "sudo mkdir -p /opt/packer",
-      "sudo mkdir -p /opt/packer/nginx",
+      "sudo mkdir -p /opt/packer/wordpress-nginx",
       "sudo chown -R ec2-user:ec2-user /opt"
     ]
   }

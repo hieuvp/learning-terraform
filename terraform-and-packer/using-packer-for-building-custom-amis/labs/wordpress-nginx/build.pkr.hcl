@@ -5,8 +5,7 @@ build {
 
   provisioner "shell" {
     inline = [
-      "sudo mkdir -p /opt/packer",
-      "sudo mkdir -p /opt/packer/nginx",
+      "sudo mkdir -p /opt/packer/wordpress-nginx",
       "sudo chown -R ec2-user:ec2-user /opt"
     ]
   }
