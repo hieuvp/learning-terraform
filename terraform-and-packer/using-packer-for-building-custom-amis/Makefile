@@ -15,4 +15,5 @@ wordpress-nginx:
 
 .PHONY: cleanup
 cleanup:
-	scripts/cleanup.sh
+	cd labs \
+	&& ./cleanup.sh &> ./cleanup.console

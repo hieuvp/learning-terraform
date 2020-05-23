@@ -1,0 +1,13 @@
+
+Found A Matching AMI       : shopback-learning-packer-2020-05-23T03-50-13Z
+- Deregistering This Image : ami-0629c41cdf589b976
+- Deleting This Snapshot   : snap-09c24f29b6f19982b
+
+Found A Matching AMI       : shopback-learning-packer-2020-05-23T03-53-42Z
+- Deregistering This Image : ami-0a472499cdca02d58
+- Deleting This Snapshot   : snap-0a8742c52666b82a9
+
+Found A Matching AMI       : shopback-learning-packer-2020-05-23T03-46-52Z
+- Deregistering This Image : ami-0a85e167a599cf2ad
+- Deleting This Snapshot   : snap-03d20465b34eb0ab8
+
