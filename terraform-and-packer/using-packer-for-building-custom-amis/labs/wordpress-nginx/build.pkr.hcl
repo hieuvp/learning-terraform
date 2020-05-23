@@ -11,13 +11,13 @@ build {
   }
 
   provisioner "file" {
-    source      = "example-wordpress-nginx.sh"
-    destination = "/opt/packer/example-wordpress-nginx.sh"
+    source      = "clone-source-code.sh"
+    destination = "/opt/packer/clone-source-code.sh"
   }
 
   provisioner "shell" {
     inline = [
-      "/opt/packer/example-wordpress-nginx.sh"
+      "/opt/packer/clone-source-code.sh"
     ]
   }
 }

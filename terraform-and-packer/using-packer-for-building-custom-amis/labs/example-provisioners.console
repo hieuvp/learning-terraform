@@ -2,40 +2,40 @@
 Template validated successfully.
 + packer build -color=false example-provisioners.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-24-32Z
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-41-57Z
     amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
-==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a580-2cd5-8ddb-9ade-200fed4849f7
-==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a587-59bc-35e1-86cf-0c0c188cc723
+==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a996-9295-e663-e3eb-3621e4f77c40
+==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a99c-4998-37f1-3fbe-4f434e847cc1
 ==> amazon-linux-ami: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-linux-ami: Launching a source AWS instance...
 ==> amazon-linux-ami: Adding tags to source instance
     amazon-linux-ami: Adding tag: "Name": "Packer Builder"
-    amazon-linux-ami: Instance ID: i-03e7f42cc79fad6be
-==> amazon-linux-ami: Waiting for instance (i-03e7f42cc79fad6be) to become ready...
-==> amazon-linux-ami: Using ssh communicator to connect: 54.82.207.83
+    amazon-linux-ami: Instance ID: i-0bf861f30a3fa426c
+==> amazon-linux-ami: Waiting for instance (i-0bf861f30a3fa426c) to become ready...
+==> amazon-linux-ami: Using ssh communicator to connect: 34.205.65.203
 ==> amazon-linux-ami: Waiting for SSH to become available...
 ==> amazon-linux-ami: Connected to SSH!
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell250411581
-==> amazon-linux-ami: Uploading example-wordpress-nginx.sh => /opt/packer/example-wordpress-nginx.sh
-example-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 170 B / 170 B [=======================================] 100.00% 1s
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell438509773
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell373575102
+==> amazon-linux-ami: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
+clone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell254046462
 ==> amazon-linux-ami: + sudo yum --quiet --assumeyes install git
 ==> amazon-linux-ami: + git clone https://github.com/A5hleyRich/wordpress-nginx.git /opt/packer/wordpress-nginx
 ==> amazon-linux-ami: Cloning into '/opt/packer/wordpress-nginx'...
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-24-32Z from instance i-03e7f42cc79fad6be
-    amazon-linux-ami: AMI: ami-018d8628eed7850ea
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-41-57Z from instance i-0bf861f30a3fa426c
+    amazon-linux-ami: AMI: ami-0c0f8339a416eea03
 ==> amazon-linux-ami: Waiting for AMI to become ready...
-==> amazon-linux-ami: Modifying attributes on AMI (ami-018d8628eed7850ea)...
+==> amazon-linux-ami: Modifying attributes on AMI (ami-0c0f8339a416eea03)...
     amazon-linux-ami: Modifying: description
-==> amazon-linux-ami: Modifying attributes on snapshot (snap-0fc9c681acb9cea34)...
+==> amazon-linux-ami: Modifying attributes on snapshot (snap-067ba06cc3e0aa8fd)...
 ==> amazon-linux-ami: Terminating the source AWS instance...
 ==> amazon-linux-ami: Cleaning up any extra volumes...
 ==> amazon-linux-ami: No volumes to clean up, skipping
@@ -45,5 +45,5 @@ Build 'amazon-linux-ami' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
-us-east-1: ami-018d8628eed7850ea
+us-east-1: ami-0c0f8339a416eea03
 

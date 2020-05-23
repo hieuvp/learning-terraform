@@ -1,96 +1,40 @@
 + packer build -color=false wordpress-nginx
 ==> amazon-ebs: Prevalidating any provided VPC information
-==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-09-57Z
+==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-45-18Z
     amazon-ebs: Found Image ID: ami-01d025118d8e760db
-==> amazon-ebs: Creating temporary keypair: packer_5ec8a215-f4ab-c4e6-6d73-f6edd1a253b7
-==> amazon-ebs: Creating temporary security group for this instance: packer_5ec8a21c-a9ca-3187-b4c5-4a306cd2e343
+==> amazon-ebs: Creating temporary keypair: packer_5ec8aa5e-1388-cd17-569b-20e9f12b1fc6
+==> amazon-ebs: Creating temporary security group for this instance: packer_5ec8aa66-0c85-4f3d-1fe6-d7eee67739d8
 ==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-ebs: Launching a source AWS instance...
 ==> amazon-ebs: Adding tags to source instance
     amazon-ebs: Adding tag: "Name": "Packer Builder"
-    amazon-ebs: Instance ID: i-0cff6cead5d82a1e7
-==> amazon-ebs: Waiting for instance (i-0cff6cead5d82a1e7) to become ready...
-==> amazon-ebs: Using ssh communicator to connect: 100.25.141.187
+    amazon-ebs: Instance ID: i-0aefdff77cc6fe562
+==> amazon-ebs: Waiting for instance (i-0aefdff77cc6fe562) to become ready...
+==> amazon-ebs: Using ssh communicator to connect: 35.175.130.53
 ==> amazon-ebs: Waiting for SSH to become available...
 ==> amazon-ebs: Connected to SSH!
-==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell614567377
-==> amazon-ebs: Uploading example-wordpress-nginx.sh => /opt/packer/example-wordpress-nginx.sh
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
-==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell041295105
-==> amazon-ebs: + sudo yum -y install git
-    amazon-ebs: Loaded plugins: priorities, update-motd, upgrade-helper
-    amazon-ebs: Resolving Dependencies
-    amazon-ebs: --> Running transaction check
-    amazon-ebs: ---> Package git.x86_64 0:2.14.6-1.62.amzn1 will be installed
-    amazon-ebs: --> Processing Dependency: perl-Git = 2.14.6-1.62.amzn1 for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-ebs: --> Processing Dependency: perl(Term::ReadKey) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-ebs: --> Processing Dependency: perl(Git::I18N) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-ebs: --> Processing Dependency: perl(Git) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-ebs: --> Processing Dependency: perl(Error) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-ebs: --> Running transaction check
-    amazon-ebs: ---> Package perl-Error.noarch 1:0.17020-2.9.amzn1 will be installed
-    amazon-ebs: ---> Package perl-Git.noarch 0:2.14.6-1.62.amzn1 will be installed
-    amazon-ebs: ---> Package perl-TermReadKey.x86_64 0:2.30-20.9.amzn1 will be installed
-    amazon-ebs: --> Finished Dependency Resolution
-    amazon-ebs:
-    amazon-ebs: Dependencies Resolved
-    amazon-ebs:
-    amazon-ebs: ================================================================================
-    amazon-ebs:  Package              Arch       Version                 Repository        Size
-    amazon-ebs: ================================================================================
-    amazon-ebs: Installing:
-    amazon-ebs:  git                  x86_64     2.14.6-1.62.amzn1       amzn-updates      12 M
-    amazon-ebs: Installing for dependencies:
-    amazon-ebs:  perl-Error           noarch     1:0.17020-2.9.amzn1     amzn-main         33 k
-    amazon-ebs:  perl-Git             noarch     2.14.6-1.62.amzn1       amzn-updates      69 k
-    amazon-ebs:  perl-TermReadKey     x86_64     2.30-20.9.amzn1         amzn-main         33 k
-    amazon-ebs:
-    amazon-ebs: Transaction Summary
-    amazon-ebs: ================================================================================
-    amazon-ebs: Install  1 Package (+3 Dependent packages)
-    amazon-ebs:
-    amazon-ebs: Total download size: 12 M
-    amazon-ebs: Installed size: 29 M
-    amazon-ebs: Downloading packages:
-    amazon-ebs: --------------------------------------------------------------------------------
-    amazon-ebs: Total                                               10 MB/s |  12 MB  00:01
-    amazon-ebs: Running transaction check
-    amazon-ebs: Running transaction test
-    amazon-ebs: Transaction test succeeded
-    amazon-ebs: Running transaction
-    amazon-ebs:   Installing : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
-    amazon-ebs:   Installing : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      2/4
-    amazon-ebs:   Installing : git-2.14.6-1.62.amzn1.x86_64                                 3/4
-    amazon-ebs:   Installing : perl-Git-2.14.6-1.62.amzn1.noarch                            4/4
-    amazon-ebs:   Verifying  : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
-    amazon-ebs:   Verifying  : git-2.14.6-1.62.amzn1.x86_64                                 2/4
-    amazon-ebs:   Verifying  : perl-Git-2.14.6-1.62.amzn1.noarch                            3/4
-    amazon-ebs:   Verifying  : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      4/4
-    amazon-ebs:
-    amazon-ebs: Installed:
-    amazon-ebs:   git.x86_64 0:2.14.6-1.62.amzn1
-    amazon-ebs:
-    amazon-ebs: Dependency Installed:
-    amazon-ebs:   perl-Error.noarch 1:0.17020-2.9.amzn1     perl-Git.noarch 0:2.14.6-1.62.amzn1
-    amazon-ebs:   perl-TermReadKey.x86_64 0:2.30-20.9.amzn1
-    amazon-ebs:
-    amazon-ebs: Complete!
+==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell060501310
+==> amazon-ebs: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
+clone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1Aclone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
+==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell241211926
+==> amazon-ebs: + sudo yum --quiet --assumeyes install git
 ==> amazon-ebs: + git clone https://github.com/A5hleyRich/wordpress-nginx.git /opt/packer/wordpress-nginx
 ==> amazon-ebs: Cloning into '/opt/packer/wordpress-nginx'...
 ==> amazon-ebs: Stopping the source instance...
     amazon-ebs: Stopping instance
 ==> amazon-ebs: Waiting for the instance to stop...
-==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-23T04-09-57Z from instance i-0cff6cead5d82a1e7
-    amazon-ebs: AMI: ami-004efaf24e08435dd
+==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-23T04-45-18Z from instance i-0aefdff77cc6fe562
+    amazon-ebs: AMI: ami-026d8f7eda024b8ed
 ==> amazon-ebs: Waiting for AMI to become ready...
-==> amazon-ebs: Modifying attributes on AMI (ami-004efaf24e08435dd)...
+==> amazon-ebs: Modifying attributes on AMI (ami-026d8f7eda024b8ed)...
     amazon-ebs: Modifying: description
-==> amazon-ebs: Modifying attributes on snapshot (snap-05979f0929c00c733)...
+==> amazon-ebs: Modifying attributes on snapshot (snap-0ff5c552b4f79e66b)...
 ==> amazon-ebs: Terminating the source AWS instance...
 ==> amazon-ebs: Cleaning up any extra volumes...
 ==> amazon-ebs: No volumes to clean up, skipping
@@ -100,5 +44,5 @@ Build 'amazon-ebs' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-ebs: AMIs were created:
-us-east-1: ami-004efaf24e08435dd
+us-east-1: ami-026d8f7eda024b8ed
 

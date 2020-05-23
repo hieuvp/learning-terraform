@@ -17,3 +17,6 @@ wordpress-nginx:
 cleanup:
 	cd labs \
 	&& ./cleanup.sh &> ./cleanup.console
+
+.PHONY: all
+all: example-builders example-provisioners wordpress-nginx cleanup
