@@ -332,103 +332,46 @@ us-east-1: ami-08f8c36f9e150110c
 Template validated successfully.
 + packer build -color=false example-provisioners.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-06-33Z
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-24-32Z
     amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
-==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a149-9b3f-ce9a-44f6-58adbd0effcb
-==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a150-e411-e66a-2808-2fea3baf4c52
+==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a580-2cd5-8ddb-9ade-200fed4849f7
+==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a587-59bc-35e1-86cf-0c0c188cc723
 ==> amazon-linux-ami: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-linux-ami: Launching a source AWS instance...
 ==> amazon-linux-ami: Adding tags to source instance
     amazon-linux-ami: Adding tag: "Name": "Packer Builder"
-    amazon-linux-ami: Instance ID: i-03cdd022e249b598a
-==> amazon-linux-ami: Waiting for instance (i-03cdd022e249b598a) to become ready...
-==> amazon-linux-ami: Using ssh communicator to connect: 100.26.213.32
+    amazon-linux-ami: Instance ID: i-03e7f42cc79fad6be
+==> amazon-linux-ami: Waiting for instance (i-03e7f42cc79fad6be) to become ready...
+==> amazon-linux-ami: Using ssh communicator to connect: 54.82.207.83
 ==> amazon-linux-ami: Waiting for SSH to become available...
 ==> amazon-linux-ami: Connected to SSH!
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell414162544
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell250411581
 ==> amazon-linux-ami: Uploading example-wordpress-nginx.sh => /opt/packer/example-wordpress-nginx.sh
 
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+example-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
 [1A
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+example-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
 [1A
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+example-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
 [1A
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+example-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
 [1A
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+example-wordpress-nginx.sh 170 B / 170 B [==========================================] 100.00%
 [1A
-example-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell446458856
-==> amazon-linux-ami: + sudo yum -y install git
-    amazon-linux-ami: Loaded plugins: priorities, update-motd, upgrade-helper
-    amazon-linux-ami: Resolving Dependencies
-    amazon-linux-ami: --> Running transaction check
-    amazon-linux-ami: ---> Package git.x86_64 0:2.14.6-1.62.amzn1 will be installed
-    amazon-linux-ami: --> Processing Dependency: perl-Git = 2.14.6-1.62.amzn1 for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-linux-ami: --> Processing Dependency: perl(Term::ReadKey) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-linux-ami: --> Processing Dependency: perl(Git::I18N) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-linux-ami: --> Processing Dependency: perl(Git) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-linux-ami: --> Processing Dependency: perl(Error) for package: git-2.14.6-1.62.amzn1.x86_64
-    amazon-linux-ami: --> Running transaction check
-    amazon-linux-ami: ---> Package perl-Error.noarch 1:0.17020-2.9.amzn1 will be installed
-    amazon-linux-ami: ---> Package perl-Git.noarch 0:2.14.6-1.62.amzn1 will be installed
-    amazon-linux-ami: ---> Package perl-TermReadKey.x86_64 0:2.30-20.9.amzn1 will be installed
-    amazon-linux-ami: --> Finished Dependency Resolution
-    amazon-linux-ami:
-    amazon-linux-ami: Dependencies Resolved
-    amazon-linux-ami:
-    amazon-linux-ami: ================================================================================
-    amazon-linux-ami:  Package              Arch       Version                 Repository        Size
-    amazon-linux-ami: ================================================================================
-    amazon-linux-ami: Installing:
-    amazon-linux-ami:  git                  x86_64     2.14.6-1.62.amzn1       amzn-updates      12 M
-    amazon-linux-ami: Installing for dependencies:
-    amazon-linux-ami:  perl-Error           noarch     1:0.17020-2.9.amzn1     amzn-main         33 k
-    amazon-linux-ami:  perl-Git             noarch     2.14.6-1.62.amzn1       amzn-updates      69 k
-    amazon-linux-ami:  perl-TermReadKey     x86_64     2.30-20.9.amzn1         amzn-main         33 k
-    amazon-linux-ami:
-    amazon-linux-ami: Transaction Summary
-    amazon-linux-ami: ================================================================================
-    amazon-linux-ami: Install  1 Package (+3 Dependent packages)
-    amazon-linux-ami:
-    amazon-linux-ami: Total download size: 12 M
-    amazon-linux-ami: Installed size: 29 M
-    amazon-linux-ami: Downloading packages:
-    amazon-linux-ami: --------------------------------------------------------------------------------
-    amazon-linux-ami: Total                                              6.9 MB/s |  12 MB  00:01
-    amazon-linux-ami: Running transaction check
-    amazon-linux-ami: Running transaction test
-    amazon-linux-ami: Transaction test succeeded
-    amazon-linux-ami: Running transaction
-    amazon-linux-ami:   Installing : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
-    amazon-linux-ami:   Installing : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      2/4
-    amazon-linux-ami:   Installing : git-2.14.6-1.62.amzn1.x86_64                                 3/4
-    amazon-linux-ami:   Installing : perl-Git-2.14.6-1.62.amzn1.noarch                            4/4
-    amazon-linux-ami:   Verifying  : 1:perl-Error-0.17020-2.9.amzn1.noarch                        1/4
-    amazon-linux-ami:   Verifying  : git-2.14.6-1.62.amzn1.x86_64                                 2/4
-    amazon-linux-ami:   Verifying  : perl-Git-2.14.6-1.62.amzn1.noarch                            3/4
-    amazon-linux-ami:   Verifying  : perl-TermReadKey-2.30-20.9.amzn1.x86_64                      4/4
-    amazon-linux-ami:
-    amazon-linux-ami: Installed:
-    amazon-linux-ami:   git.x86_64 0:2.14.6-1.62.amzn1
-    amazon-linux-ami:
-    amazon-linux-ami: Dependency Installed:
-    amazon-linux-ami:   perl-Error.noarch 1:0.17020-2.9.amzn1     perl-Git.noarch 0:2.14.6-1.62.amzn1
-    amazon-linux-ami:   perl-TermReadKey.x86_64 0:2.30-20.9.amzn1
-    amazon-linux-ami:
-    amazon-linux-ami: Complete!
+example-wordpress-nginx.sh 170 B / 170 B [=======================================] 100.00% 1s
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell438509773
+==> amazon-linux-ami: + sudo yum --quiet --assumeyes install git
 ==> amazon-linux-ami: + git clone https://github.com/A5hleyRich/wordpress-nginx.git /opt/packer/wordpress-nginx
 ==> amazon-linux-ami: Cloning into '/opt/packer/wordpress-nginx'...
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-06-33Z from instance i-03cdd022e249b598a
-    amazon-linux-ami: AMI: ami-020b544a0b60482b9
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-24-32Z from instance i-03e7f42cc79fad6be
+    amazon-linux-ami: AMI: ami-018d8628eed7850ea
 ==> amazon-linux-ami: Waiting for AMI to become ready...
-==> amazon-linux-ami: Modifying attributes on AMI (ami-020b544a0b60482b9)...
+==> amazon-linux-ami: Modifying attributes on AMI (ami-018d8628eed7850ea)...
     amazon-linux-ami: Modifying: description
-==> amazon-linux-ami: Modifying attributes on snapshot (snap-03583e70a72cbe269)...
+==> amazon-linux-ami: Modifying attributes on snapshot (snap-0fc9c681acb9cea34)...
 ==> amazon-linux-ami: Terminating the source AWS instance...
 ==> amazon-linux-ami: Cleaning up any extra volumes...
 ==> amazon-linux-ami: No volumes to clean up, skipping
@@ -438,7 +381,7 @@ Build 'amazon-linux-ami' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
-us-east-1: ami-020b544a0b60482b9
+us-east-1: ami-018d8628eed7850ea
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
