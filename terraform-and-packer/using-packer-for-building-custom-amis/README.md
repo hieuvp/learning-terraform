@@ -387,6 +387,19 @@ source "amazon-ebs" "example" {
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx.sh) -->
+<!-- The below code snippet is automatically added from labs/wordpress-nginx.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eoux pipefail
+
+packer build wordpress-nginx
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ## References
 
 - [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
