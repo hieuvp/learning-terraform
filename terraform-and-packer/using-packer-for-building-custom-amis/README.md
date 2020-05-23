@@ -21,6 +21,7 @@
 - [Builders](#builders)
 - [Provisioners](#provisioners)
 - [HCL Configuration Language](#hcl-configuration-language)
+- [Cleanup](#cleanup)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -634,6 +635,56 @@ us-east-1: ami-0a815d2b5b1223cf2
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Cleanup
+
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=scripts/cleanup.sh) -->
+<!-- The below code snippet is automatically added from scripts/cleanup.sh -->
+
+```sh
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+export AWS_REGION="us-east-1"
+
+readonly AMI_NAME="shopback-linux-*"
+readonly IMAGES=$(
+  aws ec2 describe-images --output json \
+    --filters "Name=name,Values=${AMI_NAME}"
+)
+
+main() {
+  local -r index=$1
+  local -r name=$(echo "$IMAGES" | jq --raw-output ".Images[${index}].Name")
+  local -r image_id=$(echo "$IMAGES" | jq --raw-output ".Images[${index}].ImageId")
+  local -r snapshot_id=$(echo "$IMAGES" | jq --raw-output ".Images[${index}].BlockDeviceMappings[0].Ebs.SnapshotId")
+
+  printf "\n"
+  echo "Found A Matching AMI       : ${name}"
+
+  echo "- Deregistering This Image : ${image_id}"
+  aws ec2 deregister-image --image-id "$image_id"
+
+  echo "- Deleting This Snapshot   : ${snapshot_id}"
+  aws ec2 delete-snapshot --snapshot-id "$snapshot_id"
+}
+
+for index in $(echo "$IMAGES" | jq '.Images | keys | .[]'); do
+  main "$index"
+done
+
+printf "\n"
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+Pricing
+Resources
+
+- EC2
+- AMI
+- Snapshot ==> Why?
 
 ## References
 
