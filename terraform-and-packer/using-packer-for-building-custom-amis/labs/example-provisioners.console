@@ -2,7 +2,7 @@
 Template validated successfully.
 + packer build -color=false example-provisioners.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-linux-2020-05-23T01-40-46Z
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T01-40-46Z
     amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
 ==> amazon-linux-ami: Creating temporary keypair: packer_5ec87f1e-ddc1-5dfd-2c39-564b791180fa
 ==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec87f25-cccb-a65e-cef8-9cb72348ba9a
@@ -17,12 +17,18 @@ Template validated successfully.
 ==> amazon-linux-ami: Connected to SSH!
 ==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell293599887
 ==> amazon-linux-ami: Uploading example-wordpress-nginx.sh => /opt/packer/example-wordpress-nginx.sh
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
+
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
 ==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell579266743
 ==> amazon-linux-ami: + sudo yum -y install git
     amazon-linux-ami: Loaded plugins: priorities, update-motd, upgrade-helper
@@ -87,7 +93,7 @@ Template validated successfully.
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-linux-2020-05-23T01-40-46Z from instance i-05e1f0c9afcd42fab
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T01-40-46Z from instance i-05e1f0c9afcd42fab
     amazon-linux-ami: AMI: ami-0d1873ca0fd908dcf
 ==> amazon-linux-ami: Waiting for AMI to become ready...
 ==> amazon-linux-ami: Modifying attributes on AMI (ami-0d1873ca0fd908dcf)...

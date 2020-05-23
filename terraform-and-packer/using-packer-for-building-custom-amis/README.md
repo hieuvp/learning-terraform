@@ -194,7 +194,7 @@ If you don't know how configuration templates work yet, please read that page fi
   },
   "builders": [
     {
-      "ami_name": "shopback-linux-{{isotime | clean_resource_name}}",
+      "ami_name": "shopback-learning-packer-{{isotime | clean_resource_name}}",
       "ami_description": "ShopBack Linux AMI",
       "instance_type": "t2.micro",
       "name": "amazon-linux-ami",
@@ -227,7 +227,7 @@ If you don't know how configuration templates work yet, please read that page fi
 Template validated successfully.
 + packer build -color=false example-builders.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-linux-2020-05-23T01-38-09Z
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T01-38-09Z
     amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
 ==> amazon-linux-ami: Creating temporary keypair: packer_5ec87e81-f2e7-a77c-e04a-a0e09a051e5e
 ==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec87e89-975d-1867-142b-5807ef3e8a9b
@@ -243,7 +243,7 @@ Template validated successfully.
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-linux-2020-05-23T01-38-09Z from instance i-0034045b5b6a4f41c
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T01-38-09Z from instance i-0034045b5b6a4f41c
     amazon-linux-ami: AMI: ami-0824fe55d1c59be4f
 ==> amazon-linux-ami: Waiting for AMI to become ready...
 ==> amazon-linux-ami: Modifying attributes on AMI (ami-0824fe55d1c59be4f)...
@@ -280,7 +280,7 @@ us-east-1: ami-0824fe55d1c59be4f
   },
   "builders": [
     {
-      "ami_name": "shopback-linux-{{isotime | clean_resource_name}}",
+      "ami_name": "shopback-learning-packer-{{isotime | clean_resource_name}}",
       "ami_description": "ShopBack Linux AMI",
       "instance_type": "t2.micro",
       "name": "amazon-linux-ami",
@@ -331,7 +331,7 @@ us-east-1: ami-0824fe55d1c59be4f
 Template validated successfully.
 + packer build -color=false example-provisioners.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-linux-2020-05-23T01-40-46Z
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T01-40-46Z
     amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
 ==> amazon-linux-ami: Creating temporary keypair: packer_5ec87f1e-ddc1-5dfd-2c39-564b791180fa
 ==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec87f25-cccb-a65e-cef8-9cb72348ba9a
@@ -422,7 +422,7 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-linux-2020-05-23T01-40-46Z from instance i-05e1f0c9afcd42fab
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T01-40-46Z from instance i-05e1f0c9afcd42fab
     amazon-linux-ami: AMI: ami-0d1873ca0fd908dcf
 ==> amazon-linux-ami: Waiting for AMI to become ready...
 ==> amazon-linux-ami: Modifying attributes on AMI (ami-0d1873ca0fd908dcf)...
@@ -494,7 +494,7 @@ build {
 source "amazon-ebs" "example" {
   # name = "amazon-linux-ami"?
 
-  ami_name        = "shopback-linux-{{isotime | clean_resource_name}}"
+  ami_name        = "shopback-learning-packer-{{isotime | clean_resource_name}}"
   ami_description = "ShopBack Linux AMI"
   instance_type   = "t2.micro"
   region          = var.aws_region
@@ -524,7 +524,7 @@ source "amazon-ebs" "example" {
 ```console
 + packer build -color=false wordpress-nginx
 ==> amazon-ebs: Prevalidating any provided VPC information
-==> amazon-ebs: Prevalidating AMI Name: shopback-linux-2020-05-23T01-54-49Z
+==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T01-54-49Z
     amazon-ebs: Found Image ID: ami-01d025118d8e760db
 ==> amazon-ebs: Creating temporary keypair: packer_5ec88269-439d-5555-51f0-010dbaed6f3c
 ==> amazon-ebs: Creating temporary security group for this instance: packer_5ec88271-7362-722d-5231-973914e3ba11
@@ -615,7 +615,7 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
 ==> amazon-ebs: Stopping the source instance...
     amazon-ebs: Stopping instance
 ==> amazon-ebs: Waiting for the instance to stop...
-==> amazon-ebs: Creating AMI shopback-linux-2020-05-23T01-54-49Z from instance i-048e723aa1b1b866a
+==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-23T01-54-49Z from instance i-048e723aa1b1b866a
     amazon-ebs: AMI: ami-0a815d2b5b1223cf2
 ==> amazon-ebs: Waiting for AMI to become ready...
 ==> amazon-ebs: Modifying attributes on AMI (ami-0a815d2b5b1223cf2)...

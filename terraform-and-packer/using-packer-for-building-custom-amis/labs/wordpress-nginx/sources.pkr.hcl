@@ -1,7 +1,7 @@
 source "amazon-ebs" "example" {
   # name = "amazon-linux-ami"?
 
-  ami_name        = "shopback-linux-{{isotime | clean_resource_name}}"
+  ami_name        = "shopback-learning-packer-{{isotime | clean_resource_name}}"
   ami_description = "ShopBack Linux AMI"
   instance_type   = "t2.micro"
   region          = var.aws_region

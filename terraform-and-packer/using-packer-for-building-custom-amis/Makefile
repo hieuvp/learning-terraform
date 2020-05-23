@@ -12,3 +12,7 @@ example-provisioners:
 wordpress-nginx:
 	cd labs \
 	&& ./wordpress-nginx.sh &> ./wordpress-nginx.console
+
+.PHONY: cleanup
+cleanup:
+	scripts/cleanup.sh

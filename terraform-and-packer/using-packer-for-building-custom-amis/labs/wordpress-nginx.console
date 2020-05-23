@@ -1,6 +1,6 @@
 + packer build -color=false wordpress-nginx
 ==> amazon-ebs: Prevalidating any provided VPC information
-==> amazon-ebs: Prevalidating AMI Name: shopback-linux-2020-05-23T01-54-49Z
+==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T01-54-49Z
     amazon-ebs: Found Image ID: ami-01d025118d8e760db
 ==> amazon-ebs: Creating temporary keypair: packer_5ec88269-439d-5555-51f0-010dbaed6f3c
 ==> amazon-ebs: Creating temporary security group for this instance: packer_5ec88271-7362-722d-5231-973914e3ba11
@@ -15,12 +15,18 @@
 ==> amazon-ebs: Connected to SSH!
 ==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell046870775
 ==> amazon-ebs: Uploading example-wordpress-nginx.sh => /opt/packer/example-wordpress-nginx.sh
-example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
-[1Aexample-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
+
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
+[1A
+example-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
 ==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell438462199
 ==> amazon-ebs: + sudo yum -y install git
     amazon-ebs: Loaded plugins: priorities, update-motd, upgrade-helper
@@ -85,7 +91,7 @@
 ==> amazon-ebs: Stopping the source instance...
     amazon-ebs: Stopping instance
 ==> amazon-ebs: Waiting for the instance to stop...
-==> amazon-ebs: Creating AMI shopback-linux-2020-05-23T01-54-49Z from instance i-048e723aa1b1b866a
+==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-23T01-54-49Z from instance i-048e723aa1b1b866a
     amazon-ebs: AMI: ami-0a815d2b5b1223cf2
 ==> amazon-ebs: Waiting for AMI to become ready...
 ==> amazon-ebs: Modifying attributes on AMI (ami-0a815d2b5b1223cf2)...
