@@ -20,10 +20,10 @@ main() {
   echo "Found A Matching AMI       : ${name}"
 
   echo "- Deregistering This Image : ${image_id}"
-  # aws ec2 deregister-image --image-id ami-0123456789
+  aws ec2 deregister-image --image-id "$image_id"
 
   echo "- Deleting This Snapshot   : ${snapshot_id}"
-  # aws ec2 delete-snapshot --snapshot-id snap-9876543210
+  aws ec2 delete-snapshot --snapshot-id "$snapshot_id"
 }
 
 for index in $(echo "$IMAGES" | jq '.Images | keys | .[]'); do
