@@ -29,5 +29,3 @@ main() {
 for index in $(echo "$IMAGES" | jq '.Images | keys | .[]'); do
   main "$index"
 done
-
-printf "\n"

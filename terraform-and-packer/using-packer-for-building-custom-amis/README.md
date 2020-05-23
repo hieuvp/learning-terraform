@@ -228,28 +228,28 @@ If you don't know how configuration templates work yet, please read that page fi
 Template validated successfully.
 + packer build -color=false example-builders.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T03-46-52Z
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-03-21Z
     amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
-==> amazon-linux-ami: Creating temporary keypair: packer_5ec89cac-aefb-67d4-78bc-6c834e5916a3
-==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec89cb4-52ca-84b7-8532-5d6182461087
+==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a089-2999-4624-4ccc-c83586b424ea
+==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a091-8cf5-5edb-309e-1e6309e7cab4
 ==> amazon-linux-ami: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-linux-ami: Launching a source AWS instance...
 ==> amazon-linux-ami: Adding tags to source instance
     amazon-linux-ami: Adding tag: "Name": "Packer Builder"
-    amazon-linux-ami: Instance ID: i-0766343d4f36842c6
-==> amazon-linux-ami: Waiting for instance (i-0766343d4f36842c6) to become ready...
-==> amazon-linux-ami: Using ssh communicator to connect: 100.25.45.201
+    amazon-linux-ami: Instance ID: i-09b41be60bde11d86
+==> amazon-linux-ami: Waiting for instance (i-09b41be60bde11d86) to become ready...
+==> amazon-linux-ami: Using ssh communicator to connect: 100.26.240.80
 ==> amazon-linux-ami: Waiting for SSH to become available...
 ==> amazon-linux-ami: Connected to SSH!
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T03-46-52Z from instance i-0766343d4f36842c6
-    amazon-linux-ami: AMI: ami-0a85e167a599cf2ad
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-03-21Z from instance i-09b41be60bde11d86
+    amazon-linux-ami: AMI: ami-08f8c36f9e150110c
 ==> amazon-linux-ami: Waiting for AMI to become ready...
-==> amazon-linux-ami: Modifying attributes on AMI (ami-0a85e167a599cf2ad)...
+==> amazon-linux-ami: Modifying attributes on AMI (ami-08f8c36f9e150110c)...
     amazon-linux-ami: Modifying: description
-==> amazon-linux-ami: Modifying attributes on snapshot (snap-03d20465b34eb0ab8)...
+==> amazon-linux-ami: Modifying attributes on snapshot (snap-0c7b273395e480c87)...
 ==> amazon-linux-ami: Terminating the source AWS instance...
 ==> amazon-linux-ami: Cleaning up any extra volumes...
 ==> amazon-linux-ami: No volumes to clean up, skipping
@@ -259,7 +259,7 @@ Build 'amazon-linux-ami' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
-us-east-1: ami-0a85e167a599cf2ad
+us-east-1: ami-08f8c36f9e150110c
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -332,20 +332,20 @@ us-east-1: ami-0a85e167a599cf2ad
 Template validated successfully.
 + packer build -color=false example-provisioners.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T03-50-13Z
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-06-33Z
     amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
-==> amazon-linux-ami: Creating temporary keypair: packer_5ec89d75-b0fb-de71-9bd0-ee74db4a4704
-==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec89d7e-2d83-0eea-c498-35a4bf991018
+==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a149-9b3f-ce9a-44f6-58adbd0effcb
+==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a150-e411-e66a-2808-2fea3baf4c52
 ==> amazon-linux-ami: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-linux-ami: Launching a source AWS instance...
 ==> amazon-linux-ami: Adding tags to source instance
     amazon-linux-ami: Adding tag: "Name": "Packer Builder"
-    amazon-linux-ami: Instance ID: i-029275ffa33807016
-==> amazon-linux-ami: Waiting for instance (i-029275ffa33807016) to become ready...
-==> amazon-linux-ami: Using ssh communicator to connect: 34.232.67.26
+    amazon-linux-ami: Instance ID: i-03cdd022e249b598a
+==> amazon-linux-ami: Waiting for instance (i-03cdd022e249b598a) to become ready...
+==> amazon-linux-ami: Using ssh communicator to connect: 100.26.213.32
 ==> amazon-linux-ami: Waiting for SSH to become available...
 ==> amazon-linux-ami: Connected to SSH!
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell540288373
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell414162544
 ==> amazon-linux-ami: Uploading example-wordpress-nginx.sh => /opt/packer/example-wordpress-nginx.sh
 
 example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
@@ -359,7 +359,7 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
 example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
 [1A
 example-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell326068397
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell446458856
 ==> amazon-linux-ami: + sudo yum -y install git
     amazon-linux-ami: Loaded plugins: priorities, update-motd, upgrade-helper
     amazon-linux-ami: Resolving Dependencies
@@ -396,7 +396,7 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
     amazon-linux-ami: Installed size: 29 M
     amazon-linux-ami: Downloading packages:
     amazon-linux-ami: --------------------------------------------------------------------------------
-    amazon-linux-ami: Total                                              7.8 MB/s |  12 MB  00:01
+    amazon-linux-ami: Total                                              6.9 MB/s |  12 MB  00:01
     amazon-linux-ami: Running transaction check
     amazon-linux-ami: Running transaction test
     amazon-linux-ami: Transaction test succeeded
@@ -423,12 +423,12 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T03-50-13Z from instance i-029275ffa33807016
-    amazon-linux-ami: AMI: ami-0629c41cdf589b976
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-06-33Z from instance i-03cdd022e249b598a
+    amazon-linux-ami: AMI: ami-020b544a0b60482b9
 ==> amazon-linux-ami: Waiting for AMI to become ready...
-==> amazon-linux-ami: Modifying attributes on AMI (ami-0629c41cdf589b976)...
+==> amazon-linux-ami: Modifying attributes on AMI (ami-020b544a0b60482b9)...
     amazon-linux-ami: Modifying: description
-==> amazon-linux-ami: Modifying attributes on snapshot (snap-09c24f29b6f19982b)...
+==> amazon-linux-ami: Modifying attributes on snapshot (snap-03583e70a72cbe269)...
 ==> amazon-linux-ami: Terminating the source AWS instance...
 ==> amazon-linux-ami: Cleaning up any extra volumes...
 ==> amazon-linux-ami: No volumes to clean up, skipping
@@ -438,7 +438,7 @@ Build 'amazon-linux-ami' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
-us-east-1: ami-0629c41cdf589b976
+us-east-1: ami-020b544a0b60482b9
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -525,20 +525,20 @@ source "amazon-ebs" "example" {
 ```console
 + packer build -color=false wordpress-nginx
 ==> amazon-ebs: Prevalidating any provided VPC information
-==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T03-53-42Z
+==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-09-57Z
     amazon-ebs: Found Image ID: ami-01d025118d8e760db
-==> amazon-ebs: Creating temporary keypair: packer_5ec89e46-acf5-7b55-719f-6ddf35cfaadc
-==> amazon-ebs: Creating temporary security group for this instance: packer_5ec89e4d-e60d-66ad-d856-4b846b56ce8f
+==> amazon-ebs: Creating temporary keypair: packer_5ec8a215-f4ab-c4e6-6d73-f6edd1a253b7
+==> amazon-ebs: Creating temporary security group for this instance: packer_5ec8a21c-a9ca-3187-b4c5-4a306cd2e343
 ==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-ebs: Launching a source AWS instance...
 ==> amazon-ebs: Adding tags to source instance
     amazon-ebs: Adding tag: "Name": "Packer Builder"
-    amazon-ebs: Instance ID: i-0eab66a5c24854d98
-==> amazon-ebs: Waiting for instance (i-0eab66a5c24854d98) to become ready...
-==> amazon-ebs: Using ssh communicator to connect: 54.164.93.97
+    amazon-ebs: Instance ID: i-0cff6cead5d82a1e7
+==> amazon-ebs: Waiting for instance (i-0cff6cead5d82a1e7) to become ready...
+==> amazon-ebs: Using ssh communicator to connect: 100.25.141.187
 ==> amazon-ebs: Waiting for SSH to become available...
 ==> amazon-ebs: Connected to SSH!
-==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell425991605
+==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell614567377
 ==> amazon-ebs: Uploading example-wordpress-nginx.sh => /opt/packer/example-wordpress-nginx.sh
 
 example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
@@ -552,7 +552,7 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
 example-wordpress-nginx.sh 153 B / 153 B [==========================================] 100.00%
 [1A
 example-wordpress-nginx.sh 153 B / 153 B [=======================================] 100.00% 1s
-==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell962109293
+==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell041295105
 ==> amazon-ebs: + sudo yum -y install git
     amazon-ebs: Loaded plugins: priorities, update-motd, upgrade-helper
     amazon-ebs: Resolving Dependencies
@@ -589,7 +589,7 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
     amazon-ebs: Installed size: 29 M
     amazon-ebs: Downloading packages:
     amazon-ebs: --------------------------------------------------------------------------------
-    amazon-ebs: Total                                              7.0 MB/s |  12 MB  00:01
+    amazon-ebs: Total                                               10 MB/s |  12 MB  00:01
     amazon-ebs: Running transaction check
     amazon-ebs: Running transaction test
     amazon-ebs: Transaction test succeeded
@@ -616,12 +616,12 @@ example-wordpress-nginx.sh 153 B / 153 B [======================================
 ==> amazon-ebs: Stopping the source instance...
     amazon-ebs: Stopping instance
 ==> amazon-ebs: Waiting for the instance to stop...
-==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-23T03-53-42Z from instance i-0eab66a5c24854d98
-    amazon-ebs: AMI: ami-0a472499cdca02d58
+==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-23T04-09-57Z from instance i-0cff6cead5d82a1e7
+    amazon-ebs: AMI: ami-004efaf24e08435dd
 ==> amazon-ebs: Waiting for AMI to become ready...
-==> amazon-ebs: Modifying attributes on AMI (ami-0a472499cdca02d58)...
+==> amazon-ebs: Modifying attributes on AMI (ami-004efaf24e08435dd)...
     amazon-ebs: Modifying: description
-==> amazon-ebs: Modifying attributes on snapshot (snap-0a8742c52666b82a9)...
+==> amazon-ebs: Modifying attributes on snapshot (snap-05979f0929c00c733)...
 ==> amazon-ebs: Terminating the source AWS instance...
 ==> amazon-ebs: Cleaning up any extra volumes...
 ==> amazon-ebs: No volumes to clean up, skipping
@@ -631,7 +631,7 @@ Build 'amazon-ebs' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-ebs: AMIs were created:
-us-east-1: ami-0a472499cdca02d58
+us-east-1: ami-004efaf24e08435dd
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -673,8 +673,6 @@ main() {
 for index in $(echo "$IMAGES" | jq '.Images | keys | .[]'); do
   main "$index"
 done
-
-printf "\n"
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -683,17 +681,17 @@ printf "\n"
 <!-- The below code snippet is automatically added from labs/cleanup.console -->
 
 ```console
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T03-50-13Z
-- Deregistering This Image : ami-0629c41cdf589b976
-- Deleting This Snapshot   : snap-09c24f29b6f19982b
+Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-09-57Z
+- Deregistering This Image : ami-004efaf24e08435dd
+- Deleting This Snapshot   : snap-05979f0929c00c733
 
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T03-53-42Z
-- Deregistering This Image : ami-0a472499cdca02d58
-- Deleting This Snapshot   : snap-0a8742c52666b82a9
+Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-06-33Z
+- Deregistering This Image : ami-020b544a0b60482b9
+- Deleting This Snapshot   : snap-03583e70a72cbe269
 
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T03-46-52Z
-- Deregistering This Image : ami-0a85e167a599cf2ad
-- Deleting This Snapshot   : snap-03d20465b34eb0ab8
+Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-03-21Z
+- Deregistering This Image : ami-08f8c36f9e150110c
+- Deleting This Snapshot   : snap-0c7b273395e480c87
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
