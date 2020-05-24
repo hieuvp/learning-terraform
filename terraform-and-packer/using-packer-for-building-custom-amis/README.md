@@ -2,6 +2,8 @@
 
 <div align="center">
   <img src="assets/packer-terraform-aws.png" width="900">
+  <br />
+  <div>An example of using <b>Packer</b> for building an automated workflow</div>
 </div>
 
 ## Table of Contents
