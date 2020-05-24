@@ -52,6 +52,10 @@ git-pre-merge:
 	@printf "\n"
 
 	@printf "\n"
+	make export-drawio
+	@printf "\n"
+
+	@printf "\n"
 	make git-add
 	@printf "\n"
 
