@@ -1,4 +1,4 @@
-# Using Packer for building Custom AMI's
+# Using Packer for building Custom AMIs
 
 <div align="center">
   <img src="assets/packer-terraform-aws.png" width="900">
@@ -12,6 +12,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [What is a Golden Image](#what-is-a-golden-image)
+  - [Tips for Getting Started](#tips-for-getting-started)
 - [What is Packer](#what-is-packer)
 - [Templates](#templates)
   - [Template Builders](#template-builders)
@@ -64,11 +65,19 @@ Similarly, you might also hear this term in the world of virtual machines (VMs),
 where a golden image of a carefully configured virtual drive
 is the source from which all new virtual machines are cloned.
 
-<div align="center"><img src="assets/tips-for-getting-started.png" width="900"></div>
-
 <div align="center"><img src="assets/golden-image-pipeline.png" width="900"></div>
 
 <div align="center"><img src="assets/golden-image-value-stream-possibilities.png" width="900"></div>
+
+### Tips for Getting Started
+
+- Goal is to have as few Golden Images as possible to be used in all Infrastructure Scenarios.
+
+- Include all software and configurations in the Golden Image, OR.
+- Install software and do the configuration
+  after the golden image has been spun up and is used by a Virtual Machine.
+
+- Do not build images containing secrets like API Keys and Passwords.
 
 ## What is Packer
 
