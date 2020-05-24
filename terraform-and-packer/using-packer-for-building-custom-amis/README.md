@@ -25,7 +25,7 @@
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
 - [Provisioners](#provisioners)
 - [HCL Configuration Language](#hcl-configuration-language)
-- [Cleanup](#cleanup)
+- [Bonus: Cleanup](#bonus-cleanup)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -70,6 +70,7 @@ is the source from which all new virtual machines are cloned.
   <img src="assets/golden-image-pipeline.png" width="900">
   <br />
   <strong>Golden Image Pipeline</strong>
+  <br />
 </div>
 
 <br />
@@ -78,6 +79,7 @@ is the source from which all new virtual machines are cloned.
   <img src="assets/golden-image-value-stream-possibilities.png" width="900">
   <br />
   <strong>Golden Image Value Stream Possibilities</strong>
+  <br />
 </div>
 
 ### Tips for Getting Started
@@ -408,15 +410,15 @@ Template validated successfully.
 ==> amazon-linux-ami: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
 
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
 ==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell254046462
 ==> amazon-linux-ami: + sudo yum --quiet --assumeyes install git
@@ -550,17 +552,17 @@ source "amazon-ebs" "example" {
 ==> amazon-ebs: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
 
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
 ==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell241211926
 ==> amazon-ebs: + sudo yum --quiet --assumeyes install git
@@ -589,7 +591,7 @@ us-east-2: ami-026d8f7eda024b8ed
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## Cleanup
+## Bonus: Cleanup
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/cleanup.sh) -->
 <!-- The below code snippet is automatically added from labs/cleanup.sh -->
@@ -654,7 +656,7 @@ Resources
 
 - EC2
 - AMI
-- Snapshot ==> Why?
+- Snapshot
 
 ## References
 

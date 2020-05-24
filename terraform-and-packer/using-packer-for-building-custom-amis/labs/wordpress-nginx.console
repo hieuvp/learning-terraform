@@ -17,17 +17,17 @@
 ==> amazon-ebs: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
 
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1A
+
 clone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
 ==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell241211926
 ==> amazon-ebs: + sudo yum --quiet --assumeyes install git
