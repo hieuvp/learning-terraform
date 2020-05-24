@@ -15,7 +15,7 @@ main() {
 
   draw.io --export --format png \
     --scale 1 \
-    --border 20 \
+    --border 5 \
     --embed-diagram \
     "$file"
 }
