@@ -68,7 +68,7 @@ is the source from which all new virtual machines are cloned.
 <div align="center">
   <img src="assets/golden-image-pipeline.png" width="900">
   <br />
-  <div>What is a Golden Image Pipeline</div>
+  <strong>Golden Image Pipeline</strong>
 </div>
 
 <br />
@@ -76,7 +76,7 @@ is the source from which all new virtual machines are cloned.
 <div align="center">
   <img src="assets/golden-image-value-stream-possibilities.png" width="900">
   <br />
-  <div>Golden Image Value Stream Possibilities</div>
+  <strong>Golden Image Value Stream Possibilities</strong>
 </div>
 
 ### Tips for Getting Started
