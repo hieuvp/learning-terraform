@@ -65,3 +65,9 @@ clean:
 	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/clean-terraform.sh
 	@printf "\n"
+
+.PHONY: export-drawio
+export-drawio:
+	@printf "\n"
+	scripts/export-drawio.sh
+	@printf "\n"
