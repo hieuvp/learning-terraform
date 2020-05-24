@@ -1,3 +1,5 @@
+# sources.pkr.hcl
+
 source "amazon-ebs" "example" {
   # name = "amazon-linux-ami"?
 

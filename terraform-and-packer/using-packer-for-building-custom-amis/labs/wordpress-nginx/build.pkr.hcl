@@ -1,3 +1,5 @@
+# build.pkr.hcl
+
 build {
   sources = [
     "source.amazon-ebs.example"

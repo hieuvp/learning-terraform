@@ -2,28 +2,28 @@
 Template validated successfully.
 + packer build -color=false example-builders.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-38-41Z
-    amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
-==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a8d1-c1f3-81b4-3dae-502590008c6a
-==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a8d8-547e-c78c-c185-e9b8ec3d591d
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-24T09-12-39Z
+    amazon-linux-ami: Found Image ID: ami-083ebc5a49573896a
+==> amazon-linux-ami: Creating temporary keypair: packer_5eca3a87-e093-5d6b-7cf9-e1d7ab8a1b86
+==> amazon-linux-ami: Creating temporary security group for this instance: packer_5eca3a8d-0d76-21c9-a819-da286e5e1530
 ==> amazon-linux-ami: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-linux-ami: Launching a source AWS instance...
 ==> amazon-linux-ami: Adding tags to source instance
     amazon-linux-ami: Adding tag: "Name": "Packer Builder"
-    amazon-linux-ami: Instance ID: i-0e300326227dea0cc
-==> amazon-linux-ami: Waiting for instance (i-0e300326227dea0cc) to become ready...
-==> amazon-linux-ami: Using ssh communicator to connect: 100.25.133.181
+    amazon-linux-ami: Instance ID: i-0f68e7d1e817d8cba
+==> amazon-linux-ami: Waiting for instance (i-0f68e7d1e817d8cba) to become ready...
+==> amazon-linux-ami: Using ssh communicator to connect: 3.135.210.132
 ==> amazon-linux-ami: Waiting for SSH to become available...
 ==> amazon-linux-ami: Connected to SSH!
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-38-41Z from instance i-0e300326227dea0cc
-    amazon-linux-ami: AMI: ami-05ae982102ab92f0c
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-24T09-12-39Z from instance i-0f68e7d1e817d8cba
+    amazon-linux-ami: AMI: ami-0f50843abd3b56267
 ==> amazon-linux-ami: Waiting for AMI to become ready...
-==> amazon-linux-ami: Modifying attributes on AMI (ami-05ae982102ab92f0c)...
+==> amazon-linux-ami: Modifying attributes on AMI (ami-0f50843abd3b56267)...
     amazon-linux-ami: Modifying: description
-==> amazon-linux-ami: Modifying attributes on snapshot (snap-0141f0e5682cbb768)...
+==> amazon-linux-ami: Modifying attributes on snapshot (snap-04e1ecb3e3c5b995e)...
 ==> amazon-linux-ami: Terminating the source AWS instance...
 ==> amazon-linux-ami: Cleaning up any extra volumes...
 ==> amazon-linux-ami: No volumes to clean up, skipping
@@ -33,5 +33,5 @@ Build 'amazon-linux-ami' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
-us-east-1: ami-05ae982102ab92f0c
+us-east-2: ami-0f50843abd3b56267
 

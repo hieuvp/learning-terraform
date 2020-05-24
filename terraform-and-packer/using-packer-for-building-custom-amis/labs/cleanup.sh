@@ -2,7 +2,7 @@
 
 set -eou pipefail
 
-export AWS_REGION="us-east-1"
+export AWS_REGION="us-east-2"
 
 readonly AMI_NAME="shopback-learning-packer-*"
 readonly IMAGES=$(

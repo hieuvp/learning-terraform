@@ -17,12 +17,18 @@ Template validated successfully.
 ==> amazon-linux-ami: Connected to SSH!
 ==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell373575102
 ==> amazon-linux-ami: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1Aclone-source-code.sh 170 B / 170 B [================================================] 100.00%
-[1Aclone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
+
+clone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1A
+clone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1A
+clone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1A
+clone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1A
+clone-source-code.sh 170 B / 170 B [================================================] 100.00%
+[1A
+clone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
 ==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell254046462
 ==> amazon-linux-ami: + sudo yum --quiet --assumeyes install git
 ==> amazon-linux-ami: + git clone https://github.com/A5hleyRich/wordpress-nginx.git /opt/packer/wordpress-nginx
@@ -45,5 +51,5 @@ Build 'amazon-linux-ami' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
-us-east-1: ami-0c0f8339a416eea03
+us-east-2: ami-0c0f8339a416eea03
 
