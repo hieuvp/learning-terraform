@@ -35,20 +35,11 @@
 A golden image provides the template which a virtual machine
 (e.g. AWS EC2 instances) is created from.
 It may also be referred to as a base image or an image template.
-Think of it as a snapshot copy of an operating system that can be launched as a new virtual machine.
 
 The idea is that you set up an operating system to the desired state,
 save it and then you can re-use it across your infrastructure.
 
-It is a term that has made its way into the collective consciousness
-of anyone involved in creating one perfect model and then producing many duplicates from that mold.
-That is what a gold master, or golden image, is:
-The virtual mold from which you cast your distributable models.
-
-You may encounter golden images of an organization's chosen operating system,
-with the important settings baked in the virtual private network (VPN) certificates are already in place,
-incoming email servers are already set in the email client, and so on.
-Similarly, you might also hear this term in the world of virtual machines (VMs),
+You might hear this term in the world of virtual machines (VMs),
 where a golden image of a carefully configured virtual drive
 is the source from which all new virtual machines are cloned.
 
