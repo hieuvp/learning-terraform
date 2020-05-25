@@ -71,8 +71,8 @@ is the source from which all new virtual machines are cloned.
 
 ## What is Packer
 
-> HashiCorp Packer has become the standard open source tool
-> for creating golden images from code.
+> HashiCorp Packer has become
+> the standard open source tool for creating golden images from code.
 
 Learn how to use HashiCorp Packer in an Azure pipeline to maintain immutable infrastructure.
 A battle-tested virtual machine template
