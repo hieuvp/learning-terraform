@@ -77,7 +77,7 @@ is the source from which all new virtual machines are cloned.
 Learn how to use HashiCorp Packer in an Azure pipeline to maintain immutable infrastructure.
 A battle-tested virtual machine template
 that forms the foundation for all other VMs used in the infrastructure.
-Sometimes they're called base images or image templates,
+Sometimes they are called base images or image templates,
 but the goal remains the same: immutable infrastructure.
 
 In this session from Microsoft Ignite,
