@@ -483,11 +483,16 @@ variable "aws_region" {
 ```hcl
 # build.pkr.hcl
 
+# A build starts sources and runs provisioning steps on those sources.
 build {
   sources = [
+    # there can be multiple sources per build
     "source.amazon-ebs.example"
   ]
 
+  # All provisioners and post-processors have a 1:1 correspondence to their
+  # current layout. The argument name (ie: inline) must to be unquoted
+  # and can be set using the equal sign operator (=).
   provisioner "shell" {
     inline = [
       "sudo mkdir -p /opt/packer/wordpress-nginx",
@@ -505,6 +510,8 @@ build {
       "/opt/packer/clone-source-code.sh"
     ]
   }
+
+  # post-processors work too, example: `post-processor "shell-local" {}`.
 }
 ```
 
@@ -516,6 +523,11 @@ build {
 ```hcl
 # sources.pkr.hcl
 
+# the source block is what was defined in the builders section and represents a
+# reusable way to start a machine. You build your images from that source. All
+# sources have a 1:1 correspondance to what currently is a builder. The
+# argument name (ie: ami_name) must be unquoted and can be set using the equal
+# sign operator (=).
 source "amazon-ebs" "example" {
   # name = "amazon-linux-ami"?
 
@@ -523,7 +535,6 @@ source "amazon-ebs" "example" {
   ami_description = "ShopBack Linux AMI"
   instance_type   = "t2.micro"
   region          = var.aws_region
-  ssh_username    = "ec2-user"
 
   source_ami_filter {
     filters = {
@@ -538,6 +549,9 @@ source "amazon-ebs" "example" {
     owners      = ["amazon"]
     most_recent = true
   }
+
+  communicator = "ssh"
+  ssh_username = "ec2-user"
 }
 ```
 
