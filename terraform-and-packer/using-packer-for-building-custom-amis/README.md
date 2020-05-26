@@ -107,6 +107,14 @@ A builder is invoked as part of a build in order to create the actual resulting 
 Example builders include VirtualBox, VMware, and Amazon EC2.
 Builders can be created and added to Packer in the form of plugins.
 
+Builders are responsible for creating machines and generating images from them for various platforms.
+For example, there are separate builders for EC2, VMware, VirtualBox, etc.
+Packer comes with many builders by default,
+and can also be extended to add new builders.
+
+To learn more about an individual builder, choose it from the sidebar.
+Each builder has its own configuration options and parameters.
+
 ### Provisioners
 
 Provisioners are components of Packer that install and configure software
