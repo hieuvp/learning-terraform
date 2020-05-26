@@ -19,10 +19,10 @@
   - [Provisioners](#provisioners)
   - [Templates](#templates)
     - [Template Builders](#template-builders)
+    - [Template Provisioners](#template-provisioners)
     - [Template Communicators](#template-communicators)
     - [Template Engine](#template-engine)
     - [Template Post-Processors](#template-post-processors)
-    - [Template Provisioners](#template-provisioners)
     - [Template User Variables](#template-user-variables)
 - [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
@@ -131,6 +131,19 @@ For example, there are separate builders for EC2, VMware, VirtualBox, etc.
 Packer comes with many builders by default,
 and can also be extended to add new builders.
 
+#### Template Provisioners
+
+Within the template,
+the provisioners section contains an array of all the provisioners
+that Packer should use to install and configure software within running machines prior
+to turning them into machine images.
+
+Provisioners are optional.
+If no provisioners are defined within a template,
+then no software other than the defaults will be installed within the resulting machine images.
+This is not typical, however, since much of the value of Packer is
+to produce multiple identical images of pre-configured software.
+
 #### Template Communicators
 
 Communicators are the mechanism Packer uses to
@@ -157,19 +170,6 @@ Post-processors are optional.
 If no post-processors are defined within a template,
 then no post-processing will be done to the image.
 The resulting artifact of a build is just the image outputted by the builder.
-
-#### Template Provisioners
-
-Within the template,
-the provisioners section contains an array of all the provisioners
-that Packer should use to install and configure software within running machines prior
-to turning them into machine images.
-
-Provisioners are optional.
-If no provisioners are defined within a template,
-then no software other than the defaults will be installed within the resulting machine images.
-This is not typical, however, since much of the value of Packer is
-to produce multiple identical images of pre-configured software.
 
 #### Template User Variables
 
