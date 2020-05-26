@@ -26,6 +26,7 @@
 - [Provisioners](#provisioners)
 - [HCL Configuration Language](#hcl-configuration-language)
 - [Cleaning Up Amazon EBS-Backed AMI](#cleaning-up-amazon-ebs-backed-ami)
+- [Pricing](#pricing)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -640,7 +641,8 @@ Therefore, if you are finished with the snapshots, you should delete them.
   <div>The process for cleaning up your Amazon EBS-backed AMI</div>
 </div>
 
-Pricing
+## Pricing
+
 Resources
 
 - EC2
