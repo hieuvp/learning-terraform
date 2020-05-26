@@ -679,6 +679,32 @@ Note that you will be charged separately for the EBS volumes used by your instan
 EBS is not the same as the instance storage included in the hourly fee.
 See "Amazon EBS Standard volumes" right above the snapshot information.
 
+Very close to nothing.
+
+There is no cost to make an AMI itself,
+but if you're making it from a running instance
+you will pay the fees for running a micro instance
+(which is about \$0.02/hr, depending on availability region - see the pricing details)
+<http://aws.amazon.com/ec2/pricing/>
+and also fees for using the EBS root for however long you use it.
+
+When storing the AMI,
+you only pay for the S3 storage taken from the snapshot.
+The root FS must be an EBS volume (for all micro instances),
+but this is stored as an EBS snapshot
+(which are stored in S3, rather than EBS)
+so you pay S3 fees to store it.
+Note that EBS charges per allocated GB,
+while S3 charges per used GB;
+with the way they do things,
+a 10G EBS volume that only has 500MB on it will only take up approx.
+500MB of S3 storage.
+
+Further to that,
+Micro instances are included in Amazon's free tier at the moment,
+so all of the above will cost you nothing
+(with limits - see the pricing link above).
+
 ## References
 
 - [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
