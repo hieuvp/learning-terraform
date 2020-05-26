@@ -14,16 +14,19 @@
 - [What is a Golden Image](#what-is-a-golden-image)
   - [Tips for Getting Started](#tips-for-getting-started)
 - [What is Packer](#what-is-packer)
-- [Templates](#templates)
-  - [Template Builders](#template-builders)
-  - [Template Communicators](#template-communicators)
-  - [Template Engine](#template-engine)
-  - [Template Post-Processors](#template-post-processors)
-  - [Template Provisioners](#template-provisioners)
-  - [Template User Variables](#template-user-variables)
-- [Builders](#builders)
+- [Concepts](#concepts)
+  - [Builders](#builders)
+  - [Provisioners](#provisioners)
+  - [Templates](#templates)
+    - [Template Builders](#template-builders)
+    - [Template Communicators](#template-communicators)
+    - [Template Engine](#template-engine)
+    - [Template Post-Processors](#template-post-processors)
+    - [Template Provisioners](#template-provisioners)
+    - [Template User Variables](#template-user-variables)
+- [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
-- [Provisioners](#provisioners)
+  - [Common Provisioners](#common-provisioners)
 - [HCL Configuration Language](#hcl-configuration-language)
 - [Cleaning Up Amazon EBS-Backed AMI](#cleaning-up-amazon-ebs-backed-ami)
 - [Pricing](#pricing)
@@ -94,13 +97,30 @@ Packer does not replace configuration management like Chef or Puppet.
 In fact, when building images,
 Packer is able to use tools like Chef or Puppet to install software onto the image.
 
-## Templates
+## Concepts
+
+### Builders
+
+> Builders are components of Packer that are able to create a machine image for a single platform.
+> Builders read in some configuration and use that to run and generate a machine image.
+> A builder is invoked as part of a build in order to create the actual resulting images.
+> Example builders include VirtualBox, VMware, and Amazon EC2.
+> Builders can be created and added to Packer in the form of plugins.
+
+### Provisioners
+
+> Provisioners are components of Packer that install and configure software
+> within a running machine prior to that machine being turned into a static image.
+> They perform the major work of making the image contain useful software.
+> Example provisioners include shell scripts, Chef, Puppet, etc.
+
+### Templates
 
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
 
-### Template Builders
+#### Template Builders
 
 Within the template,
 the builders section contains an array of all the builders
@@ -111,12 +131,12 @@ For example, there are separate builders for EC2, VMware, VirtualBox, etc.
 Packer comes with many builders by default,
 and can also be extended to add new builders.
 
-### Template Communicators
+#### Template Communicators
 
 Communicators are the mechanism Packer uses to
 upload files, execute scripts, etc. with the machine being created.
 
-### Template Engine
+#### Template Engine
 
 All strings within templates are processed by a common Packer templating engine,
 where variables and functions can be used to modify the value of a configuration parameter at runtime.
@@ -127,7 +147,7 @@ The syntax of templates uses the following conventions:
 - Functions are specified directly within the braces, such as `{{timestamp}}`.
 - Template variables are prefixed with a period and capitalized, such as `{{.Variable}}`.
 
-### Template Post-Processors
+#### Template Post-Processors
 
 The post-processor section within a template configures any post-processing
 that will be done to images built by the builders.
@@ -138,7 +158,7 @@ If no post-processors are defined within a template,
 then no post-processing will be done to the image.
 The resulting artifact of a build is just the image outputted by the builder.
 
-### Template Provisioners
+#### Template Provisioners
 
 Within the template,
 the provisioners section contains an array of all the provisioners
@@ -151,7 +171,7 @@ then no software other than the defaults will be installed within the resulting 
 This is not typical, however, since much of the value of Packer is
 to produce multiple identical images of pre-configured software.
 
-### Template User Variables
+#### Template User Variables
 
 User variables allow your templates to be further configured
 with variables from the command-line, environment variables, Vault, or files.
@@ -163,13 +183,7 @@ This maximizes the portability of the template.
 Using user variables expects you to know how configuration templates work.
 If you don't know how configuration templates work yet, please read that page first.
 
-## Builders
-
-> Builders are components of Packer that are able to create a machine image for a single platform.
-> Builders read in some configuration and use that to run and generate a machine image.
-> A builder is invoked as part of a build in order to create the actual resulting images.
-> Example builders include VirtualBox, VMware, and Amazon EC2.
-> Builders can be created and added to Packer in the form of plugins.
+## Practices
 
 ### [AMI Builder (EBS backed)](https://www.packer.io/docs/builders/amazon-ebs)
 
@@ -287,12 +301,29 @@ us-east-2: ami-0f50843abd3b56267
 <div align="center"><img src="assets/example-builders-instance-terminated.png" width="900"></div>
 <br />
 
-## Provisioners
+### Common Provisioners
 
-> Provisioners are components of Packer that install and configure software
-> within a running machine prior to that machine being turned into a static image.
-> They perform the major work of making the image contain useful software.
-> Example provisioners include shell scripts, Chef, Puppet, etc.
+- File Provisioner
+
+Type: `file`
+
+The file Packer provisioner uploads files to machines built by Packer.
+The recommended usage of the file provisioner is to use it to upload files,
+and then use shell provisioner to move them to the proper place, set permissions, etc.
+
+Warning: You can only upload files to locations
+that the provisioning user (generally not root) has permission to access.
+Creating files in /tmp and using a shell provisioner to move them into the final location
+is the only way to upload files to root owned locations.
+
+The file provisioner can upload both single files and complete directories.
+
+- Shell Provisioner
+
+Type: `shell`
+
+The shell Packer provisioner provisions machines built by Packer using shell scripts.
+Shell provisioning is the easiest way to get software installed and configured on a machine.
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/example-provisioners.json) -->
 <!-- The below code snippet is automatically added from labs/example-provisioners.json -->
