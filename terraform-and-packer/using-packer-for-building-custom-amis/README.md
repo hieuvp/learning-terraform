@@ -668,6 +668,17 @@ and you will pay storage fees for the data being stored in S3 according to the S
 <http://aws.amazon.com/s3/pricing/>
 whether the instance is running or not.
 
+Assuming this is an EBS AMI,
+you will be charged for the snapshot(s) containing the data for your image.
+The relevant pricing information can be found under "Amazon EBS Snapshots to Amazon S3"
+at <http://aws.amazon.com/ec2/pricing/>.
+"Subscriptions" (Reservations) are available for instances,
+but not for the storage of your AMI.
+
+Note that you will be charged separately for the EBS volumes used by your instances.
+EBS is not the same as the instance storage included in the hourly fee.
+See "Amazon EBS Standard volumes" right above the snapshot information.
+
 ## References
 
 - [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
