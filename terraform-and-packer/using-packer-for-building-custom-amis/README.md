@@ -81,8 +81,7 @@ that forms the foundation for all other VMs used in the infrastructure.
 Sometimes they are called base images or image templates,
 but the goal remains the same: immutable infrastructure.
 
-In this session from Microsoft Ignite,
-you will see how to create pipelines to host golden images in Azure,
+You will see how to create pipelines to host golden images in Azure,
 and make them available through Azure's Shared Image Gallery.
 Simply do the configuration work once, and use it across your entire infrastructure.
 It will save you time, make you faster and reduce human error.
