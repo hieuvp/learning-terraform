@@ -260,13 +260,10 @@ it is up to you to use, delete, etc. the AMI.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/example-builders.console) -->
-<!-- The below code snippet is automatically added from labs/example-builders.console -->
-
 ```console
 + packer validate example-builders.json
 Template validated successfully.
-+ packer build -color=false example-builders.json
++ packer build example-builders.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
 ==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-24T09-12-39Z
     amazon-linux-ami: Found Image ID: ami-083ebc5a49573896a
@@ -301,8 +298,6 @@ Build 'amazon-linux-ami' finished.
 --> amazon-linux-ami: AMIs were created:
 us-east-2: ami-0f50843abd3b56267
 ```
-
-<!-- AUTO-GENERATED-CONTENT:END -->
 
 <div align="center"><img src="assets/example-builders-source-ami.png" width="900"></div>
 <br />

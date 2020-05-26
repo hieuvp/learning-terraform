@@ -1,7 +1,6 @@
 .PHONY: example-builders
 example-builders:
-	cd labs \
-	&& ./example-builders.sh &> ./example-builders.console
+	cd labs && ./example-builders.sh
 
 .PHONY: example-provisioners
 example-provisioners:
