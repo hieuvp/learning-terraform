@@ -628,12 +628,45 @@ Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-41-57Z
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+Cleaning up your Amazon EBS-backed AMI
+
+When you deregister an Amazon EBS-backed AMI,
+it doesn't affect the snapshot(s)
+that were created for the volume(s) of the instance during the AMI creation process.
+You'll continue to incur storage costs for the snapshots.
+Therefore, if you are finished with the snapshots, you should delete them.
+
+The following diagram illustrates the process for cleaning up your Amazon EBS-backed AMI.
+
+<div align="center">
+  <img src="assets/remove-ebs-backed-ami.png" width="900">
+</div>
+
 Pricing
 Resources
 
 - EC2
 - AMI
 - Snapshot
+
+Singapore
+t2.micro 1 Variable 1 GiB EBS Only \$0.0146 per Hour
+
+You are only charged for the storage of the bits that make up your AMI,
+there are no charges for creating an AMI.
+EBS-backed AMIs are made up of snapshots of the EBS volumes that form the AMI.
+You will pay storage fees for those snapshots according to the rates listed here.
+<https://aws.amazon.com/ebs/pricing/>
+Your EBS volumes are not "duplicated" until the instance is launched,
+at which point a volume is created from the stored snapshots
+and you will pay regular EBS volume fees and EBS snapshot billing.
+<https://aws.amazon.com/ebs/pricing/>
+<https://aws.amazon.com/premiumsupport/knowledge-center/ebs-snapshot-billing/>
+
+S3-backed AMIs have their information stored in S3
+and you will pay storage fees for the data being stored in S3 according to the S3 pricing,
+<http://aws.amazon.com/s3/pricing/>
+whether the instance is running or not.
 
 ## References
 
