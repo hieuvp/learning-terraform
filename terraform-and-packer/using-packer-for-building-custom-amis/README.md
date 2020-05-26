@@ -94,22 +94,7 @@ Packer does not replace configuration management like Chef or Puppet.
 In fact, when building images,
 Packer is able to use tools like Chef or Puppet to install software onto the image.
 
-A machine image is a single static unit that contains a pre-configured operating system
-and installed software which is used to quickly create new running machines.
-Machine image formats change for each platform.
-Some examples include AMIs for EC2, VMDK/VMX files for VMware, OVF exports for VirtualBox, etc.
-
 ## Templates
-
-Templates are JSON files that configure the various components of Packer
-in order to create one or more machine images.
-Templates are portable, static, and readable and writable by both humans and computers.
-This has the added benefit of being able to not only create and modify templates by hand,
-but also write scripts to dynamically create or modify templates.
-
-Templates are given to commands such as `packer build`,
-which will take the template and actually run the builds within it,
-producing any resulting machine images.
 
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
