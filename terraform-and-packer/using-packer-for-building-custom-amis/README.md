@@ -343,7 +343,7 @@ us-east-2: ami-0f50843abd3b56267
 
 ### Common Provisioners
 
-- **File Provisioner**
+- [**File Provisioner**](https://www.packer.io/docs/provisioners/file)
 
 Type: `file`
 
@@ -358,7 +358,7 @@ is the only way to upload files to root owned locations.
 
 The file provisioner can upload both single files and complete directories.
 
-- **Shell Provisioner**
+- [**Shell Provisioner**](https://www.packer.io/docs/provisioners/shell)
 
 Type: `shell`
 
