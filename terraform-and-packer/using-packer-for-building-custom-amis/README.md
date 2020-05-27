@@ -692,7 +692,7 @@ You will continue to incur storage costs for the snapshots.
 Therefore, if you are finished with the snapshots, you should delete them.
 
 <div align="center">
-  <img src="assets/remove-ebs-backed-ami.png" width="900">
+  <img src="assets/cleanup-amazon-ebs-backed-ami.png" width="900">
   <br />
   <div>The process for cleaning up your Amazon EBS-backed AMI</div>
 </div>
