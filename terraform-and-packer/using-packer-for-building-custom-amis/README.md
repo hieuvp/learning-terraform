@@ -290,7 +290,7 @@ $ packer build example-builders.json
 ==> amazon-linux-ami: Connected to SSH!
 ```
 
-<div align="center"><img src="assets/example-builders-instance-pending.png" width="900"></div>
+<div align="center"><img src="assets/example-builders-instance-pending.png" width="860"></div>
 
 <br />
 
@@ -327,7 +327,7 @@ Build 'amazon-linux-ami' finished.
 
 ```
 
-<div align="center"><img src="assets/example-builders-instance-terminated.png" width="900"></div>
+<div align="center"><img src="assets/example-builders-instance-terminated.png" width="860"></div>
 
 <br />
 
