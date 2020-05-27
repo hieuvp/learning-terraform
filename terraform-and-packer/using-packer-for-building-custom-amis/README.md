@@ -630,6 +630,20 @@ us-east-2: ami-07cafedfc46ccf7f1
 
 ## Cleanup Amazon EBS-Backed AMI
 
+When you deregister an Amazon EBS-backed AMI,
+it doesn't affect the snapshot(s)
+that were created for the volume(s) of the instance during the AMI creation process.
+You will continue to incur storage costs for the snapshots.
+Therefore, if you are finished with the snapshots, you should delete them.
+
+<div align="center">
+  <img src="assets/cleanup-amazon-ebs-backed-ami.png" width="900">
+  <br />
+  <div>The process for cleaning up your Amazon EBS-backed AMI</div>
+</div>
+
+<br />
+
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/cleanup.sh) -->
 <!-- The below code snippet is automatically added from labs/cleanup.sh -->
 
@@ -684,18 +698,6 @@ Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-28-07Z
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
-
-When you deregister an Amazon EBS-backed AMI,
-it doesn't affect the snapshot(s)
-that were created for the volume(s) of the instance during the AMI creation process.
-You will continue to incur storage costs for the snapshots.
-Therefore, if you are finished with the snapshots, you should delete them.
-
-<div align="center">
-  <img src="assets/cleanup-amazon-ebs-backed-ami.png" width="900">
-  <br />
-  <div>The process for cleaning up your Amazon EBS-backed AMI</div>
-</div>
 
 ## Pricing
 
