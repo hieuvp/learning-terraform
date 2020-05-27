@@ -261,12 +261,18 @@ it is up to you to use, delete, etc. the AMI.
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ```console
-+ packer validate example-builders.json
+$ packer validate example-builders.json
 Template validated successfully.
-+ packer build example-builders.json
+$ packer build example-builders.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
 ==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-24T09-12-39Z
     amazon-linux-ami: Found Image ID: ami-083ebc5a49573896a
+```
+
+<div align="center"><img src="assets/example-builders-source-ami.png" width="900"></div>
+<br />
+
+```console
 ==> amazon-linux-ami: Creating temporary keypair: packer_5eca3a87-e093-5d6b-7cf9-e1d7ab8a1b86
 ==> amazon-linux-ami: Creating temporary security group for this instance: packer_5eca3a8d-0d76-21c9-a819-da286e5e1530
 ==> amazon-linux-ami: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
@@ -281,12 +287,30 @@ Template validated successfully.
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
+```
+
+<div align="center"><img src="assets/example-builders-instance-pending.png" width="900"></div>
+<br />
+
+```console
 ==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-24T09-12-39Z from instance i-0f68e7d1e817d8cba
     amazon-linux-ami: AMI: ami-0f50843abd3b56267
 ==> amazon-linux-ami: Waiting for AMI to become ready...
 ==> amazon-linux-ami: Modifying attributes on AMI (ami-0f50843abd3b56267)...
     amazon-linux-ami: Modifying: description
+```
+
+<div align="center"><img src="assets/example-builders-ami-pending.png" width="900"></div>
+<br />
+
+```console
 ==> amazon-linux-ami: Modifying attributes on snapshot (snap-04e1ecb3e3c5b995e)...
+```
+
+<div align="center"><img src="assets/example-builders-snapshot-completed.png" width="900"></div>
+<br />
+
+```console
 ==> amazon-linux-ami: Terminating the source AWS instance...
 ==> amazon-linux-ami: Cleaning up any extra volumes...
 ==> amazon-linux-ami: No volumes to clean up, skipping
@@ -294,27 +318,18 @@ Template validated successfully.
 ==> amazon-linux-ami: Deleting temporary keypair...
 Build 'amazon-linux-ami' finished.
 
+```
+
+<div align="center"><img src="assets/example-builders-instance-terminated.png" width="900"></div>
+<br />
+
+```console
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
 us-east-2: ami-0f50843abd3b56267
 ```
 
-<div align="center"><img src="assets/example-builders-source-ami.png" width="900"></div>
-<br />
-
-<div align="center"><img src="assets/example-builders-instance-pending.png" width="900"></div>
-<br />
-
-<div align="center"><img src="assets/example-builders-ami-pending.png" width="900"></div>
-<br />
-
 <div align="center"><img src="assets/example-builders-ami-available.png" width="900"></div>
-<br />
-
-<div align="center"><img src="assets/example-builders-snapshot-completed.png" width="900"></div>
-<br />
-
-<div align="center"><img src="assets/example-builders-instance-terminated.png" width="900"></div>
 <br />
 
 ### Common Provisioners
