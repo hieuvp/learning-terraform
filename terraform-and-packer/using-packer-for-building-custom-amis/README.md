@@ -298,14 +298,14 @@ $ packer build example-builders.json
 ==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-24T09-12-39Z from instance i-0f68e7d1e817d8cba
     amazon-linux-ami: AMI: ami-0f50843abd3b56267
 ==> amazon-linux-ami: Waiting for AMI to become ready...
-==> amazon-linux-ami: Modifying attributes on AMI (ami-0f50843abd3b56267)...
-    amazon-linux-ami: Modifying: description
 ```
 
 <div align="center"><img src="assets/example-builders-ami-pending.png" width="900"></div>
 <br />
 
 ```console
+==> amazon-linux-ami: Modifying attributes on AMI (ami-0f50843abd3b56267)...
+    amazon-linux-ami: Modifying: description
 ==> amazon-linux-ami: Modifying attributes on snapshot (snap-04e1ecb3e3c5b995e)...
 ```
 
