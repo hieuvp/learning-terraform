@@ -290,7 +290,7 @@ $ packer build example-builders.json
 ==> amazon-linux-ami: Connected to SSH!
 ```
 
-<div align="center"><img src="assets/example-builders-instance-pending.png" width="860"></div>
+<div align="center"><img src="assets/example-builders-instance-pending.png" width="830"></div>
 
 <br />
 
@@ -303,7 +303,7 @@ $ packer build example-builders.json
 ==> amazon-linux-ami: Waiting for AMI to become ready...
 ```
 
-<div align="center"><img src="assets/example-builders-ami-pending.png" width="900"></div>
+<div align="center"><img src="assets/example-builders-ami-pending.png" width="880"></div>
 
 <br />
 
@@ -327,7 +327,7 @@ Build 'amazon-linux-ami' finished.
 
 ```
 
-<div align="center"><img src="assets/example-builders-instance-terminated.png" width="860"></div>
+<div align="center"><img src="assets/example-builders-instance-terminated.png" width="830"></div>
 
 <br />
 
@@ -337,7 +337,7 @@ Build 'amazon-linux-ami' finished.
 us-east-2: ami-0f50843abd3b56267
 ```
 
-<div align="center"><img src="assets/example-builders-ami-available.png" width="900"></div>
+<div align="center"><img src="assets/example-builders-ami-available.png" width="880"></div>
 
 <br />
 
