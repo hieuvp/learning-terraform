@@ -27,7 +27,7 @@
 - [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
-- [HCL Configuration Language](#hcl-configuration-language)
+- [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
 - [Cleaning Up Amazon EBS-Backed AMI](#cleaning-up-amazon-ebs-backed-ami)
 - [Pricing](#pricing)
 - [References](#references)
@@ -474,7 +474,7 @@ us-east-2: ami-0c0f8339a416eea03
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## HCL Configuration Language
+## HashiCorp Configuration Language (HCL)
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx/variables.pkr.hcl) -->
 <!-- The below code snippet is automatically added from labs/wordpress-nginx/variables.pkr.hcl -->
