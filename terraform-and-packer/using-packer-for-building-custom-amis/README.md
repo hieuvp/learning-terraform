@@ -27,6 +27,8 @@
 - [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
+    - [**File Provisioner**](#file-provisioner)
+    - [**Shell Provisioner**](#shell-provisioner)
 - [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
 - [Cleanup Amazon EBS-Backed AMI](#cleanup-amazon-ebs-backed-ami)
 - [Pricing](#pricing)
@@ -343,7 +345,7 @@ us-east-2: ami-0f50843abd3b56267
 
 ### Common Provisioners
 
-- [**File Provisioner**](https://www.packer.io/docs/provisioners/file)
+#### [**File Provisioner**](https://www.packer.io/docs/provisioners/file)
 
 Type: `file`
 
@@ -358,7 +360,7 @@ is the only way to upload files to root owned locations.
 
 The file provisioner can upload both single files and complete directories.
 
-- [**Shell Provisioner**](https://www.packer.io/docs/provisioners/shell)
+#### [**Shell Provisioner**](https://www.packer.io/docs/provisioners/shell)
 
 Type: `shell`
 
