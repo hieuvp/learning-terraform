@@ -99,7 +99,7 @@ Packer is able to use tools like Chef or Puppet to install software onto the ima
 
 ## Concepts
 
-### Builders
+### [Builders](https://www.packer.io/docs/builders)
 
 Builders are components of Packer that are able to create a machine image for a single platform.
 Builders read in some configuration and use that to run and generate a machine image.
@@ -115,7 +115,7 @@ and can also be extended to add new builders.
 To learn more about an individual builder, choose it from the sidebar.
 Each builder has its own configuration options and parameters.
 
-### Provisioners
+### [Provisioners](https://www.packer.io/docs/provisioners)
 
 Provisioners are components of Packer that install and configure software
 within a running machine prior to that machine being turned into a static image.
@@ -135,13 +135,13 @@ so common use cases for provisioners include:
 See Template Provisioners to learn more about working with provisioners.
 For information on an individual provisioner, choose it from the sidebar.
 
-### Templates
+### [Templates](https://www.packer.io/docs/templates)
 
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
 
-#### Template Builders
+#### [Template Builders](https://www.packer.io/docs/templates/builders)
 
 Within the template,
 the builders section contains an array of all the builders
@@ -152,7 +152,7 @@ For example, there are separate builders for EC2, VMware, VirtualBox, etc.
 Packer comes with many builders by default,
 and can also be extended to add new builders.
 
-#### Template Provisioners
+#### [Template Provisioners](https://www.packer.io/docs/templates/provisioners)
 
 Within the template,
 the provisioners section contains an array of all the provisioners
@@ -165,12 +165,12 @@ then no software other than the defaults will be installed within the resulting 
 This is not typical, however, since much of the value of Packer is
 to produce multiple identical images of pre-configured software.
 
-#### Template Communicators
+#### [Template Communicators](https://www.packer.io/docs/templates/communicator)
 
 Communicators are the mechanism Packer uses to
 upload files, execute scripts, etc. with the machine being created.
 
-#### Template Engine
+#### [Template Engine](https://www.packer.io/docs/templates/engine)
 
 All strings within templates are processed by a common Packer templating engine,
 where variables and functions can be used to modify the value of a configuration parameter at runtime.
@@ -181,7 +181,7 @@ The syntax of templates uses the following conventions:
 - Functions are specified directly within the braces, such as `{{timestamp}}`.
 - Template variables are prefixed with a period and capitalized, such as `{{.Variable}}`.
 
-#### Template Post-Processors
+#### [Template Post-Processors](https://www.packer.io/docs/templates/post-processors)
 
 The post-processor section within a template configures any post-processing
 that will be done to images built by the builders.
@@ -192,7 +192,7 @@ If no post-processors are defined within a template,
 then no post-processing will be done to the image.
 The resulting artifact of a build is just the image outputted by the builder.
 
-#### Template User Variables
+#### [Template User Variables](https://www.packer.io/docs/templates/user-variables)
 
 User variables allow your templates to be further configured
 with variables from the command-line, environment variables, Vault, or files.
