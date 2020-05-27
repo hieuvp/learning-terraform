@@ -28,7 +28,7 @@
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
 - [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
-- [Cleaning Up Amazon EBS-Backed AMI](#cleaning-up-amazon-ebs-backed-ami)
+- [Cleanup Amazon EBS-Backed AMI](#cleanup-amazon-ebs-backed-ami)
 - [Pricing](#pricing)
 - [References](#references)
 
@@ -628,7 +628,7 @@ us-east-2: ami-07cafedfc46ccf7f1
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## Cleaning Up Amazon EBS-Backed AMI
+## Cleanup Amazon EBS-Backed AMI
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/cleanup.sh) -->
 <!-- The below code snippet is automatically added from labs/cleanup.sh -->
@@ -641,10 +641,7 @@ set -eou pipefail
 export AWS_REGION="us-east-2"
 
 readonly AMI_NAME="shopback-learning-packer-*"
-readonly IMAGES=$(
-  aws ec2 describe-images --output json \
-    --filters "Name=name,Values=${AMI_NAME}"
-)
+readonly IMAGES=$(aws ec2 describe-images --output json --filters "Name=name,Values=${AMI_NAME}")
 
 main() {
   local -r index=$1

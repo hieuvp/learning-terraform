@@ -5,10 +5,7 @@ set -eou pipefail
 export AWS_REGION="us-east-2"
 
 readonly AMI_NAME="shopback-learning-packer-*"
-readonly IMAGES=$(
-  aws ec2 describe-images --output json \
-    --filters "Name=name,Values=${AMI_NAME}"
-)
+readonly IMAGES=$(aws ec2 describe-images --output json --filters "Name=name,Values=${AMI_NAME}")
 
 main() {
   local -r index=$1
