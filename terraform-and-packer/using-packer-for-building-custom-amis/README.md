@@ -260,6 +260,8 @@ it is up to you to use, delete, etc. the AMI.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+<br />
+
 ```console
 $ packer validate example-builders.json
 Template validated successfully.
@@ -284,15 +286,15 @@ $ packer build example-builders.json
 ==> amazon-linux-ami: Using ssh communicator to connect: 3.135.210.132
 ==> amazon-linux-ami: Waiting for SSH to become available...
 ==> amazon-linux-ami: Connected to SSH!
-==> amazon-linux-ami: Stopping the source instance...
-    amazon-linux-ami: Stopping instance
-==> amazon-linux-ami: Waiting for the instance to stop...
 ```
 
 <div align="center"><img src="assets/example-builders-instance-pending.png" width="900"></div>
 <br />
 
 ```console
+==> amazon-linux-ami: Stopping the source instance...
+    amazon-linux-ami: Stopping instance
+==> amazon-linux-ami: Waiting for the instance to stop...
 ==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-24T09-12-39Z from instance i-0f68e7d1e817d8cba
     amazon-linux-ami: AMI: ami-0f50843abd3b56267
 ==> amazon-linux-ami: Waiting for AMI to become ready...
