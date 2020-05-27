@@ -365,6 +365,8 @@ Type: `shell`
 The shell Packer provisioner provisions machines built by Packer using shell scripts.
 Shell provisioning is the easiest way to get software installed and configured on a machine.
 
+<br />
+
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/example-provisioners.json) -->
 <!-- The below code snippet is automatically added from labs/example-provisioners.json -->
 
@@ -426,46 +428,41 @@ Shell provisioning is the easiest way to get software installed and configured o
 Template validated successfully.
 + packer build -color=false example-provisioners.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
-==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-41-57Z
-    amazon-linux-ami: Found Image ID: ami-01d025118d8e760db
-==> amazon-linux-ami: Creating temporary keypair: packer_5ec8a996-9295-e663-e3eb-3621e4f77c40
-==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ec8a99c-4998-37f1-3fbe-4f434e847cc1
+==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-27T00-30-21Z
+    amazon-linux-ami: Found Image ID: ami-083ebc5a49573896a
+==> amazon-linux-ami: Creating temporary keypair: packer_5ecdb49d-5d6c-fd4a-3e5d-9ea885937a6d
+==> amazon-linux-ami: Creating temporary security group for this instance: packer_5ecdb4a3-8c23-5e6f-084b-70f854a049fa
 ==> amazon-linux-ami: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-linux-ami: Launching a source AWS instance...
 ==> amazon-linux-ami: Adding tags to source instance
     amazon-linux-ami: Adding tag: "Name": "Packer Builder"
-    amazon-linux-ami: Instance ID: i-0bf861f30a3fa426c
-==> amazon-linux-ami: Waiting for instance (i-0bf861f30a3fa426c) to become ready...
-==> amazon-linux-ami: Using ssh communicator to connect: 34.205.65.203
+    amazon-linux-ami: Instance ID: i-004e7cd4cd5891eb4
+==> amazon-linux-ami: Waiting for instance (i-004e7cd4cd5891eb4) to become ready...
+==> amazon-linux-ami: Using ssh communicator to connect: 3.14.127.197
 ==> amazon-linux-ami: Waiting for SSH to become available...
 ==> amazon-linux-ami: Connected to SSH!
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell373575102
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell445888808
 ==> amazon-linux-ami: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
-==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell254046462
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [===============================] 100.00% 1s
+==> amazon-linux-ami: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell831335008
 ==> amazon-linux-ami: + sudo yum --quiet --assumeyes install git
 ==> amazon-linux-ami: + git clone https://github.com/A5hleyRich/wordpress-nginx.git /opt/packer/wordpress-nginx
 ==> amazon-linux-ami: Cloning into '/opt/packer/wordpress-nginx'...
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
 ==> amazon-linux-ami: Waiting for the instance to stop...
-==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-23T04-41-57Z from instance i-0bf861f30a3fa426c
-    amazon-linux-ami: AMI: ami-0c0f8339a416eea03
+==> amazon-linux-ami: Creating AMI shopback-learning-packer-2020-05-27T00-30-21Z from instance i-004e7cd4cd5891eb4
+    amazon-linux-ami: AMI: ami-03a1e765a272a7fd9
 ==> amazon-linux-ami: Waiting for AMI to become ready...
-==> amazon-linux-ami: Modifying attributes on AMI (ami-0c0f8339a416eea03)...
+==> amazon-linux-ami: Modifying attributes on AMI (ami-03a1e765a272a7fd9)...
     amazon-linux-ami: Modifying: description
-==> amazon-linux-ami: Modifying attributes on snapshot (snap-067ba06cc3e0aa8fd)...
+==> amazon-linux-ami: Modifying attributes on snapshot (snap-0cd034ff4c902b642)...
 ==> amazon-linux-ami: Terminating the source AWS instance...
 ==> amazon-linux-ami: Cleaning up any extra volumes...
 ==> amazon-linux-ami: No volumes to clean up, skipping
@@ -475,7 +472,7 @@ Build 'amazon-linux-ami' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-linux-ami: AMIs were created:
-us-east-2: ami-0c0f8339a416eea03
+us-east-2: ami-03a1e765a272a7fd9
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -491,46 +488,6 @@ us-east-2: ami-0c0f8339a416eea03
 variable "aws_region" {
   type    = string
   default = "us-east-2"
-}
-```
-
-<!-- AUTO-GENERATED-CONTENT:END -->
-
-<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx/build.pkr.hcl) -->
-<!-- The below code snippet is automatically added from labs/wordpress-nginx/build.pkr.hcl -->
-
-```hcl
-# build.pkr.hcl
-
-# A build starts sources and runs provisioning steps on those sources.
-build {
-  sources = [
-    # there can be multiple sources per build
-    "source.amazon-ebs.example"
-  ]
-
-  # All provisioners and post-processors have a 1:1 correspondence to their
-  # current layout. The argument name (ie: inline) must to be unquoted
-  # and can be set using the equal sign operator (=).
-  provisioner "shell" {
-    inline = [
-      "sudo mkdir -p /opt/packer/wordpress-nginx",
-      "sudo chown -R ec2-user:ec2-user /opt"
-    ]
-  }
-
-  provisioner "file" {
-    source      = "clone-source-code.sh"
-    destination = "/opt/packer/clone-source-code.sh"
-  }
-
-  provisioner "shell" {
-    inline = [
-      "/opt/packer/clone-source-code.sh"
-    ]
-  }
-
-  # post-processors work too, example: `post-processor "shell-local" {}`.
 }
 ```
 
@@ -576,54 +533,87 @@ source "amazon-ebs" "example" {
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx/build.pkr.hcl) -->
+<!-- The below code snippet is automatically added from labs/wordpress-nginx/build.pkr.hcl -->
+
+```hcl
+# build.pkr.hcl
+
+# A build starts sources and runs provisioning steps on those sources.
+build {
+  sources = [
+    # there can be multiple sources per build
+    "source.amazon-ebs.example"
+  ]
+
+  # All provisioners and post-processors have a 1:1 correspondence to their
+  # current layout. The argument name (ie: inline) must to be unquoted
+  # and can be set using the equal sign operator (=).
+  provisioner "shell" {
+    inline = [
+      "sudo mkdir -p /opt/packer/wordpress-nginx",
+      "sudo chown -R ec2-user:ec2-user /opt"
+    ]
+  }
+
+  provisioner "file" {
+    source      = "clone-source-code.sh"
+    destination = "/opt/packer/clone-source-code.sh"
+  }
+
+  provisioner "shell" {
+    inline = [
+      "/opt/packer/clone-source-code.sh"
+    ]
+  }
+
+  # post-processors work too, example: `post-processor "shell-local" {}`.
+}
+```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx.console) -->
 <!-- The below code snippet is automatically added from labs/wordpress-nginx.console -->
 
 ```console
 + packer build -color=false wordpress-nginx
 ==> amazon-ebs: Prevalidating any provided VPC information
-==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-23T04-45-18Z
-    amazon-ebs: Found Image ID: ami-01d025118d8e760db
-==> amazon-ebs: Creating temporary keypair: packer_5ec8aa5e-1388-cd17-569b-20e9f12b1fc6
-==> amazon-ebs: Creating temporary security group for this instance: packer_5ec8aa66-0c85-4f3d-1fe6-d7eee67739d8
+==> amazon-ebs: Prevalidating AMI Name: shopback-learning-packer-2020-05-27T00-33-47Z
+    amazon-ebs: Found Image ID: ami-083ebc5a49573896a
+==> amazon-ebs: Creating temporary keypair: packer_5ecdb56b-e6f2-a9b8-1868-b328c4c3ceb9
+==> amazon-ebs: Creating temporary security group for this instance: packer_5ecdb571-72de-c293-5c09-fd91efd87bc4
 ==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
 ==> amazon-ebs: Launching a source AWS instance...
 ==> amazon-ebs: Adding tags to source instance
     amazon-ebs: Adding tag: "Name": "Packer Builder"
-    amazon-ebs: Instance ID: i-0aefdff77cc6fe562
-==> amazon-ebs: Waiting for instance (i-0aefdff77cc6fe562) to become ready...
-==> amazon-ebs: Using ssh communicator to connect: 35.175.130.53
+    amazon-ebs: Instance ID: i-017fd36501675dc46
+==> amazon-ebs: Waiting for instance (i-017fd36501675dc46) to become ready...
+==> amazon-ebs: Using ssh communicator to connect: 13.59.21.81
 ==> amazon-ebs: Waiting for SSH to become available...
 ==> amazon-ebs: Connected to SSH!
-==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell060501310
+==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell785215325
 ==> amazon-ebs: Uploading clone-source-code.sh => /opt/packer/clone-source-code.sh
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [================================================] 100.00%
-
-clone-source-code.sh 170 B / 170 B [=============================================] 100.00% 1s
-==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell241211926
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [==================================] 100.00%
+clone-source-code.sh 170 B / 170 B [===============================] 100.00% 1s
+==> amazon-ebs: Provisioning with shell script: /var/folders/s9/lyjc62f13fq772dt_gjt2w100000gn/T/packer-shell311223221
 ==> amazon-ebs: + sudo yum --quiet --assumeyes install git
 ==> amazon-ebs: + git clone https://github.com/A5hleyRich/wordpress-nginx.git /opt/packer/wordpress-nginx
 ==> amazon-ebs: Cloning into '/opt/packer/wordpress-nginx'...
 ==> amazon-ebs: Stopping the source instance...
     amazon-ebs: Stopping instance
 ==> amazon-ebs: Waiting for the instance to stop...
-==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-23T04-45-18Z from instance i-0aefdff77cc6fe562
-    amazon-ebs: AMI: ami-026d8f7eda024b8ed
+==> amazon-ebs: Creating AMI shopback-learning-packer-2020-05-27T00-33-47Z from instance i-017fd36501675dc46
+    amazon-ebs: AMI: ami-07cafedfc46ccf7f1
 ==> amazon-ebs: Waiting for AMI to become ready...
-==> amazon-ebs: Modifying attributes on AMI (ami-026d8f7eda024b8ed)...
+==> amazon-ebs: Modifying attributes on AMI (ami-07cafedfc46ccf7f1)...
     amazon-ebs: Modifying: description
-==> amazon-ebs: Modifying attributes on snapshot (snap-0ff5c552b4f79e66b)...
+==> amazon-ebs: Modifying attributes on snapshot (snap-0afa94e1202d25b14)...
 ==> amazon-ebs: Terminating the source AWS instance...
 ==> amazon-ebs: Cleaning up any extra volumes...
 ==> amazon-ebs: No volumes to clean up, skipping
@@ -633,7 +623,7 @@ Build 'amazon-ebs' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
 --> amazon-ebs: AMIs were created:
-us-east-2: ami-026d8f7eda024b8ed
+us-east-2: ami-07cafedfc46ccf7f1
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -683,17 +673,17 @@ done
 <!-- The below code snippet is automatically added from labs/cleanup.console -->
 
 ```console
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-45-18Z
-- Deregistering This Image : ami-026d8f7eda024b8ed
-- Deleting This Snapshot   : snap-0ff5c552b4f79e66b
+Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-30-21Z
+- Deregistering This Image : ami-03a1e765a272a7fd9
+- Deleting This Snapshot   : snap-0cd034ff4c902b642
 
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-38-41Z
-- Deregistering This Image : ami-05ae982102ab92f0c
-- Deleting This Snapshot   : snap-0141f0e5682cbb768
+Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-33-47Z
+- Deregistering This Image : ami-07cafedfc46ccf7f1
+- Deleting This Snapshot   : snap-0afa94e1202d25b14
 
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-41-57Z
-- Deregistering This Image : ami-0c0f8339a416eea03
-- Deleting This Snapshot   : snap-067ba06cc3e0aa8fd
+Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-28-07Z
+- Deregistering This Image : ami-08451804619926c69
+- Deleting This Snapshot   : snap-0614c98b418c16616
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->

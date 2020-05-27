@@ -1,12 +1,12 @@
 
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-45-18Z
-- Deregistering This Image : ami-026d8f7eda024b8ed
-- Deleting This Snapshot   : snap-0ff5c552b4f79e66b
+Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-30-21Z
+- Deregistering This Image : ami-03a1e765a272a7fd9
+- Deleting This Snapshot   : snap-0cd034ff4c902b642
 
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-38-41Z
-- Deregistering This Image : ami-05ae982102ab92f0c
-- Deleting This Snapshot   : snap-0141f0e5682cbb768
+Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-33-47Z
+- Deregistering This Image : ami-07cafedfc46ccf7f1
+- Deleting This Snapshot   : snap-0afa94e1202d25b14
 
-Found A Matching AMI       : shopback-learning-packer-2020-05-23T04-41-57Z
-- Deregistering This Image : ami-0c0f8339a416eea03
-- Deleting This Snapshot   : snap-067ba06cc3e0aa8fd
+Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-28-07Z
+- Deregistering This Image : ami-08451804619926c69
+- Deleting This Snapshot   : snap-0614c98b418c16616
