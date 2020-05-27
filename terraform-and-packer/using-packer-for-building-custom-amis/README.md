@@ -265,6 +265,7 @@ it is up to you to use, delete, etc. the AMI.
 ```console
 $ packer validate example-builders.json
 Template validated successfully.
+
 $ packer build example-builders.json
 ==> amazon-linux-ami: Prevalidating any provided VPC information
 ==> amazon-linux-ami: Prevalidating AMI Name: shopback-learning-packer-2020-05-24T09-12-39Z
