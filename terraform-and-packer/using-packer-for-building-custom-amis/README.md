@@ -273,6 +273,7 @@ $ packer build example-builders.json
 ```
 
 <div align="center"><img src="assets/example-builders-source-ami.png" width="900"></div>
+
 <br />
 
 ```console
@@ -290,6 +291,7 @@ $ packer build example-builders.json
 ```
 
 <div align="center"><img src="assets/example-builders-instance-pending.png" width="900"></div>
+
 <br />
 
 ```console
@@ -302,6 +304,7 @@ $ packer build example-builders.json
 ```
 
 <div align="center"><img src="assets/example-builders-ami-pending.png" width="900"></div>
+
 <br />
 
 ```console
@@ -311,6 +314,7 @@ $ packer build example-builders.json
 ```
 
 <div align="center"><img src="assets/example-builders-snapshot-completed.png" width="900"></div>
+
 <br />
 
 ```console
@@ -324,6 +328,7 @@ Build 'amazon-linux-ami' finished.
 ```
 
 <div align="center"><img src="assets/example-builders-instance-terminated.png" width="900"></div>
+
 <br />
 
 ```console
@@ -333,6 +338,7 @@ us-east-2: ami-0f50843abd3b56267
 ```
 
 <div align="center"><img src="assets/example-builders-ami-available.png" width="900"></div>
+
 <br />
 
 ### Common Provisioners
