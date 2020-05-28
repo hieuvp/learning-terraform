@@ -28,10 +28,11 @@
 - [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
-    - [**File Provisioner**](#file-provisioner)
-    - [**Shell Provisioner**](#shell-provisioner)
+    - [File Provisioner](#file-provisioner)
+    - [Shell Provisioner](#shell-provisioner)
 - [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
 - [Cleanup Amazon EBS-Backed AMI](#cleanup-amazon-ebs-backed-ami)
+- [Debugging Packer Builds](#debugging-packer-builds)
 - [Pricing](#pricing)
 - [References](#references)
 
@@ -360,7 +361,7 @@ us-east-2: ami-0f50843abd3b56267
 
 ### Common Provisioners
 
-#### [**File Provisioner**](https://www.packer.io/docs/provisioners/file)
+#### [File Provisioner](https://www.packer.io/docs/provisioners/file)
 
 Type: `file`
 
@@ -375,7 +376,7 @@ is the only way to upload files to root owned locations.
 
 The file provisioner can upload both single files and complete directories.
 
-#### [**Shell Provisioner**](https://www.packer.io/docs/provisioners/shell)
+#### [Shell Provisioner](https://www.packer.io/docs/provisioners/shell)
 
 Type: `shell`
 
@@ -715,6 +716,13 @@ Found A Matching AMI       : shopback-learning-packer-2020-05-27T00-28-07Z
 ```
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Debugging Packer Builds
+
+```shell script
+packer build -on-error=ask
+packer build -debug
+```
 
 ## Pricing
 
