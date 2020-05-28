@@ -17,12 +17,13 @@
 - [Concepts](#concepts)
   - [Builders](#builders)
   - [Provisioners](#provisioners)
+  - [Post-Processors](#post-processors)
   - [Templates](#templates)
     - [Template Builders](#template-builders)
     - [Template Provisioners](#template-provisioners)
+    - [Template Post-Processors](#template-post-processors)
     - [Template Communicators](#template-communicators)
     - [Template Engine](#template-engine)
-    - [Template Post-Processors](#template-post-processors)
     - [Template User Variables](#template-user-variables)
 - [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
@@ -137,6 +138,20 @@ so common use cases for provisioners include:
 See Template Provisioners to learn more about working with provisioners.
 For information on an individual provisioner, choose it from the sidebar.
 
+### [Post-Processors](https://www.packer.io/docs/post-processors)
+
+Post-processors are components of Packer that take the result of a builder or another post-processor
+and process that to create a new artifact.
+Examples of post-processors are compress to compress artifacts,
+upload to upload artifacts, etc.
+
+Post-processors run after the image is built by the builder
+and provisioned by the provisioner(s).
+Post-processors are optional,
+and they can be used to upload artifacts, re-package, or more.
+For more information about post-processors,
+please choose an option from the sidebar.
+
 ### [Templates](https://www.packer.io/docs/templates)
 
 Templates are JSON files which define one or more builds
@@ -167,6 +182,17 @@ then no software other than the defaults will be installed within the resulting 
 This is not typical, however, since much of the value of Packer is
 to produce multiple identical images of pre-configured software.
 
+#### [Template Post-Processors](https://www.packer.io/docs/templates/post-processors)
+
+The post-processor section within a template configures any post-processing
+that will be done to images built by the builders.
+Examples of post-processing would be compressing files, uploading artifacts, etc.
+
+Post-processors are optional.
+If no post-processors are defined within a template,
+then no post-processing will be done to the image.
+The resulting artifact of a build is just the image outputted by the builder.
+
 #### [Template Communicators](https://www.packer.io/docs/templates/communicator)
 
 Communicators are the mechanism Packer uses to
@@ -182,17 +208,6 @@ The syntax of templates uses the following conventions:
 - Anything template related happens within double-braces: `{{ }}`.
 - Functions are specified directly within the braces, such as `{{timestamp}}`.
 - Template variables are prefixed with a period and capitalized, such as `{{.Variable}}`.
-
-#### [Template Post-Processors](https://www.packer.io/docs/templates/post-processors)
-
-The post-processor section within a template configures any post-processing
-that will be done to images built by the builders.
-Examples of post-processing would be compressing files, uploading artifacts, etc.
-
-Post-processors are optional.
-If no post-processors are defined within a template,
-then no post-processing will be done to the image.
-The resulting artifact of a build is just the image outputted by the builder.
 
 #### [Template User Variables](https://www.packer.io/docs/templates/user-variables)
 
