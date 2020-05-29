@@ -150,8 +150,30 @@ where variables and functions can be used to modify the value of a configuration
 The syntax of templates uses the following conventions:
 
 - Anything template related happens within double-braces: `{{ }}`.
-- Functions are specified directly within the braces, such as `{{timestamp}}`.
-- Template variables are prefixed with a period and capitalized, such as `{{.Variable}}`.
+- **Functions** are specified directly within the braces, such as `{{timestamp}}`.
+- **Template variables** are prefixed with a period and capitalized, such as `{{.Variable}}`.
+
+Template variables are special variables automatically set by Packer at build time.
+Some builders, provisioners and other components have template variables
+that are available only for that component.
+Template variables are recognizable because they're prefixed by a period, such as `{{ .Name }}`.
+For example, when using the `shell builder` template variables are available
+to customize the `execute_command` parameter used to determine how Packer will run the shell command.
+
+```json
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "{{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "scripts": ["scripts/bootstrap.sh"]
+    }
+  ]
+}
+```
+
+The `{{ .Vars }}` and `{{ .Path }}` template variables will be replaced with
+the list of the environment variables and the path to the script to be executed respectively.
 
 #### [Template User Variables](https://www.packer.io/docs/templates/user-variables)
 
