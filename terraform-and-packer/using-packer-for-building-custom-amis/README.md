@@ -26,8 +26,8 @@
 - [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
-    - [File Provisioner](#file-provisioner)
     - [Shell Provisioner](#shell-provisioner)
+    - [File Provisioner](#file-provisioner)
 - [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
 - [Cleanup Amazon EBS-Backed AMI](#cleanup-amazon-ebs-backed-ami)
 - [Debugging Packer Builds](#debugging-packer-builds)
@@ -329,6 +329,13 @@ us-east-2: ami-0f50843abd3b56267
 
 ### Common Provisioners
 
+#### [Shell Provisioner](https://www.packer.io/docs/provisioners/shell)
+
+- Type: `shell`
+
+The shell Packer provisioner provisions machines built by Packer using shell scripts.
+Shell provisioning is the easiest way to get software installed and configured on a machine.
+
 #### [File Provisioner](https://www.packer.io/docs/provisioners/file)
 
 - Type: `file`
@@ -343,13 +350,6 @@ Creating files in /tmp and using a shell provisioner to move them into the final
 is the only way to upload files to root owned locations.
 
 The file provisioner can upload both single files and complete directories.
-
-#### [Shell Provisioner](https://www.packer.io/docs/provisioners/shell)
-
-- Type: `shell`
-
-The shell Packer provisioner provisions machines built by Packer using shell scripts.
-Shell provisioning is the easiest way to get software installed and configured on a machine.
 
 <br />
 
