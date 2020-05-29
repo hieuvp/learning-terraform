@@ -118,17 +118,9 @@ Example provisioners include shell scripts, Chef, Puppet, etc.
 
 ### [Post-Processors](https://www.packer.io/docs/post-processors)
 
-Post-processors are components of Packer that take the result of a builder or another post-processor
-and process that to create a new artifact.
-Examples of post-processors are compress to compress artifacts,
-upload to upload artifacts, etc.
-
-Post-processors run after the image is built by the builder
-and provisioned by the provisioner(s).
-Post-processors are optional,
-and they can be used to upload artifacts, re-package, or more.
-For more information about post-processors,
-please choose an option from the sidebar.
+Post-processors run after the image is
+built by the builder and provisioned by the provisioner(s).
+They can be used to compress artifacts, upload artifacts, re-package, or more.
 
 ### [Templates](https://www.packer.io/docs/templates)
 
