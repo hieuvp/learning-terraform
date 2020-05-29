@@ -111,23 +111,10 @@ Packer comes with many builders by default, and can also be extended to add new 
 
 ### [Provisioners](https://www.packer.io/docs/provisioners)
 
-Provisioners are components of Packer that install and configure software
-within a running machine prior to that machine being turned into a static image.
+Provisioners are components that install and configure software within a running machine
+prior to that machine being turned into a static image.
 They perform the major work of making the image contain useful software.
 Example provisioners include shell scripts, Chef, Puppet, etc.
-
-Provisioners use builtin and third-party software to install
-and configure the machine image after booting.
-Provisioners prepare the system for use,
-so common use cases for provisioners include:
-
-- installing packages
-- patching the kernel
-- creating users
-- downloading application code
-
-See Template Provisioners to learn more about working with provisioners.
-For information on an individual provisioner, choose it from the sidebar.
 
 ### [Post-Processors](https://www.packer.io/docs/post-processors)
 
