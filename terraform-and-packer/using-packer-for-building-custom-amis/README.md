@@ -21,6 +21,7 @@
   - [Post-Processors](#post-processors)
   - [Templates](#templates)
     - [Template Engine](#template-engine)
+    - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Practices](#practices)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
@@ -152,6 +153,8 @@ The syntax of templates uses the following conventions:
 - Anything template related happens within double-braces: `{{ }}`.
 - **Functions** are specified directly within the braces, such as `{{timestamp}}`.
 - **Template variables** are prefixed with a period and capitalized, such as `{{.Variable}}`.
+
+#### Template Variables
 
 Template variables are special variables automatically set by Packer at build time.
 Some builders, provisioners and other components have template variables
