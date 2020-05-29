@@ -19,7 +19,6 @@
   - [Provisioners](#provisioners)
   - [Post-Processors](#post-processors)
   - [Templates](#templates)
-    - [Template Post-Processors](#template-post-processors)
     - [Template Communicators](#template-communicators)
     - [Template Engine](#template-engine)
     - [Template User Variables](#template-user-variables)
@@ -118,24 +117,13 @@ Example provisioners include shell scripts, Chef, Puppet, etc.
 
 Post-processors run after the image is
 built by the builder and provisioned by the provisioner(s).
-They can be used to compress artifacts, upload artifacts, re-package, or more.
+They can be used to compress files, upload artifacts, re-package, or more.
 
 ### [Templates](https://www.packer.io/docs/templates)
 
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
-
-#### [Template Post-Processors](https://www.packer.io/docs/templates/post-processors)
-
-The post-processor section within a template configures any post-processing
-that will be done to images built by the builders.
-Examples of post-processing would be compressing files, uploading artifacts, etc.
-
-Post-processors are optional.
-If no post-processors are defined within a template,
-then no post-processing will be done to the image.
-The resulting artifact of a build is just the image outputted by the builder.
 
 #### [Template Communicators](https://www.packer.io/docs/templates/communicator)
 
