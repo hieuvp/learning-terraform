@@ -105,19 +105,9 @@ Packer is able to use tools like Chef or Puppet to install software onto the ima
 
 ### [Builders](https://www.packer.io/docs/builders)
 
-Builders are components of Packer that are able to create a machine image for a single platform.
-Builders read in some configuration and use that to run and generate a machine image.
-A builder is invoked as part of a build in order to create the actual resulting images.
-Example builders include VirtualBox, VMware, and Amazon EC2.
-Builders can be created and added to Packer in the form of plugins.
-
 Builders are responsible for creating machines and generating images from them for various platforms.
 For example, there are separate builders for EC2, VMware, VirtualBox, etc.
-Packer comes with many builders by default,
-and can also be extended to add new builders.
-
-To learn more about an individual builder, choose it from the sidebar.
-Each builder has its own configuration options and parameters.
+Packer comes with many builders by default, and can also be extended to add new builders.
 
 ### [Provisioners](https://www.packer.io/docs/provisioners)
 
