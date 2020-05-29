@@ -20,7 +20,6 @@
   - [Communicators](#communicators)
   - [Post-Processors](#post-processors)
   - [Templates](#templates)
-    - [Template Communicators](#template-communicators)
     - [Template Engine](#template-engine)
     - [Template User Variables](#template-user-variables)
 - [Practices](#practices)
@@ -122,13 +121,14 @@ upload files, execute scripts, etc. with the machine being created.
 Communicators are configured within the builder section.
 Packer currently supports three kinds of communicators:
 
-- `none` - No communicator will be used. If this is set, most provisioners also can't be used.
+- `none` - No communicator will be used.
+  If this is set, most [provisioners](#provisioners) also can't be used.
 - `ssh` - An SSH connection will be established to the machine. This is usually the default.
 - `winrm` - A WinRM connection will be established.
 
 In addition to the above, some builders have custom communicators they can use.
 For example, the Docker builder has a "docker" communicator
-that uses docker exec and docker cp to execute scripts and copy files.
+that uses `docker exec` and `docker cp` to execute scripts and copy files.
 
 ### [Post-Processors](https://www.packer.io/docs/post-processors)
 
@@ -141,11 +141,6 @@ They can be used to compress files, upload artifacts, re-package, or more.
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
-
-#### [Template Communicators](https://www.packer.io/docs/templates/communicator)
-
-Communicators are the mechanism Packer uses to
-upload files, execute scripts, etc. with the machine being created.
 
 #### [Template Engine](https://www.packer.io/docs/templates/engine)
 
