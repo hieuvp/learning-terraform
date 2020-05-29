@@ -139,13 +139,12 @@ They can be used to compress files, upload artifacts, re-package, or more.
 
 ### [Templates](https://www.packer.io/docs/templates)
 
+> This is an old-style stable configuration language.
+> From version 1.5 and later, Packer supports HCL2 templates.
+
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
-
-This page is about HCL2 in Packer 1.5 and later.
-HCL2 support for Packer is still in Beta.
-For the old-style stable configuration language see [template docs](#templates).
 
 #### [Template Engine](https://www.packer.io/docs/templates/engine)
 
