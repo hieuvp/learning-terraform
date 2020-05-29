@@ -19,7 +19,6 @@
   - [Provisioners](#provisioners)
   - [Post-Processors](#post-processors)
   - [Templates](#templates)
-    - [Template Provisioners](#template-provisioners)
     - [Template Post-Processors](#template-post-processors)
     - [Template Communicators](#template-communicators)
     - [Template Engine](#template-engine)
@@ -126,19 +125,6 @@ They can be used to compress artifacts, upload artifacts, re-package, or more.
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
-
-#### [Template Provisioners](https://www.packer.io/docs/templates/provisioners)
-
-Within the template,
-the provisioners section contains an array of all the provisioners
-that Packer should use to install and configure software within running machines prior
-to turning them into machine images.
-
-Provisioners are optional.
-If no provisioners are defined within a template,
-then no software other than the defaults will be installed within the resulting machine images.
-This is not typical, however, since much of the value of Packer is
-to produce multiple identical images of pre-configured software.
 
 #### [Template Post-Processors](https://www.packer.io/docs/templates/post-processors)
 
