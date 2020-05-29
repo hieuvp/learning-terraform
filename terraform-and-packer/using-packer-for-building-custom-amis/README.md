@@ -17,6 +17,7 @@
 - [Concepts](#concepts)
   - [Builders](#builders)
   - [Provisioners](#provisioners)
+  - [Communicators](#communicators)
   - [Post-Processors](#post-processors)
   - [Templates](#templates)
     - [Template Communicators](#template-communicators)
@@ -112,6 +113,22 @@ Provisioners are components that install and configure software within a running
 prior to that machine being turned into a static image.
 They perform the major work of making the image contain useful software.
 Example provisioners include shell scripts, Chef, Puppet, etc.
+
+### [Communicators](https://www.packer.io/docs/communicators)
+
+Communicators are the mechanism Packer uses to
+upload files, execute scripts, etc. with the machine being created.
+
+Communicators are configured within the builder section.
+Packer currently supports three kinds of communicators:
+
+- `none` - No communicator will be used. If this is set, most provisioners also can't be used.
+- `ssh` - An SSH connection will be established to the machine. This is usually the default.
+- `winrm` - A WinRM connection will be established.
+
+In addition to the above, some builders have custom communicators they can use.
+For example, the Docker builder has a "docker" communicator
+that uses docker exec and docker cp to execute scripts and copy files.
 
 ### [Post-Processors](https://www.packer.io/docs/post-processors)
 
