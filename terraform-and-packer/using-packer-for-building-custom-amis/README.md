@@ -19,7 +19,6 @@
   - [Provisioners](#provisioners)
   - [Post-Processors](#post-processors)
   - [Templates](#templates)
-    - [Template Builders](#template-builders)
     - [Template Provisioners](#template-provisioners)
     - [Template Post-Processors](#template-post-processors)
     - [Template Communicators](#template-communicators)
@@ -127,17 +126,6 @@ They can be used to compress artifacts, upload artifacts, re-package, or more.
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
-
-#### [Template Builders](https://www.packer.io/docs/templates/builders)
-
-Within the template,
-the builders section contains an array of all the builders
-that Packer should use to generate machine images for the template.
-
-Builders are responsible for creating machines and generating images from them for various platforms.
-For example, there are separate builders for EC2, VMware, VirtualBox, etc.
-Packer comes with many builders by default,
-and can also be extended to add new builders.
 
 #### [Template Provisioners](https://www.packer.io/docs/templates/provisioners)
 
