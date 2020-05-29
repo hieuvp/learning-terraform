@@ -140,7 +140,7 @@ They can be used to compress files, upload artifacts, re-package, or more.
 ### [Templates](https://www.packer.io/docs/templates)
 
 > This is an old-style stable configuration language.
-> From version 1.5 and later, Packer supports HCL2 templates.
+> From version `1.5.0` and later, Packer supports [HCL2 templates](https://www.packer.io/guides/hcl).
 
 Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
