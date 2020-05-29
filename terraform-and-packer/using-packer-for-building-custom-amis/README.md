@@ -194,7 +194,7 @@ This maximizes the portability of the template.
 
 ### [AMI Builder (EBS backed)](https://www.packer.io/docs/builders/amazon-ebs)
 
-Type: `amazon-ebs`
+- Type: `amazon-ebs`
 
 The amazon-ebs Packer builder is able to create Amazon AMIs backed by EBS volumes for use in EC2.
 For more information on the difference between EBS-backed instances and instance-store backed instances,
@@ -331,7 +331,7 @@ us-east-2: ami-0f50843abd3b56267
 
 #### [File Provisioner](https://www.packer.io/docs/provisioners/file)
 
-Type: `file`
+- Type: `file`
 
 The file Packer provisioner uploads files to machines built by Packer.
 The recommended usage of the file provisioner is to use it to upload files,
@@ -346,7 +346,7 @@ The file provisioner can upload both single files and complete directories.
 
 #### [Shell Provisioner](https://www.packer.io/docs/provisioners/shell)
 
-Type: `shell`
+- Type: `shell`
 
 The shell Packer provisioner provisions machines built by Packer using shell scripts.
 Shell provisioning is the easiest way to get software installed and configured on a machine.
