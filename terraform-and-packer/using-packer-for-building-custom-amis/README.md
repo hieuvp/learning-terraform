@@ -143,6 +143,10 @@ Templates are JSON files which define one or more builds
 by configuring the various components of Packer.
 Packer is able to read a template and use that information to create multiple machine images in parallel.
 
+This page is about HCL2 in Packer 1.5 and later.
+HCL2 support for Packer is still in Beta.
+For the old-style stable configuration language see [template docs](#templates).
+
 #### [Template Engine](https://www.packer.io/docs/templates/engine)
 
 All strings within templates are processed by a common Packer templating engine,
@@ -176,7 +180,7 @@ to customize the `execute_command` parameter used to determine how Packer will r
 ```
 
 The `{{ .Vars }}` and `{{ .Path }}` template variables will be replaced with
-the list of the environment variables and the path to the script to be executed respectively.
+the list of the environment variables and, the path to the script to be executed respectively.
 
 #### [Template User Variables](https://www.packer.io/docs/templates/user-variables)
 
@@ -186,9 +190,6 @@ This lets you parameterize your templates so that
 you can keep secret tokens, environment-specific data,
 and other types of information out of your templates.
 This maximizes the portability of the template.
-
-Using user variables expects you to know how configuration templates work.
-If you don't know how configuration templates work yet, please read that page first.
 
 ## Practices
 
