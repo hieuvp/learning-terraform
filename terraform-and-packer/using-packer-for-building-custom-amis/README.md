@@ -708,45 +708,25 @@ packer build -debug
 
 ## AWS Pricing
 
-- [EC2 Instance Pricing](https://aws.amazon.com/ec2/pricing/on-demand)
+- [**EC2 Instance**](https://aws.amazon.com/ec2/pricing/on-demand)
 
 |          Region          | Operating System | Instance Type |        Cost        |
 | :----------------------: | :--------------: | :-----------: | :----------------: |
 | Asia Pacific (Singapore) |      Linux       |   t2.micro    | `$0.0146 per Hour` |
 
-- EBS-Backed AMI
+- **EBS-Backed AMI**
 
 > An AMI that is based on EBS-backed EC2 instance.
 
-I want to create a backup
-or launch multiple copies of my Amazon Elastic Compute Cloud (Amazon EC2) instance,
-or I received a maintenance notification suggesting
-that I create an Amazon Machine Image (AMI) of my instance.
-What's an AMI, and how do I create one?  
-Resolution
-
-Amazon Machine Images (AMIs) are archival copies of instances that you can use to launch other instances.
-If you have an Amazon EC2 instance that's backed by an Amazon Elastic Block Store (Amazon EBS),
-use custom AMIs to launch multiple copies of one instance, or use a custom AMI as a backup solution.
-
-By default, when you create an AMI from an instance,
+By default, when creating an AMI from an instance,
 snapshots are taken of each EBS volume attached to the instance.
+
 AMIs can launch with multiple EBS volumes attached,
 allowing you to replicate both an instance's configuration
 and the state of all the EBS volumes that are attached to that instance.
 
 Note: Instances created from AMIs do not retain or copy any data stored in instance store volumes.
 The source instance you create the AMI from retains all data that is stored in the instance store.
-
-To create an AMI
-
-- If your instance is running Linux,
-  follow the instructions at Creating an Amazon EBS-Backed Linux AMI.
-  <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html>
-
-Note: To maintain data consistency,
-your instance reboots during the AMI creation process,
-but the public IP address and instance store volumes for your instance remain the same.
 
 Resources
 
