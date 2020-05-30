@@ -708,14 +708,16 @@ packer build -debug
 
 ## AWS Pricing
 
+- [EC2 Instance Pricing](https://aws.amazon.com/ec2/pricing/on-demand)
+
+|          Region          | Operating System | Instance Type |        Cost        |
+| :----------------------: | :--------------: | :-----------: | :----------------: |
+| Asia Pacific (Singapore) |      Linux       |   t2.micro    | `$0.0146 per Hour` |
+
 Resources
 
-- EC2
 - AMI
 - Snapshot
-
-Singapore
-t2.micro 1 Variable 1 GiB EBS Only \$0.0146 per Hour
 
 You are only charged for the storage of the bits that make up your AMI,
 there are no charges for creating an AMI.
