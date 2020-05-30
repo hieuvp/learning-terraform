@@ -714,6 +714,8 @@ packer build -debug
 | :----------------------: | :--------------: | :-----------: | :----------------: |
 | Asia Pacific (Singapore) |      Linux       |   t2.micro    | `$0.0146 per Hour` |
 
+<br />
+
 - **EBS-Backed AMI**
 
 > An AMI that is based on EBS-backed EC2 instance.
@@ -727,11 +729,6 @@ and the state of all the EBS volumes that are attached to that instance.
 
 Note: Instances created from AMIs do not retain or copy any data stored in instance store volumes.
 The source instance you create the AMI from retains all data that is stored in the instance store.
-
-Resources
-
-- AMI
-- Snapshot
 
 You are only charged for the storage of the bits that make up your AMI,
 there are no charges for creating an AMI.
