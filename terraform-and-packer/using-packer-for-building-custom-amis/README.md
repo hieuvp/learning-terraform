@@ -709,7 +709,9 @@ packer build -debug
 
 ## AWS Pricing
 
-- [**EC2 Instance**](https://aws.amazon.com/ec2/pricing/on-demand)
+- [**EC2 Instance**](https://aws.amazon.com/ec2/pricing)
+
+On-Demand instances
 
 |          Region          | Operating System | Instance Type |        Cost        |
 | :----------------------: | :--------------: | :-----------: | :----------------: |
@@ -717,12 +719,29 @@ packer build -debug
 
 <br />
 
+- **EBS Root**
+
+Region: Asia Pacific (Singapore)
+
+Amazon EBS Volumes
+
+With Amazon EBS, you pay only for what you use.
+The pricing for Amazon EBS volumes is listed below
+General Purpose SSD (gp2) Volumes
+`$0.12` per GB-month of provisioned storage
+
 - **EBS-Backed AMI**
 
 > An AMI that is based on EBS-backed EC2 instance.
 
 By default, when creating an AMI from an instance,
 snapshots are taken of each EBS volume attached to the instance.
+
+Region: Asia Pacific (Singapore)
+
+Amazon EBS Snapshots
+EBS Snapshots
+`$0.05` per GB-month of data stored
 
 You are only charged for the storage of the bits that make up your AMI,
 there are no charges for creating an AMI.
@@ -746,15 +765,6 @@ but not for the storage of your AMI.
 Note that you will be charged separately for the EBS volumes used by your instances.
 EBS is not the same as the instance storage included in the hourly fee.
 See "Amazon EBS Standard volumes" right above the snapshot information.
-
-Very close to nothing.
-
-There is no cost to make an AMI itself,
-but if you're making it from a running instance
-you will pay the fees for running a micro instance
-(which is about \$0.02/hr, depending on availability region - see the pricing details)
-<http://aws.amazon.com/ec2/pricing/>
-and also fees for using the EBS root for however long you use it.
 
 When storing the AMI,
 you only pay for the S3 storage taken from the snapshot.
