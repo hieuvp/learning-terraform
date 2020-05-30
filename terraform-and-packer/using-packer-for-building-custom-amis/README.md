@@ -304,7 +304,7 @@ $ packer build example-builders.json
 ==> amazon-linux-ami: Waiting for AMI to become ready...
 ```
 
-<div align="center"><img src="assets/example-builders-ami-pending.png" width="880"></div>
+<div align="center"><img src="assets/example-builders-ami-pending.png" width="860"></div>
 
 <br />
 
@@ -325,7 +325,6 @@ $ packer build example-builders.json
 ==> amazon-linux-ami: Deleting temporary security group...
 ==> amazon-linux-ami: Deleting temporary keypair...
 Build 'amazon-linux-ami' finished.
-
 ```
 
 <div align="center"><img src="assets/example-builders-instance-terminated.png" width="800"></div>
@@ -339,7 +338,7 @@ Build 'amazon-linux-ami' finished.
 us-east-2: ami-0f50843abd3b56267
 ```
 
-<div align="center"><img src="assets/example-builders-ami-available.png" width="880"></div>
+<div align="center"><img src="assets/example-builders-ami-available.png" width="860"></div>
 
 <br />
 
