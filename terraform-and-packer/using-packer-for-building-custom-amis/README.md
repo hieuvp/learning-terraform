@@ -723,28 +723,17 @@ packer build -debug
 By default, when creating an AMI from an instance,
 snapshots are taken of each EBS volume attached to the instance.
 
-AMIs can launch with multiple EBS volumes attached,
-allowing you to replicate both an instance's configuration
-and the state of all the EBS volumes that are attached to that instance.
-
-Note: Instances created from AMIs do not retain or copy any data stored in instance store volumes.
-The source instance you create the AMI from retains all data that is stored in the instance store.
-
 You are only charged for the storage of the bits that make up your AMI,
 there are no charges for creating an AMI.
 EBS-backed AMIs are made up of snapshots of the EBS volumes that form the AMI.
 You will pay storage fees for those snapshots according to the rates listed here.
 <https://aws.amazon.com/ebs/pricing/>
+
 Your EBS volumes are not "duplicated" until the instance is launched,
 at which point a volume is created from the stored snapshots
 and you will pay regular EBS volume fees and EBS snapshot billing.
 <https://aws.amazon.com/ebs/pricing/>
 <https://aws.amazon.com/premiumsupport/knowledge-center/ebs-snapshot-billing/>
-
-S3-backed AMIs have their information stored in S3
-and you will pay storage fees for the data being stored in S3 according to the S3 pricing,
-<http://aws.amazon.com/s3/pricing/>
-whether the instance is running or not.
 
 Assuming this is an EBS AMI,
 you will be charged for the snapshot(s) containing the data for your image.
