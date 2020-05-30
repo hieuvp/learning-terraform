@@ -747,24 +747,13 @@ You are only charged for the storage of the bits that make up your AMI,
 there are no charges for creating an AMI.
 EBS-backed AMIs are made up of snapshots of the EBS volumes that form the AMI.
 You will pay storage fees for those snapshots according to the rates listed here.
-<https://aws.amazon.com/ebs/pricing/>
-
-Your EBS volumes are not "duplicated" until the instance is launched,
-at which point a volume is created from the stored snapshots
-and you will pay regular EBS volume fees and EBS snapshot billing.
-<https://aws.amazon.com/ebs/pricing/>
-<https://aws.amazon.com/premiumsupport/knowledge-center/ebs-snapshot-billing/>
-
-Assuming this is an EBS AMI,
+<https://aws.amazon.com/ebs/pricing>
 you will be charged for the snapshot(s) containing the data for your image.
-The relevant pricing information can be found under "Amazon EBS Snapshots to Amazon S3"
-at <http://aws.amazon.com/ec2/pricing/>.
-"Subscriptions" (Reservations) are available for instances,
-but not for the storage of your AMI.
 
 Note that you will be charged separately for the EBS volumes used by your instances.
 EBS is not the same as the instance storage included in the hourly fee.
 See "Amazon EBS Standard volumes" right above the snapshot information.
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html>
 
 When storing the AMI,
 you only pay for the S3 storage taken from the snapshot.
