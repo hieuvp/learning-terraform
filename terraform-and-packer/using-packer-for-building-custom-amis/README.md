@@ -294,6 +294,10 @@ $ packer build example-builders.json
 
 <br />
 
+<div align="center"><img src="assets/example-builders-volume-in-use.png" width="900"></div>
+
+<br />
+
 ```console
 ==> amazon-linux-ami: Stopping the source instance...
     amazon-linux-ami: Stopping instance
@@ -328,6 +332,10 @@ Build 'amazon-linux-ami' finished.
 ```
 
 <div align="center"><img src="assets/example-builders-instance-terminated.png" width="820"></div>
+
+<br />
+
+<div align="center"><img src="assets/example-builders-volume-empty.png" width="900"></div>
 
 <br />
 
