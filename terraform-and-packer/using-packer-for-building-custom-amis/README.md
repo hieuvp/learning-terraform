@@ -24,6 +24,7 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Practices](#practices)
+  - [Commands (CLI)](#commands-cli)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
     - [Shell Provisioner](#shell-provisioner)
@@ -191,6 +192,19 @@ and other types of information out of your templates.
 This maximizes the portability of the template.
 
 ## Practices
+
+### [Commands (CLI)](https://www.packer.io/docs/commands)
+
+```shell script
+# Check that a template is valid
+$ packer validate [options] TEMPLATE
+
+# Fix templates from old versions of packer
+$ packer fix [options] TEMPLATE
+
+# Build image(s) from template
+$ packer build [options] TEMPLATE
+```
 
 ### [AMI Builder (EBS backed)](https://www.packer.io/docs/builders/amazon-ebs)
 
