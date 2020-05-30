@@ -714,18 +714,9 @@ packer build -debug
 | :----------------------: | :--------------: | :-----------: | :----------------: |
 | Asia Pacific (Singapore) |      Linux       |   t2.micro    | `$0.0146 per Hour` |
 
-- EBS-Backed Linux AMI
+- EBS-Backed AMI
 
-To create an Amazon EBS-backed Linux AMI,
-start from an instance that you've launched from an existing Amazon EBS-backed Linux AMI.
-This can be an AMI you have obtained from the AWS Marketplace,
-an AMI you have created using the AWS Server Migration Service or VM Import/Export,
-or any other AMI you can access.
-After you customize the instance to suit your needs,
-create and register a new AMI,
-which you can use to launch new instances with these customizations.
-
-An AMI that is based on EBS-backed EC2 instance.
+> An AMI that is based on EBS-backed EC2 instance.
 
 I want to create a backup
 or launch multiple copies of my Amazon Elastic Compute Cloud (Amazon EC2) instance,
