@@ -32,7 +32,7 @@
 - [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
 - [Cleanup Amazon EBS-Backed AMI](#cleanup-amazon-ebs-backed-ami)
 - [Debugging Packer Builds](#debugging-packer-builds)
-- [Pricing](#pricing)
+- [AWS Pricing](#aws-pricing)
 - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -706,7 +706,7 @@ packer build -on-error=ask
 packer build -debug
 ```
 
-## Pricing
+## AWS Pricing
 
 Resources
 
