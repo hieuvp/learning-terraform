@@ -25,6 +25,9 @@
     - [Template User Variables](#template-user-variables)
 - [Practices](#practices)
   - [Commands (CLI)](#commands-cli)
+  - [Root device storage concepts](#root-device-storage-concepts)
+    - [Instance Store-Backed Instances](#instance-store-backed-instances)
+    - [Amazon EBS-Backed Instances](#amazon-ebs-backed-instances)
   - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
     - [Instance Stores](#instance-stores)
     - [Ephemeral storage vs. EBS](#ephemeral-storage-vs-ebs)
@@ -211,6 +214,78 @@ $ packer fix [options] TEMPLATE
 # Build image(s) from template
 $ packer build [options] TEMPLATE
 ```
+
+### Root device storage concepts
+
+You can launch an instance from either an instance store-backed AMI or an Amazon EBS-backed AMI.
+The description of an AMI includes which type of AMI it is;
+you will see the root device referred to in some places as either ebs (for Amazon EBS-backed)
+or instance store (for instance store-backed).
+This is important because there are significant differences between
+what you can do with each type of AMI.
+For more information about these differences,
+see Storage for the root device.
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device>
+
+#### Instance Store-Backed Instances
+
+Instances that use instance stores for the root device automatically have one
+or more instance store volumes available,
+with one volume serving as the root device volume.
+When an instance is launched,
+the image that is used to boot the instance is copied to the root volume.
+Note that you can optionally use additional instance store volumes,
+depending on the instance type.
+
+Any data on the instance store volumes persists as long as the instance is running,
+but this data is deleted when the instance is terminated
+(instance store-backed instances do not support the Stop action)
+or if it fails (such as if an underlying drive has issues).
+Root device on an Amazon EC2 instance store-backed instance.
+
+After an instance store-backed instance fails or terminates,
+it cannot be restored.
+If you plan to use Amazon EC2 instance store-backed instances,
+we highly recommend that you distribute the data
+on your instance stores across multiple Availability Zones.
+You should also back up critical data from your instance store volumes
+to persistent storage on a regular basis.
+
+For more information, see Amazon EC2 Instance Store.
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html>
+
+#### Amazon EBS-Backed Instances
+
+Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
+When you launch an Amazon EBS-backed instance,
+we create an Amazon EBS volume for each Amazon EBS snapshot referenced by the AMI you use.
+You can optionally use other Amazon EBS volumes or instance store volumes,
+depending on the instance type.
+
+Root device volume and other Amazon EBS volumes of an Amazon EBS-backed instance
+
+An Amazon EBS-backed instance can be stopped
+and later restarted without affecting data stored in the attached volumes.
+There are various instance and volume-related tasks you can do
+when an Amazon EBS-backed instance is in a stopped state.
+For example, you can modify the properties of the instance,
+change its size, or update the kernel it is using,
+or you can attach your root volume to a different running instance for debugging or any other purpose.
+
+If an Amazon EBS-backed instance fails, you can restore your session by following one of these methods:
+
+- Stop and then start again (try this method first).
+- Automatically snapshot all relevant volumes and create a new AMI.
+  For more information, see Creating an Amazon EBS-backed Linux AMI.
+- Attach the volume to the new instance by following these steps:
+  1. Create a snapshot of the root volume.
+  1. Register a new AMI using the snapshot.
+  1. Launch a new instance from the new AMI.
+  1. Detach the remaining Amazon EBS volumes from the old instance.
+  1. Reattach the Amazon EBS volumes to the new instance.
+
+For more information, see Amazon EBS volumes.
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html>
 
 ### EC2 Instance Store vs. EBS
 
