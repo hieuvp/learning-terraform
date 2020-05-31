@@ -214,6 +214,9 @@ The amazon-ebs Packer builder is able to create Amazon AMIs backed by EBS volume
 For more information on the difference between EBS-backed instances and instance-store backed instances,
 see the "storage for the root device" section in the EC2 documentation.
 
+<https://help.acloud.guru/hc/en-us/articles/115003534253-AWS-EC2-Instance-Store-vs-EBS>
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html>
+
 This builder builds an AMI by launching an EC2 instance from a source AMI,
 provisioning that running machine, and then creating an AMI from that machine.
 This is all done in your own AWS account.
