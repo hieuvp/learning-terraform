@@ -28,8 +28,9 @@
   - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
     - [Instance Stores](#instance-stores)
     - [Ephemeral storage vs. EBS](#ephemeral-storage-vs-ebs)
-    - [Treatments](#treatments)
     - [Conclusion](#conclusion)
+    - [Amazon EBS](#amazon-ebs)
+    - [Amazon EC2 instance store](#amazon-ec2-instance-store)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
     - [Shell Provisioner](#shell-provisioner)
@@ -223,7 +224,7 @@ or NAS and may be competing for I/O with thousands of other instances.
 
 For 90% of use cases the difference in latency will be irrelevant,
 and certainly not worth the complication introduced
-by the ephemeral nature of the Instance Store storage.
+by the ephemeral nature of the `Instance Store` storage.
 The performance difference in latency,
 especially with SSD Instance Stores,
 can have a profound impact on compute intensive workloads
@@ -243,10 +244,10 @@ that any other storage on that site.
 
 #### Ephemeral storage vs. EBS
 
-Discussion about ephemeral storage us EBS is often phrased as two extremes,
+Discussion about ephemeral storage vs. EBS is often phrased as two extremes,
 with Instance Stores being at risk of disappearing at any moment vs. EBS
 with is rock solid and will never fail.
-While they are at either ends of of the continuum, neither are extremes,
+While they are at either ends of the continuum, neither are extremes,
 they are in some cases closer then often considered.
 
 It is true that Instance Stores will be wiped if the instance is stopped.
@@ -274,34 +275,6 @@ For a high proportion of systems EBS is an adequate (and cost effective) solutio
 However if your application is very sensitive the solution
 to make EBS fault tolerant will be similar to making an Instance Store fault tolerant.
 
-#### Treatments
-
-Depending on the nature of the data and use case there are a range of options to be considered.
-
-- A RAID mirror can be a good method to manage a disk level failure,
-  as it provides time to mange the outage to move to a new instance.
-  However it alone is not a full solution as you will continue to
-  run an a defective instance until it is fixed,
-  and it does not protect against other non-disk type failures.
-- If the requirement is only for fast Read,
-  the data does not change frequently,
-  and RTO / RPO are not onerous,
-  Use S3 to host the master copy and basic snapshots
-  or Lambda to pick up and write the incremental changes bask to S3.
-- If the data is changing, or the RPO & RTO are short,
-  you may want to consider file level or
-  block level replication to a standby Instance with Instance Store volumes.
-  AWS do not have a services for this at present,
-  but it can be done with 3rd party products.
-- If the data is changing, or the RPO is short but RTO is not,
-  you may want to consider file level or block level replication to an instance
-  with EBS volume as a form of up-to-date / real-time snapshot to use to build a new instance.
-  AWS do not have a services for this at present, but it can be done with 3rd party products.
-- Possibly the design is no longer optimal
-  and you should consider a High Performance Compute (HPC) solution
-  which has additional safeguards and recovery methods built in.
-- I am sure you can think of more when you start to think outside the box.
-
 #### Conclusion
 
 Instance stores still have value especially when it comes to massive IOPS at low latency.
@@ -312,6 +285,39 @@ regardless of the technology.
 
 Until you get to the rarified atmosphere of high performance compute,
 EBS storage provides plenty of grunt and a whole bunch of flexibility to meet most of your EC2 needs.
+
+#### Amazon EBS
+
+Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
+You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates.
+For example, Amazon EBS is the recommended storage option when you run a database on an instance.
+
+An EBS volume behaves like a raw, unformatted,
+external block device that you can attach to a single instance.
+The volume persists independently from the running life of an instance.
+After an EBS volume is attached to an instance,
+you can use it like any other physical hard drive.
+As illustrated in the previous figure,
+multiple volumes can be attached to an instance.
+You can also detach an EBS volume from one instance
+and attach it to another instance.
+You can dynamically change the configuration of a volume attached to an instance.
+EBS volumes can also be created as encrypted volumes using the Amazon EBS encryption feature.
+For more information, see Amazon EBS encryption.
+
+To keep a backup copy of your data,
+you can create a snapshot of an EBS volume, which is stored in Amazon S3.
+You can create an EBS volume from a snapshot, and attach it to another instance.
+For more information, see Amazon Elastic Block Store.
+
+#### Amazon EC2 instance store
+
+Many instances can access storage from disks that are physically attached to the host computer.
+This disk storage is referred to as instance store.
+Instance store provides temporary block-level storage for instances.
+The data on an instance store volume persists only during the life of the associated instance;
+if you stop or terminate an instance, any data on instance store volumes is lost.
+For more information, see Amazon EC2 Instance Store.
 
 ### [AMI Builder (EBS backed)](https://www.packer.io/docs/builders/amazon-ebs)
 
@@ -819,6 +825,44 @@ packer build -debug
 ```
 
 ## AWS Pricing
+
+- Amazon EBS-backed AMI
+  You're charged for instance usage,
+  Amazon EBS volume usage, and storing your AMI as an Amazon EBS snapshot.
+- Amazon instance store-backed AMI
+  You're charged for instance usage and storing your AMI in Amazon S3.
+
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device>
+
+How you're charged
+
+With AMIs backed by instance store,
+you're charged for instance usage and storing your AMI in Amazon S3.
+With AMIs backed by Amazon EBS,
+you're charged for instance usage, Amazon EBS volume storage and usage,
+and storing your AMI as an Amazon EBS snapshot.
+
+With Amazon EC2 instance store-backed AMIs,
+each time you customize an AMI and create a new one,
+all of the parts are stored in Amazon S3 for each AMI.
+So, the storage footprint for each customized AMI is the full size of the AMI.
+For Amazon EBS-backed AMIs, each time you customize an AMI and create a new one,
+only the changes are stored.
+So the storage footprint for subsequent AMIs you customize after the first is much smaller,
+resulting in lower AMI storage charges.
+
+When an Amazon EBS-backed instance is stopped,
+you're not charged for instance usage;
+however, you're still charged for volume storage.
+As soon as you start your instance, we charge a minimum of one minute for usage.
+After one minute, we charge only for the seconds used.
+For example, if you run an instance for 20 seconds and then stop it,
+we charge for a full one minute.
+If you run an instance for 3 minutes and 40 seconds,
+we charge for exactly 3 minutes and 40 seconds of usage.
+We charge you for each second, with a one-minute minimum,
+that you keep the instance running,
+even if the instance remains idle and you don't connect to it.
 
 - [**EC2 Instance**](https://aws.amazon.com/ec2/pricing)
 
