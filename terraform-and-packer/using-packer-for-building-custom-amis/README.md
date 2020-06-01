@@ -23,8 +23,8 @@
     - [Template Engine](#template-engine)
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
-- [Root Device Storage](#root-device-storage)
-  - [Instance-Store Backed Instances](#instance-store-backed-instances)
+- [Amazon EC2 Root Device Volume](#amazon-ec2-root-device-volume)
+  - [Instance Store-Backed Instances](#instance-store-backed-instances)
   - [EBS-Backed Instances](#ebs-backed-instances)
 - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
   - [Instance Stores](#instance-stores)
@@ -200,7 +200,7 @@ you can keep secret tokens, environment-specific data,
 and other types of information out of your templates.
 This maximizes the portability of the template.
 
-## Root Device Storage
+## Amazon EC2 Root Device Volume
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html>
 
@@ -214,7 +214,7 @@ For more information about these differences,
 see Storage for the root device.
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device>
 
-### Instance-Store Backed Instances
+### Instance Store-Backed Instances
 
 <div align="center"><img src="assets/amazon-ec2-instance-store.png" width="900"></div>
 
@@ -994,5 +994,6 @@ See "Amazon EBS Standard volumes" right above the snapshot information.
 ## References
 
 - [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
+- [Amazon EC2 Root Device Volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html)
 - [Packer Terminology](https://www.packer.io/docs/terminology)
 - [Introduction to Packer HCL2](https://www.packer.io/guides/hcl)
