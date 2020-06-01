@@ -38,7 +38,7 @@
   - [Common Provisioners](#common-provisioners)
     - [Shell Provisioner](#shell-provisioner)
     - [File Provisioner](#file-provisioner)
-- [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
+  - [HashiCorp Configuration Language (HCL)](#hashicorp-configuration-language-hcl)
 - [Cleanup Amazon EBS-Backed AMI](#cleanup-amazon-ebs-backed-ami)
 - [Debugging Packer Builds](#debugging-packer-builds)
 - [AWS Pricing](#aws-pricing)
@@ -676,7 +676,7 @@ us-east-2: ami-03a1e765a272a7fd9
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-## HashiCorp Configuration Language (HCL)
+### HashiCorp Configuration Language (HCL)
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=labs/wordpress-nginx/variables.pkr.hcl) -->
 <!-- The below code snippet is automatically added from labs/wordpress-nginx/variables.pkr.hcl -->
