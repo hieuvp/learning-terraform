@@ -202,17 +202,8 @@ This maximizes the portability of the template.
 
 ## Amazon EC2 Root Device Volume
 
-<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html>
-
-You can launch an instance from either an instance store-backed AMI or an Amazon EBS-backed AMI.
-The description of an AMI includes which type of AMI it is;
-you will see the root device referred to in some places as either ebs (for Amazon EBS-backed)
-or instance store (for instance store-backed).
-This is important because there are significant differences between
-what you can do with each type of AMI.
-For more information about these differences,
-see Storage for the root device.
-<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device>
+> You can launch an instance from
+> either an **Instance Store-Backed AMI** or an **EBS-Backed AMI**.
 
 ### Instance Store-Backed Instances
 
@@ -995,5 +986,4 @@ See "Amazon EBS Standard volumes" right above the snapshot information.
 
 - [Building a Golden Image Pipeline](https://www.youtube.com/watch?v=mtEeYp28FnE)
 - [Amazon EC2 Root Device Volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html)
-- [Packer Terminology](https://www.packer.io/docs/terminology)
 - [Introduction to Packer HCL2](https://www.packer.io/guides/hcl)
