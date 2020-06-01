@@ -23,17 +23,17 @@
     - [Template Engine](#template-engine)
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
+- [Root Device Storage](#root-device-storage)
+  - [Instance-Store Backed Instances](#instance-store-backed-instances)
+  - [EBS-Backed Instances](#ebs-backed-instances)
+- [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
+  - [Instance Stores](#instance-stores)
+  - [Ephemeral storage vs. EBS](#ephemeral-storage-vs-ebs)
+  - [Conclusion](#conclusion)
+  - [Amazon EBS](#amazon-ebs)
+  - [Amazon EC2 instance store](#amazon-ec2-instance-store)
 - [Practices](#practices)
   - [Commands (CLI)](#commands-cli)
-  - [Root device storage concepts](#root-device-storage-concepts)
-    - [Instance Store-Backed Instances](#instance-store-backed-instances)
-    - [Amazon EBS-Backed Instances](#amazon-ebs-backed-instances)
-  - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
-    - [Instance Stores](#instance-stores)
-    - [Ephemeral storage vs. EBS](#ephemeral-storage-vs-ebs)
-    - [Conclusion](#conclusion)
-    - [Amazon EBS](#amazon-ebs)
-    - [Amazon EC2 instance store](#amazon-ec2-instance-store)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
     - [Shell Provisioner](#shell-provisioner)
@@ -200,22 +200,9 @@ you can keep secret tokens, environment-specific data,
 and other types of information out of your templates.
 This maximizes the portability of the template.
 
-## Practices
+## Root Device Storage
 
-### [Commands (CLI)](https://www.packer.io/docs/commands)
-
-```shell script
-# Check that a template is valid
-$ packer validate [options] TEMPLATE
-
-# Fix templates from old versions of packer
-$ packer fix [options] TEMPLATE
-
-# Build image(s) from template
-$ packer build [options] TEMPLATE
-```
-
-### Root device storage concepts
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html>
 
 You can launch an instance from either an instance store-backed AMI or an Amazon EBS-backed AMI.
 The description of an AMI includes which type of AMI it is;
@@ -227,7 +214,7 @@ For more information about these differences,
 see Storage for the root device.
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device>
 
-#### Instance Store-Backed Instances
+### Instance-Store Backed Instances
 
 <div align="center"><img src="assets/amazon-ec2-instance-store.png" width="900"></div>
 
@@ -256,7 +243,7 @@ to persistent storage on a regular basis.
 For more information, see Amazon EC2 Instance Store.
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html>
 
-#### Amazon EBS-Backed Instances
+### EBS-Backed Instances
 
 <div align="center"><img src="assets/amazon-ebs-volumes.png" width="900"></div>
 
@@ -291,9 +278,9 @@ If an Amazon EBS-backed instance fails, you can restore your session by followin
 For more information, see Amazon EBS volumes.
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html>
 
-### EC2 Instance Store vs. EBS
+## EC2 Instance Store vs. EBS
 
-#### Instance Stores
+### Instance Stores
 
 Let's start with what Instance storage is.
 This is the disk that is physically attached to virtualization host.
@@ -321,7 +308,7 @@ Therefore the security wiping is not 'guaranteed'
 and the data on those disks cannot be assumed to be any more secure
 that any other storage on that site.
 
-#### Ephemeral storage vs. EBS
+### Ephemeral storage vs. EBS
 
 Discussion about ephemeral storage vs. EBS is often phrased as two extremes,
 with Instance Stores being at risk of disappearing at any moment vs. EBS
@@ -354,7 +341,7 @@ For a high proportion of systems EBS is an adequate (and cost effective) solutio
 However if your application is very sensitive the solution
 to make EBS fault tolerant will be similar to making an Instance Store fault tolerant.
 
-#### Conclusion
+### Conclusion
 
 Instance stores still have value especially when it comes to massive IOPS at low latency.
 
@@ -365,7 +352,7 @@ regardless of the technology.
 Until you get to the rarified atmosphere of high performance compute,
 EBS storage provides plenty of grunt and a whole bunch of flexibility to meet most of your EC2 needs.
 
-#### Amazon EBS
+### Amazon EBS
 
 Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
 You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates.
@@ -389,7 +376,7 @@ you can create a snapshot of an EBS volume, which is stored in Amazon S3.
 You can create an EBS volume from a snapshot, and attach it to another instance.
 For more information, see Amazon Elastic Block Store.
 
-#### Amazon EC2 instance store
+### Amazon EC2 instance store
 
 Many instances can access storage from disks that are physically attached to the host computer.
 This disk storage is referred to as instance store.
@@ -397,6 +384,21 @@ Instance store provides temporary block-level storage for instances.
 The data on an instance store volume persists only during the life of the associated instance;
 if you stop or terminate an instance, any data on instance store volumes is lost.
 For more information, see Amazon EC2 Instance Store.
+
+## Practices
+
+### [Commands (CLI)](https://www.packer.io/docs/commands)
+
+```shell script
+# Check that a template is valid
+$ packer validate [options] TEMPLATE
+
+# Fix templates from old versions of packer
+$ packer fix [options] TEMPLATE
+
+# Build image(s) from template
+$ packer build [options] TEMPLATE
+```
 
 ### [AMI Builder (EBS backed)](https://www.packer.io/docs/builders/amazon-ebs)
 
