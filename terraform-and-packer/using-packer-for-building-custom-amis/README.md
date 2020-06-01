@@ -14,7 +14,7 @@
 - [What is a Golden Image](#what-is-a-golden-image)
   - [Tips for Getting Started](#tips-for-getting-started)
 - [What is Packer](#what-is-packer)
-- [Concepts](#concepts)
+- [Packer Concepts](#packer-concepts)
   - [Builders](#builders)
   - [Provisioners](#provisioners)
   - [Communicators](#communicators)
@@ -32,7 +32,7 @@
   - [Conclusion](#conclusion)
   - [Amazon EBS](#amazon-ebs)
   - [Amazon EC2 instance store](#amazon-ec2-instance-store)
-- [Practices](#practices)
+- [Packer Practices](#packer-practices)
   - [Commands (CLI)](#commands-cli)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
   - [Common Provisioners](#common-provisioners)
@@ -109,7 +109,7 @@ Packer does not replace configuration management like Chef or Puppet.
 In fact, when building images,
 Packer is able to use tools like Chef or Puppet to install software onto the image.
 
-## Concepts
+## Packer Concepts
 
 ### [Builders](https://www.packer.io/docs/builders)
 
@@ -385,7 +385,7 @@ The data on an instance store volume persists only during the life of the associ
 if you stop or terminate an instance, any data on instance store volumes is lost.
 For more information, see Amazon EC2 Instance Store.
 
-## Practices
+## Packer Practices
 
 ### [Commands (CLI)](https://www.packer.io/docs/commands)
 
