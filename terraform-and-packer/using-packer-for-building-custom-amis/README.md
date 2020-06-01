@@ -229,6 +229,8 @@ see Storage for the root device.
 
 #### Instance Store-Backed Instances
 
+<div align="center"><img src="assets/amazon-ec2-instance-store.png" width="900"></div>
+
 Instances that use instance stores for the root device automatically have one
 or more instance store volumes available,
 with one volume serving as the root device volume.
@@ -255,6 +257,8 @@ For more information, see Amazon EC2 Instance Store.
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html>
 
 #### Amazon EBS-Backed Instances
+
+<div align="center"><img src="assets/amazon-ebs-volumes.png" width="900"></div>
 
 Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
 When you launch an Amazon EBS-backed instance,
