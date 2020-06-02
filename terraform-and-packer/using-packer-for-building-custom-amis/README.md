@@ -24,7 +24,7 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Amazon EC2 Root Device Storage](#amazon-ec2-root-device-storage)
-  - [Amazon Machine Images (AMIs)](#amazon-machine-images-amis)
+  - [AMI Types](#ami-types)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
 - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
@@ -203,9 +203,7 @@ This maximizes the portability of the template.
 
 ## Amazon EC2 Root Device Storage
 
-### Amazon Machine Images (AMIs)
-
-AMI types
+### AMI Types
 
 All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
 The former means that the root device for an instance launched from the AMI is
@@ -225,11 +223,15 @@ This is important because there are significant differences
 in what you can do with each type of AMI.
 For more information about these differences, see Storage for the root device.
 
+<br />
+
 > When launching instances, you can choose from
 > either **`Instance Store-Backed` AMIs** or an **`EBS-Backed` AMIs**.
 > <br />
 > We recommend that you use AMIs backed by Amazon EBS,
 > because they launch faster and use persistent storage.
+
+<br />
 
 ### `Instance Store-Backed` Instances
 
