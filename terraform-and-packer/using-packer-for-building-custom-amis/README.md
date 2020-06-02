@@ -24,6 +24,7 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Amazon EC2 Root Device Volume](#amazon-ec2-root-device-volume)
+  - [Instances and AMIs](#instances-and-amis)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
 - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
@@ -202,6 +203,37 @@ This maximizes the portability of the template.
 
 ## Amazon EC2 Root Device Volume
 
+### Instances and AMIs
+
+Amazon Web Services (AWS) publishes many Amazon Machine Images (AMIs)
+that contain common software configurations for public use.
+In addition, members of the AWS developer community have published their own custom AMIs.
+You can also create your own custom AMI or AMIs;
+doing so enables you to quickly and easily start new instances that have everything you need.
+For example, if your application is a website or a web service,
+your AMI could include a web server, the associated static content,
+and the code for the dynamic pages.
+As a result, after you launch an instance from this AMI,
+your web server starts, and your application is ready to accept requests.
+
+All AMIs are categorized as either backed by Amazon EBS,
+which means that the root device for an instance launched from the AMI is an Amazon EBS volume,
+or backed by instance store,
+which means that the root device for an instance launched from the AMI
+is an instance store volume created from a template stored in Amazon S3.
+
+The description of an AMI indicates the type of root device
+(either ebs or instance store).
+This is important because there are significant differences
+in what you can do with each type of AMI.
+For more information about these differences, see Storage for the root device.
+
+You can deregister an AMI when you have finished using it.
+After you deregister an AMI, you can't use it to launch new instances.
+Existing instances launched from the AMI are not affected.
+Therefore, if you are also finished with the instances launched from these AMIs,
+you should terminate them.
+
 > When launching instances, you can choose from
 > either **`Instance Store-Backed` AMIs** or an **`EBS-Backed` AMIs**.
 > <br />
@@ -227,7 +259,6 @@ or if it fails (such as if an underlying drive has issues).
   <img src="assets/amazon-ec2-instance-store.png" width="900">
   <br />
   <div>Root device on an Amazon EC2 instance store-backed instance</div>
-  <br />
 </div>
 
 <br />
@@ -252,7 +283,6 @@ depending on the instance type.
   <img src="assets/amazon-ebs-volumes.png" width="900">
   <br />
   <div>Root device volume and other Amazon EBS volumes of an Amazon EBS-backed instance</div>
-  <br />
 </div>
 
 <br />
