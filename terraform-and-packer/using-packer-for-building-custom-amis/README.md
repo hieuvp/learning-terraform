@@ -24,8 +24,8 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Amazon EC2 Root Device Volume](#amazon-ec2-root-device-volume)
-  - [Instance Store-Backed Instances](#instance-store-backed-instances)
-  - [EBS-Backed Instances](#ebs-backed-instances)
+  - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
+  - [`EBS-Backed` Instances](#ebs-backed-instances)
 - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
   - [Instance Stores](#instance-stores)
   - [Ephemeral storage vs. EBS](#ephemeral-storage-vs-ebs)
@@ -208,7 +208,7 @@ This maximizes the portability of the template.
 > We recommend that you use AMIs backed by Amazon EBS,
 > because they launch faster and use persistent storage.
 
-### Instance Store-Backed Instances
+### `Instance Store-Backed` Instances
 
 Instances that use instance stores for the root device automatically have one
 or more instance store volumes available,
@@ -222,9 +222,12 @@ Any data on the instance store volumes persists as long as the instance is runni
 but this data is deleted when the instance is terminated
 (instance store-backed instances do not support the Stop action)
 or if it fails (such as if an underlying drive has issues).
-Root device on an Amazon EC2 instance store-backed instance.
 
-<div align="center"><img src="assets/amazon-ec2-instance-store.png" width="900"></div>
+<div align="center">
+  <img src="assets/amazon-ec2-instance-store.png" width="900">
+  <br />
+  <div>Root device on an Amazon EC2 instance store-backed instance</div>
+</div>
 
 After an instance store-backed instance fails or terminates,
 it cannot be restored.
@@ -237,7 +240,7 @@ to persistent storage on a regular basis.
 For more information, see Amazon EC2 Instance Store.
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html>
 
-### EBS-Backed Instances
+### `EBS-Backed` Instances
 
 Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
 When you launch an Amazon EBS-backed instance,
