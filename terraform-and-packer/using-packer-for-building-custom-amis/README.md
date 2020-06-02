@@ -202,8 +202,10 @@ This maximizes the portability of the template.
 
 ## Amazon EC2 Root Device Volume
 
-> You can launch an instance from
-> either an **Instance Store-Backed AMI** or an **EBS-Backed AMI**.
+> When launching instances, you can choose from
+> either `Instance Store-Backed` **AMIs** or an `EBS-Backed` **AMIs**.
+> We recommend that you use AMIs backed by Amazon EBS,
+> because they launch faster and use persistent storage.
 
 ### Instance Store-Backed Instances
 
