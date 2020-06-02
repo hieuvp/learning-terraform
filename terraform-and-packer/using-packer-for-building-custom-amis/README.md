@@ -204,6 +204,7 @@ This maximizes the portability of the template.
 
 > When launching instances, you can choose from
 > either `Instance Store-Backed` **AMIs** or an `EBS-Backed` **AMIs**.
+> <br />
 > We recommend that you use AMIs backed by Amazon EBS,
 > because they launch faster and use persistent storage.
 
