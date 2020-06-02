@@ -210,8 +210,6 @@ This maximizes the portability of the template.
 
 ### Instance Store-Backed Instances
 
-<div align="center"><img src="assets/amazon-ec2-instance-store.png" width="900"></div>
-
 Instances that use instance stores for the root device automatically have one
 or more instance store volumes available,
 with one volume serving as the root device volume.
@@ -226,6 +224,8 @@ but this data is deleted when the instance is terminated
 or if it fails (such as if an underlying drive has issues).
 Root device on an Amazon EC2 instance store-backed instance.
 
+<div align="center"><img src="assets/amazon-ec2-instance-store.png" width="900"></div>
+
 After an instance store-backed instance fails or terminates,
 it cannot be restored.
 If you plan to use Amazon EC2 instance store-backed instances,
@@ -239,13 +239,13 @@ For more information, see Amazon EC2 Instance Store.
 
 ### EBS-Backed Instances
 
-<div align="center"><img src="assets/amazon-ebs-volumes.png" width="900"></div>
-
 Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
 When you launch an Amazon EBS-backed instance,
 we create an Amazon EBS volume for each Amazon EBS snapshot referenced by the AMI you use.
 You can optionally use other Amazon EBS volumes or instance store volumes,
 depending on the instance type.
+
+<div align="center"><img src="assets/amazon-ebs-volumes.png" width="900"></div>
 
 Root device volume and other Amazon EBS volumes of an Amazon EBS-backed instance
 
