@@ -23,7 +23,7 @@
     - [Template Engine](#template-engine)
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
-- [Amazon EC2 Root Device Volume](#amazon-ec2-root-device-volume)
+- [Amazon EC2 Root Device Storage](#amazon-ec2-root-device-storage)
   - [Amazon Machine Images (AMIs)](#amazon-machine-images-amis)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
@@ -201,17 +201,7 @@ you can keep secret tokens, environment-specific data,
 and other types of information out of your templates.
 This maximizes the portability of the template.
 
-## Amazon EC2 Root Device Volume
-
-Storage for the root device
-
-TL;DR
-
-EBS volume is network attached drive which results in slow performance
-but data is persistent meaning even if you reboot the instance data will be there.
-
-Instance store is physically attached device which gives better performance
-but data will be lost once instance is rebooted.
+## Amazon EC2 Root Device Storage
 
 ### Amazon Machine Images (AMIs)
 
@@ -242,6 +232,9 @@ For more information about these differences, see Storage for the root device.
 > because they launch faster and use persistent storage.
 
 ### `Instance Store-Backed` Instances
+
+> Instance store is a physically attached device which gives better performance
+> but data will be lost once instance is rebooted.
 
 Instances that use instance stores for the root device automatically have one
 or more instance store volumes available,
@@ -274,6 +267,9 @@ to persistent storage on a regular basis.
 
 ### `EBS-Backed` Instances
 
+> EBS volume is network attached drive which results in slow performance
+> but data is persistent meaning even if you reboot the instance data will be there.
+
 Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
 When you launch an Amazon EBS-backed instance,
 we create an Amazon EBS volume for each Amazon EBS snapshot referenced by the AMI you use.
@@ -295,21 +291,6 @@ when an Amazon EBS-backed instance is in a stopped state.
 For example, you can modify the properties of the instance,
 change its size, or update the kernel it is using,
 or you can attach your root volume to a different running instance for debugging or any other purpose.
-
-If an Amazon EBS-backed instance fails, you can restore your session by following one of these methods:
-
-- Stop and then start again (try this method first).
-- Automatically snapshot all relevant volumes and create a new AMI.
-  For more information, see Creating an Amazon EBS-backed Linux AMI.
-- Attach the volume to the new instance by following these steps:
-  1. Create a snapshot of the root volume.
-  1. Register a new AMI using the snapshot.
-  1. Launch a new instance from the new AMI.
-  1. Detach the remaining Amazon EBS volumes from the old instance.
-  1. Reattach the Amazon EBS volumes to the new instance.
-
-For more information, see Amazon EBS volumes.
-<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html>
 
 ## EC2 Instance Store vs. EBS
 
