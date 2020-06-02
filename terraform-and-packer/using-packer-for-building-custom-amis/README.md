@@ -227,7 +227,10 @@ or if it fails (such as if an underlying drive has issues).
   <img src="assets/amazon-ec2-instance-store.png" width="900">
   <br />
   <div>Root device on an Amazon EC2 instance store-backed instance</div>
+  <br />
 </div>
+
+<br />
 
 After an instance store-backed instance fails or terminates,
 it cannot be restored.
@@ -237,9 +240,6 @@ on your instance stores across multiple Availability Zones.
 You should also back up critical data from your instance store volumes
 to persistent storage on a regular basis.
 
-For more information, see Amazon EC2 Instance Store.
-<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html>
-
 ### `EBS-Backed` Instances
 
 Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
@@ -248,9 +248,14 @@ we create an Amazon EBS volume for each Amazon EBS snapshot referenced by the AM
 You can optionally use other Amazon EBS volumes or instance store volumes,
 depending on the instance type.
 
-<div align="center"><img src="assets/amazon-ebs-volumes.png" width="900"></div>
+<div align="center">
+  <img src="assets/amazon-ebs-volumes.png" width="900">
+  <br />
+  <div>Root device volume and other Amazon EBS volumes of an Amazon EBS-backed instance</div>
+  <br />
+</div>
 
-Root device volume and other Amazon EBS volumes of an Amazon EBS-backed instance
+<br />
 
 An Amazon EBS-backed instance can be stopped
 and later restarted without affecting data stored in the attached volumes.
