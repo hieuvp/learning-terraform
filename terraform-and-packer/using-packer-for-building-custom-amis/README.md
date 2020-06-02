@@ -24,7 +24,7 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Amazon EC2 Root Device Volume](#amazon-ec2-root-device-volume)
-  - [Instances and AMIs](#instances-and-amis)
+  - [Amazon Machine Images (AMIs)](#amazon-machine-images-amis)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
 - [EC2 Instance Store vs. EBS](#ec2-instance-store-vs-ebs)
@@ -203,18 +203,25 @@ This maximizes the portability of the template.
 
 ## Amazon EC2 Root Device Volume
 
-### Instances and AMIs
+Storage for the root device
 
-Amazon Web Services (AWS) publishes many Amazon Machine Images (AMIs)
-that contain common software configurations for public use.
-In addition, members of the AWS developer community have published their own custom AMIs.
-You can also create your own custom AMI or AMIs;
-doing so enables you to quickly and easily start new instances that have everything you need.
-For example, if your application is a website or a web service,
-your AMI could include a web server, the associated static content,
-and the code for the dynamic pages.
-As a result, after you launch an instance from this AMI,
-your web server starts, and your application is ready to accept requests.
+TL;DR
+
+EBS volume is network attached drive which results in slow performance
+but data is persistent meaning even if you reboot the instance data will be there.
+
+Instance store is physically attached device which gives better performance
+but data will be lost once instance is rebooted.
+
+### Amazon Machine Images (AMIs)
+
+AMI types
+
+All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
+The former means that the root device for an instance launched from the AMI is
+an Amazon EBS volume created from an Amazon EBS snapshot.
+The latter means that the root device for an instance launched from the AMI is
+an instance store volume created from a template stored in Amazon S3.
 
 All AMIs are categorized as either backed by Amazon EBS,
 which means that the root device for an instance launched from the AMI is an Amazon EBS volume,
@@ -227,12 +234,6 @@ The description of an AMI indicates the type of root device
 This is important because there are significant differences
 in what you can do with each type of AMI.
 For more information about these differences, see Storage for the root device.
-
-You can deregister an AMI when you have finished using it.
-After you deregister an AMI, you can't use it to launch new instances.
-Existing instances launched from the AMI are not affected.
-Therefore, if you are also finished with the instances launched from these AMIs,
-you should terminate them.
 
 > When launching instances, you can choose from
 > either **`Instance Store-Backed` AMIs** or an **`EBS-Backed` AMIs**.
