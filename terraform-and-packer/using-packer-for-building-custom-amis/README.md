@@ -24,10 +24,10 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Instance Store vs. EBS](#instance-store-vs-ebs)
-  - [AMI Types](#ami-types)
   - [Instance Store Volumes](#instance-store-volumes)
-  - [Instance Store-Backed Instances](#instance-store-backed-instances)
   - [Elastic Block Store (EBS) Volumes](#elastic-block-store-ebs-volumes)
+  - [AMI Types](#ami-types)
+  - [Instance Store-Backed Instances](#instance-store-backed-instances)
   - [EBS-Backed Instances](#ebs-backed-instances)
   - [Conclusion](#conclusion)
 - [Packer Practices](#packer-practices)
@@ -213,36 +213,6 @@ This maximizes the portability of the template.
   can be removed from one instance and reattached to another,
   and support full-volume encryption.
 
-### AMI Types
-
-All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
-The former means that the root device for an instance launched from the AMI is
-an Amazon EBS volume created from an Amazon EBS snapshot.
-The latter means that the root device for an instance launched from the AMI is
-an instance store volume created from a template stored in Amazon S3.
-
-All AMIs are categorized as either backed by Amazon EBS,
-which means that the root device for an instance launched from the AMI is an Amazon EBS volume,
-or backed by instance store,
-which means that the root device for an instance launched from the AMI
-is an instance store volume created from a template stored in Amazon S3.
-
-The description of an AMI indicates the type of root device
-(either ebs or instance store).
-This is important because there are significant differences
-in what you can do with each type of AMI.
-For more information about these differences, see Storage for the root device.
-
-<br />
-
-> When launching instances, you can choose from
-> either **`Instance Store-Backed` AMIs** or an **`EBS-Backed` AMIs**.
-> <br />
-> We recommend that you use AMIs backed by Amazon EBS,
-> because they launch faster and use persistent storage.
-
-<br />
-
 ### Instance Store Volumes
 
 Many instances can access storage from disks that are physically attached to the host computer.
@@ -277,40 +247,6 @@ Until that happens the data will be intact on the disks.
 Therefore the security wiping is not 'guaranteed'
 and the data on those disks cannot be assumed to be any more secure
 that any other storage on that site.
-
-### Instance Store-Backed Instances
-
-> Instance store is a physically attached device which gives better performance
-> but data will be lost once instance is rebooted.
-
-Instances that use instance stores for the root device automatically have one
-or more instance store volumes available,
-with one volume serving as the root device volume.
-When an instance is launched,
-the image that is used to boot the instance is copied to the root volume.
-Note that you can optionally use additional instance store volumes,
-depending on the instance type.
-
-Any data on the instance store volumes persists as long as the instance is running,
-but this data is deleted when the instance is terminated
-(instance store-backed instances do not support the Stop action)
-or if it fails (such as if an underlying drive has issues).
-
-<div align="center">
-  <img src="assets/amazon-ec2-instance-store.png" width="900">
-  <br />
-  <div>Root device on an Amazon EC2 instance store-backed instance</div>
-</div>
-
-<br />
-
-After an instance store-backed instance fails or terminates,
-it cannot be restored.
-If you plan to use Amazon EC2 instance store-backed instances,
-we highly recommend that you distribute the data
-on your instance stores across multiple Availability Zones.
-You should also back up critical data from your instance store volumes
-to persistent storage on a regular basis.
 
 ### Elastic Block Store (EBS) Volumes
 
@@ -366,6 +302,70 @@ i.e. assume it will fail and design to pick up the load elsewhere.
 For a high proportion of systems EBS is an adequate (and cost effective) solution.
 However if your application is very sensitive the solution
 to make EBS fault tolerant will be similar to making an Instance Store fault tolerant.
+
+### AMI Types
+
+All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
+The former means that the root device for an instance launched from the AMI is
+an Amazon EBS volume created from an Amazon EBS snapshot.
+The latter means that the root device for an instance launched from the AMI is
+an instance store volume created from a template stored in Amazon S3.
+
+All AMIs are categorized as either backed by Amazon EBS,
+which means that the root device for an instance launched from the AMI is an Amazon EBS volume,
+or backed by instance store,
+which means that the root device for an instance launched from the AMI
+is an instance store volume created from a template stored in Amazon S3.
+
+The description of an AMI indicates the type of root device
+(either ebs or instance store).
+This is important because there are significant differences
+in what you can do with each type of AMI.
+For more information about these differences, see Storage for the root device.
+
+<br />
+
+> When launching instances, you can choose from
+> either **`Instance Store-Backed` AMIs** or an **`EBS-Backed` AMIs**.
+> <br />
+> We recommend that you use AMIs backed by Amazon EBS,
+> because they launch faster and use persistent storage.
+
+<br />
+
+### Instance Store-Backed Instances
+
+> Instance store is a physically attached device which gives better performance
+> but data will be lost once instance is rebooted.
+
+Instances that use instance stores for the root device automatically have one
+or more instance store volumes available,
+with one volume serving as the root device volume.
+When an instance is launched,
+the image that is used to boot the instance is copied to the root volume.
+Note that you can optionally use additional instance store volumes,
+depending on the instance type.
+
+Any data on the instance store volumes persists as long as the instance is running,
+but this data is deleted when the instance is terminated
+(instance store-backed instances do not support the Stop action)
+or if it fails (such as if an underlying drive has issues).
+
+<div align="center">
+  <img src="assets/amazon-ec2-instance-store.png" width="900">
+  <br />
+  <div>Root device on an Amazon EC2 instance store-backed instance</div>
+</div>
+
+<br />
+
+After an instance store-backed instance fails or terminates,
+it cannot be restored.
+If you plan to use Amazon EC2 instance store-backed instances,
+we highly recommend that you distribute the data
+on your instance stores across multiple Availability Zones.
+You should also back up critical data from your instance store volumes
+to persistent storage on a regular basis.
 
 ### EBS-Backed Instances
 
