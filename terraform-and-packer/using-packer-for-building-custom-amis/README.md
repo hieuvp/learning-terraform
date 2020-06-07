@@ -26,9 +26,9 @@
 - [Instance Store vs. EBS](#instance-store-vs-ebs)
   - [AMI Types](#ami-types)
   - [Instance Store Volumes](#instance-store-volumes)
-  - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
+  - [Instance Store-Backed Instances](#instance-store-backed-instances)
   - [Elastic Block Store (EBS) Volumes](#elastic-block-store-ebs-volumes)
-  - [`EBS-Backed` Instances](#ebs-backed-instances)
+  - [EBS-Backed Instances](#ebs-backed-instances)
   - [Conclusion](#conclusion)
 - [Packer Practices](#packer-practices)
   - [Commands (CLI)](#commands-cli)
@@ -279,7 +279,7 @@ Therefore the security wiping is not 'guaranteed'
 and the data on those disks cannot be assumed to be any more secure
 that any other storage on that site.
 
-### `Instance Store-Backed` Instances
+### Instance Store-Backed Instances
 
 > Instance store is a physically attached device which gives better performance
 > but data will be lost once instance is rebooted.
@@ -368,7 +368,7 @@ For a high proportion of systems EBS is an adequate (and cost effective) solutio
 However if your application is very sensitive the solution
 to make EBS fault tolerant will be similar to making an Instance Store fault tolerant.
 
-### `EBS-Backed` Instances
+### EBS-Backed Instances
 
 > EBS volume is network attached drive which results in slow performance
 > but data is persistent meaning even if you reboot the instance data will be there.
