@@ -28,10 +28,8 @@
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
   - [Instance Stores](#instance-stores)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
-  - [Ephemeral storage vs. EBS](#ephemeral-storage-vs-ebs)
-  - [Conclusion](#conclusion)
-  - [Amazon EC2 instance store](#amazon-ec2-instance-store)
   - [Amazon EBS](#amazon-ebs)
+  - [Conclusion](#conclusion)
 - [Packer Practices](#packer-practices)
   - [Commands (CLI)](#commands-cli)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
@@ -268,6 +266,13 @@ to persistent storage on a regular basis.
 
 ### Instance Stores
 
+Many instances can access storage from disks that are physically attached to the host computer.
+This disk storage is referred to as instance store.
+Instance store provides temporary block-level storage for instances.
+The data on an instance store volume persists only during the life of the associated instance;
+if you stop or terminate an instance, any data on instance store volumes is lost.
+For more information, see Amazon EC2 Instance Store.
+
 Let's start with what Instance storage is.
 This is the disk that is physically attached to virtualization host.
 This is the closest (lowest latency) storage available to your instance (other than RAM).
@@ -321,7 +326,29 @@ For example, you can modify the properties of the instance,
 change its size, or update the kernel it is using,
 or you can attach your root volume to a different running instance for debugging or any other purpose.
 
-### Ephemeral storage vs. EBS
+### Amazon EBS
+
+Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
+You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates.
+For example, Amazon EBS is the recommended storage option when you run a database on an instance.
+
+An EBS volume behaves like a raw, unformatted,
+external block device that you can attach to a single instance.
+The volume persists independently from the running life of an instance.
+After an EBS volume is attached to an instance,
+you can use it like any other physical hard drive.
+As illustrated in the previous figure,
+multiple volumes can be attached to an instance.
+You can also detach an EBS volume from one instance
+and attach it to another instance.
+You can dynamically change the configuration of a volume attached to an instance.
+EBS volumes can also be created as encrypted volumes using the Amazon EBS encryption feature.
+For more information, see Amazon EBS encryption.
+
+To keep a backup copy of your data,
+you can create a snapshot of an EBS volume, which is stored in Amazon S3.
+You can create an EBS volume from a snapshot, and attach it to another instance.
+For more information, see Amazon Elastic Block Store.
 
 Discussion about ephemeral storage vs. EBS is often phrased as two extremes,
 with Instance Stores being at risk of disappearing at any moment vs. EBS
@@ -364,39 +391,6 @@ regardless of the technology.
 
 Until you get to the rarified atmosphere of high performance compute,
 EBS storage provides plenty of grunt and a whole bunch of flexibility to meet most of your EC2 needs.
-
-### Amazon EC2 instance store
-
-Many instances can access storage from disks that are physically attached to the host computer.
-This disk storage is referred to as instance store.
-Instance store provides temporary block-level storage for instances.
-The data on an instance store volume persists only during the life of the associated instance;
-if you stop or terminate an instance, any data on instance store volumes is lost.
-For more information, see Amazon EC2 Instance Store.
-
-### Amazon EBS
-
-Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
-You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates.
-For example, Amazon EBS is the recommended storage option when you run a database on an instance.
-
-An EBS volume behaves like a raw, unformatted,
-external block device that you can attach to a single instance.
-The volume persists independently from the running life of an instance.
-After an EBS volume is attached to an instance,
-you can use it like any other physical hard drive.
-As illustrated in the previous figure,
-multiple volumes can be attached to an instance.
-You can also detach an EBS volume from one instance
-and attach it to another instance.
-You can dynamically change the configuration of a volume attached to an instance.
-EBS volumes can also be created as encrypted volumes using the Amazon EBS encryption feature.
-For more information, see Amazon EBS encryption.
-
-To keep a backup copy of your data,
-you can create a snapshot of an EBS volume, which is stored in Amazon S3.
-You can create an EBS volume from a snapshot, and attach it to another instance.
-For more information, see Amazon Elastic Block Store.
 
 ## Packer Practices
 
