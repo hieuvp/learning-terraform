@@ -200,20 +200,13 @@ This maximizes the portability of the template.
 
 ## Instance Store vs. EBS
 
-- Some Amazon EC2 instance types come with a form of directly physically attached,
-  block-device storage known as the **Instance Store**.
-  The **instance store** is ideal for temporary storage,
-  because the data stored in instance store volumes is not persistent through
-  instance stops, terminations, or hardware failures.
-
-- For data that you want to retain longer, or if you want to encrypt the data,
-  use Amazon **EBS** volumes instead.
-  **EBS** volumes preserve their data through instance stops and terminations,
-  can be easily backed up with EBS snapshots,
-  can be removed from one instance and reattached to another,
-  and support full-volume encryption.
-
 ### Instance Store Volumes
+
+> Some Amazon EC2 instance types come with a form of directly physically attached,
+> block-device storage known as the **Instance Store**.
+> The **instance store** is ideal for temporary storage,
+> because the data stored in instance store volumes is not persistent through
+> instance stops, terminations, or hardware failures.
 
 This is the closest (lowest latency) storage available to your instance (other than RAM).
 By Comparison EBS storage is storage on a remote network connected SAN
@@ -228,6 +221,13 @@ can have a profound impact on compute intensive workloads
 where that CPU may be constantly waiting for data to be read from disk.
 
 ### Elastic Block Store (EBS) Volumes
+
+> For data that you want to retain longer, or if you want to encrypt the data,
+> use Amazon **EBS** volumes instead.
+> **EBS** volumes preserve their data through instance stops and terminations,
+> can be easily backed up with EBS snapshots,
+> can be removed from one instance and reattached to another,
+> and support full-volume encryption.
 
 Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
 You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates.
