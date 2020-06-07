@@ -206,7 +206,7 @@ This maximizes the portability of the template.
   because the data stored in instance store volumes is not persistent through
   instance stops, terminations, or hardware failures.
 
-- For data you want to retain longer,
+- For data that you want to retain longer,
   or if you want to encrypt the data,
   use Amazon EBS volumes instead.
   EBS volumes preserve their data through instance stops and terminations,
