@@ -27,7 +27,7 @@
   - [AMI Types](#ami-types)
   - [Instance Stores](#instance-stores)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
-  - [EBS](#ebs)
+  - [Elastic Block Store (EBS) Volumes](#elastic-block-store-ebs-volumes)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
   - [Conclusion](#conclusion)
 - [Packer Practices](#packer-practices)
@@ -299,7 +299,7 @@ on your instance stores across multiple Availability Zones.
 You should also back up critical data from your instance store volumes
 to persistent storage on a regular basis.
 
-### EBS
+### Elastic Block Store (EBS) Volumes
 
 Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
 You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates.
