@@ -24,6 +24,7 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Amazon EC2 Root Device Storage](#amazon-ec2-root-device-storage)
+- [Instance Store and EBS](#instance-store-and-ebs)
   - [AMI Types](#ami-types)
   - [Instance Store Volumes](#instance-store-volumes)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
@@ -199,6 +200,22 @@ and other types of information out of your templates.
 This maximizes the portability of the template.
 
 ## Amazon EC2 Root Device Storage
+
+## Instance Store and EBS
+
+Some Amazon Elastic Compute Cloud (Amazon EC2) instance types come with a form of directly attached,
+block-device storage known as the instance store.
+The instance store is ideal for temporary storage,
+because the data stored in instance store volumes is not persistent through
+instance stops, terminations, or hardware failures.
+
+For data you want to retain longer,
+or if you want to encrypt the data,
+use Amazon Elastic Block Store (Amazon EBS) volumes instead.
+EBS volumes preserve their data through instance stops and terminations,
+can be easily backed up with EBS snapshots,
+can be removed from one instance and reattached to another,
+and support full-volume encryption.
 
 ### AMI Types
 
