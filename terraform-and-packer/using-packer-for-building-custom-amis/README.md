@@ -25,7 +25,7 @@
     - [Template User Variables](#template-user-variables)
 - [Amazon EC2 Root Device Storage](#amazon-ec2-root-device-storage)
   - [AMI Types](#ami-types)
-  - [Instance Stores](#instance-stores)
+  - [Instance Store Volumes](#instance-store-volumes)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
   - [Elastic Block Store (EBS) Volumes](#elastic-block-store-ebs-volumes)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
@@ -230,7 +230,7 @@ For more information about these differences, see Storage for the root device.
 
 <br />
 
-### Instance Stores
+### Instance Store Volumes
 
 Many instances can access storage from disks that are physically attached to the host computer.
 This disk storage is referred to as instance store.
