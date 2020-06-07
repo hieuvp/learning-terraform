@@ -24,12 +24,12 @@
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
 - [Instance Store vs. EBS](#instance-store-vs-ebs)
+  - [TL;DR](#tldr)
   - [Instance Store Volumes](#instance-store-volumes)
   - [Elastic Block Store (EBS) Volumes](#elastic-block-store-ebs-volumes)
   - [AMI Types](#ami-types)
   - [Instance Store-Backed Instances](#instance-store-backed-instances)
   - [EBS-Backed Instances](#ebs-backed-instances)
-  - [Conclusion](#conclusion)
 - [Packer Practices](#packer-practices)
   - [Commands (CLI)](#commands-cli)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
@@ -199,6 +199,17 @@ and other types of information out of your templates.
 This maximizes the portability of the template.
 
 ## Instance Store vs. EBS
+
+### TL;DR
+
+Instance stores still have value especially when it comes to massive IOPS at low latency.
+
+Instance Stores may be ephemeral, but EBS storage is not 100% reliable either.
+Decide the level of acceptable Risk and 'Design for Failure' accordingly,
+regardless of the technology.
+
+Until you get to the rarified atmosphere of high performance compute,
+EBS storage provides plenty of grunt and a whole bunch of flexibility to meet most of your EC2 needs.
 
 ### Instance Store Volumes
 
@@ -372,17 +383,6 @@ when an Amazon EBS-backed instance is in a stopped state.
 For example, you can modify the properties of the instance,
 change its size, or update the kernel it is using,
 or you can attach your root volume to a different running instance for debugging or any other purpose.
-
-### Conclusion
-
-Instance stores still have value especially when it comes to massive IOPS at low latency.
-
-Instance Stores may be ephemeral, but EBS storage is not 100% reliable either.
-Decide the level of acceptable Risk and 'Design for Failure' accordingly,
-regardless of the technology.
-
-Until you get to the rarified atmosphere of high performance compute,
-EBS storage provides plenty of grunt and a whole bunch of flexibility to meet most of your EC2 needs.
 
 ## Packer Practices
 
