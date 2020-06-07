@@ -227,18 +227,6 @@ especially with SSD Instance Stores,
 can have a profound impact on compute intensive workloads
 where that CPU may be constantly waiting for data to be read from disk.
 
-From time to time the ephemeral nature of Instance Stores is cited as a security advantage.
-While may be true and of some value,
-[IMO] this is a false sense of security
-and should not be relied on if you are serious about your data security.
-The wiping is done by a 'process' on the host.
-If the Host fails suddenly those disks will not be wiped until the host is repaired,
-or the disks are moved to another host, or destroyed.
-Until that happens the data will be intact on the disks.
-Therefore the security wiping is not 'guaranteed'
-and the data on those disks cannot be assumed to be any more secure
-that any other storage on that site.
-
 ### Elastic Block Store (EBS) Volumes
 
 Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
