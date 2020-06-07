@@ -235,7 +235,7 @@ For example, Amazon EBS is the recommended storage option when you run a databas
 
 An EBS volume behaves like a raw, unformatted,
 external block device that you can attach to a single instance.
-The volume persists independently from the running life of an instance.
+The volume persists independently of the running life of an instance.
 After an EBS volume is attached to an instance,
 you can use it like any other physical hard drive.
 As illustrated in the previous figure,
