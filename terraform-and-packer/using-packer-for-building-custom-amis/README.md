@@ -25,10 +25,10 @@
     - [Template User Variables](#template-user-variables)
 - [Amazon EC2 Root Device Storage](#amazon-ec2-root-device-storage)
   - [AMI Types](#ami-types)
-  - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
   - [Instance Stores](#instance-stores)
+  - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
+  - [EBS](#ebs)
   - [`EBS-Backed` Instances](#ebs-backed-instances)
-  - [Amazon EBS](#amazon-ebs)
   - [Conclusion](#conclusion)
 - [Packer Practices](#packer-practices)
   - [Commands (CLI)](#commands-cli)
@@ -230,40 +230,6 @@ For more information about these differences, see Storage for the root device.
 
 <br />
 
-### `Instance Store-Backed` Instances
-
-> Instance store is a physically attached device which gives better performance
-> but data will be lost once instance is rebooted.
-
-Instances that use instance stores for the root device automatically have one
-or more instance store volumes available,
-with one volume serving as the root device volume.
-When an instance is launched,
-the image that is used to boot the instance is copied to the root volume.
-Note that you can optionally use additional instance store volumes,
-depending on the instance type.
-
-Any data on the instance store volumes persists as long as the instance is running,
-but this data is deleted when the instance is terminated
-(instance store-backed instances do not support the Stop action)
-or if it fails (such as if an underlying drive has issues).
-
-<div align="center">
-  <img src="assets/amazon-ec2-instance-store.png" width="900">
-  <br />
-  <div>Root device on an Amazon EC2 instance store-backed instance</div>
-</div>
-
-<br />
-
-After an instance store-backed instance fails or terminates,
-it cannot be restored.
-If you plan to use Amazon EC2 instance store-backed instances,
-we highly recommend that you distribute the data
-on your instance stores across multiple Availability Zones.
-You should also back up critical data from your instance store volumes
-to persistent storage on a regular basis.
-
 ### Instance Stores
 
 Many instances can access storage from disks that are physically attached to the host computer.
@@ -299,34 +265,41 @@ Therefore the security wiping is not 'guaranteed'
 and the data on those disks cannot be assumed to be any more secure
 that any other storage on that site.
 
-### `EBS-Backed` Instances
+### `Instance Store-Backed` Instances
 
-> EBS volume is network attached drive which results in slow performance
-> but data is persistent meaning even if you reboot the instance data will be there.
+> Instance store is a physically attached device which gives better performance
+> but data will be lost once instance is rebooted.
 
-Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
-When you launch an Amazon EBS-backed instance,
-we create an Amazon EBS volume for each Amazon EBS snapshot referenced by the AMI you use.
-You can optionally use other Amazon EBS volumes or instance store volumes,
+Instances that use instance stores for the root device automatically have one
+or more instance store volumes available,
+with one volume serving as the root device volume.
+When an instance is launched,
+the image that is used to boot the instance is copied to the root volume.
+Note that you can optionally use additional instance store volumes,
 depending on the instance type.
 
+Any data on the instance store volumes persists as long as the instance is running,
+but this data is deleted when the instance is terminated
+(instance store-backed instances do not support the Stop action)
+or if it fails (such as if an underlying drive has issues).
+
 <div align="center">
-  <img src="assets/amazon-ebs-volumes.png" width="900">
+  <img src="assets/amazon-ec2-instance-store.png" width="900">
   <br />
-  <div>Root device volume and other Amazon EBS volumes of an Amazon EBS-backed instance</div>
+  <div>Root device on an Amazon EC2 instance store-backed instance</div>
 </div>
 
 <br />
 
-An Amazon EBS-backed instance can be stopped
-and later restarted without affecting data stored in the attached volumes.
-There are various instance and volume-related tasks you can do
-when an Amazon EBS-backed instance is in a stopped state.
-For example, you can modify the properties of the instance,
-change its size, or update the kernel it is using,
-or you can attach your root volume to a different running instance for debugging or any other purpose.
+After an instance store-backed instance fails or terminates,
+it cannot be restored.
+If you plan to use Amazon EC2 instance store-backed instances,
+we highly recommend that you distribute the data
+on your instance stores across multiple Availability Zones.
+You should also back up critical data from your instance store volumes
+to persistent storage on a regular basis.
 
-### Amazon EBS
+### EBS
 
 Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance.
 You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates.
@@ -380,6 +353,33 @@ i.e. assume it will fail and design to pick up the load elsewhere.
 For a high proportion of systems EBS is an adequate (and cost effective) solution.
 However if your application is very sensitive the solution
 to make EBS fault tolerant will be similar to making an Instance Store fault tolerant.
+
+### `EBS-Backed` Instances
+
+> EBS volume is network attached drive which results in slow performance
+> but data is persistent meaning even if you reboot the instance data will be there.
+
+Instances that use Amazon EBS for the root device automatically have an Amazon EBS volume attached.
+When you launch an Amazon EBS-backed instance,
+we create an Amazon EBS volume for each Amazon EBS snapshot referenced by the AMI you use.
+You can optionally use other Amazon EBS volumes or instance store volumes,
+depending on the instance type.
+
+<div align="center">
+  <img src="assets/amazon-ebs-volumes.png" width="900">
+  <br />
+  <div>Root device volume and other Amazon EBS volumes of an Amazon EBS-backed instance</div>
+</div>
+
+<br />
+
+An Amazon EBS-backed instance can be stopped
+and later restarted without affecting data stored in the attached volumes.
+There are various instance and volume-related tasks you can do
+when an Amazon EBS-backed instance is in a stopped state.
+For example, you can modify the properties of the instance,
+change its size, or update the kernel it is using,
+or you can attach your root volume to a different running instance for debugging or any other purpose.
 
 ### Conclusion
 
