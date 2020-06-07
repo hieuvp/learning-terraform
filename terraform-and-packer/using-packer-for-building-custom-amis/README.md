@@ -200,7 +200,7 @@ This maximizes the portability of the template.
 
 ## Instance Store vs. EBS
 
-- Some Amazon EC2 instance types come with a form of directly attached,
+- Some Amazon EC2 instance types come with a form of directly physically attached,
   block-device storage known as the **instance store**.
   The **instance store** is ideal for temporary storage,
   because the data stored in instance store volumes is not persistent through
@@ -214,13 +214,6 @@ This maximizes the portability of the template.
   and support full-volume encryption.
 
 ### Instance Store Volumes
-
-Many instances can access storage from disks that are physically attached to the host computer.
-This disk storage is referred to as instance store.
-Instance store provides temporary block-level storage for instances.
-The data on an instance store volume persists only during the life of the associated instance;
-if you stop or terminate an instance, any data on instance store volumes is lost.
-For more information, see Amazon EC2 Instance Store.
 
 Let's start with what Instance storage is.
 This is the disk that is physically attached to virtualization host.
