@@ -201,7 +201,7 @@ This maximizes the portability of the template.
 ## Instance Store vs. EBS
 
 - Some Amazon EC2 instance types come with a form of directly physically attached,
-  block-device storage known as the **instance store**.
+  block-device storage known as the **Instance Store**.
   The **instance store** is ideal for temporary storage,
   because the data stored in instance store volumes is not persistent through
   instance stops, terminations, or hardware failures.
@@ -215,8 +215,6 @@ This maximizes the portability of the template.
 
 ### Instance Store Volumes
 
-Let's start with what Instance storage is.
-This is the disk that is physically attached to virtualization host.
 This is the closest (lowest latency) storage available to your instance (other than RAM).
 By Comparison EBS storage is storage on a remote network connected SAN
 or NAS and may be competing for I/O with thousands of other instances.
