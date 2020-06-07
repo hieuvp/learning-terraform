@@ -23,7 +23,7 @@
     - [Template Engine](#template-engine)
     - [Template Variables](#template-variables)
     - [Template User Variables](#template-user-variables)
-- [Instance Store and EBS](#instance-store-and-ebs)
+- [Instance Store vs. EBS](#instance-store-vs-ebs)
   - [AMI Types](#ami-types)
   - [Instance Store Volumes](#instance-store-volumes)
   - [`Instance Store-Backed` Instances](#instance-store-backed-instances)
@@ -198,7 +198,7 @@ you can keep secret tokens, environment-specific data,
 and other types of information out of your templates.
 This maximizes the portability of the template.
 
-## Instance Store and EBS
+## Instance Store vs. EBS
 
 - Some Amazon EC2 instance types come with a form of directly attached,
   block-device storage known as the instance store.
