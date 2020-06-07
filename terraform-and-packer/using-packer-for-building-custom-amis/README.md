@@ -201,15 +201,14 @@ This maximizes the portability of the template.
 ## Instance Store vs. EBS
 
 - Some Amazon EC2 instance types come with a form of directly attached,
-  block-device storage known as the instance store.
-  The instance store is ideal for temporary storage,
+  block-device storage known as the **instance store**.
+  The **instance store** is ideal for temporary storage,
   because the data stored in instance store volumes is not persistent through
   instance stops, terminations, or hardware failures.
 
-- For data that you want to retain longer,
-  or if you want to encrypt the data,
-  use Amazon EBS volumes instead.
-  EBS volumes preserve their data through instance stops and terminations,
+- For data that you want to retain longer, or if you want to encrypt the data,
+  use Amazon **EBS** volumes instead.
+  **EBS** volumes preserve their data through instance stops and terminations,
   can be easily backed up with EBS snapshots,
   can be removed from one instance and reattached to another,
   and support full-volume encryption.
