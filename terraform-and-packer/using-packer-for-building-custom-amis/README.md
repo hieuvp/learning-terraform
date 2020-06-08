@@ -27,9 +27,11 @@
   - [TL;DR](#tldr)
   - [Instance Store Volumes](#instance-store-volumes)
   - [Elastic Block Store (EBS) Volumes](#elastic-block-store-ebs-volumes)
-  - [AMI Types](#ami-types)
   - [Instance Store-Backed Instances](#instance-store-backed-instances)
   - [EBS-Backed Instances](#ebs-backed-instances)
+  - [AMI Types](#ami-types)
+  - [Instance Store-Backed AMIs](#instance-store-backed-amis)
+  - [EBS-Backed AMIs](#ebs-backed-amis)
 - [Packer Practices](#packer-practices)
   - [Commands (CLI)](#commands-cli)
   - [AMI Builder (EBS backed)](#ami-builder-ebs-backed)
@@ -293,36 +295,6 @@ For a high proportion of systems EBS is an adequate (and cost effective) solutio
 However if your application is very sensitive the solution
 to make EBS fault tolerant will be similar to making an Instance Store fault tolerant.
 
-### AMI Types
-
-All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
-The former means that the root device for an instance launched from the AMI is
-an Amazon EBS volume created from an Amazon EBS snapshot.
-The latter means that the root device for an instance launched from the AMI is
-an instance store volume created from a template stored in Amazon S3.
-
-All AMIs are categorized as either backed by Amazon EBS,
-which means that the root device for an instance launched from the AMI is an Amazon EBS volume,
-or backed by instance store,
-which means that the root device for an instance launched from the AMI
-is an instance store volume created from a template stored in Amazon S3.
-
-The description of an AMI indicates the type of root device
-(either ebs or instance store).
-This is important because there are significant differences
-in what you can do with each type of AMI.
-For more information about these differences, see Storage for the root device.
-
-<br />
-
-> When launching instances, you can choose from
-> either **`Instance Store-Backed` AMIs** or an **`EBS-Backed` AMIs**.
-> <br />
-> We recommend that you use AMIs backed by Amazon EBS,
-> because they launch faster and use persistent storage.
-
-<br />
-
 ### Instance Store-Backed Instances
 
 > Instance store is a physically attached device which gives better performance
@@ -383,6 +355,40 @@ when an Amazon EBS-backed instance is in a stopped state.
 For example, you can modify the properties of the instance,
 change its size, or update the kernel it is using,
 or you can attach your root volume to a different running instance for debugging or any other purpose.
+
+### AMI Types
+
+All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
+The former means that the root device for an instance launched from the AMI is
+an Amazon EBS volume created from an Amazon EBS snapshot.
+The latter means that the root device for an instance launched from the AMI is
+an instance store volume created from a template stored in Amazon S3.
+
+All AMIs are categorized as either backed by Amazon EBS,
+which means that the root device for an instance launched from the AMI is an Amazon EBS volume,
+or backed by instance store,
+which means that the root device for an instance launched from the AMI
+is an instance store volume created from a template stored in Amazon S3.
+
+The description of an AMI indicates the type of root device
+(either ebs or instance store).
+This is important because there are significant differences
+in what you can do with each type of AMI.
+For more information about these differences, see Storage for the root device.
+
+<br />
+
+> When launching instances, you can choose from
+> either **`Instance Store-Backed` AMIs** or an **`EBS-Backed` AMIs**.
+> <br />
+> We recommend that you use AMIs backed by Amazon EBS,
+> because they launch faster and use persistent storage.
+
+<br />
+
+### Instance Store-Backed AMIs
+
+### EBS-Backed AMIs
 
 ## Packer Practices
 
