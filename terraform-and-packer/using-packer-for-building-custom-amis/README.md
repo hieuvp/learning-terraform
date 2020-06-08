@@ -386,9 +386,28 @@ For more information about these differences, see Storage for the root device.
 
 <br />
 
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html>
+
+The following table summarizes the important differences when using the two types of AMIs.
+
+| Characteristic               | Amazon EBS-backed AMI                                                                                                                                       | Amazon instance store-backed AMI                                                  |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Boot time for an instance    | Usually less than 1 minute                                                                                                                                  | Usually less than 5 minutes                                                       |
+| Size limit for a root device | 16 TiB                                                                                                                                                      | 10 GiB                                                                            |
+| Root device volume           | Amazon EBS volume                                                                                                                                           | Instance store volume                                                             |
+| Data persistence             | By default, the root volume is deleted when the instance terminates.\* Data on any other Amazon EBS volumes persists after instance termination by default. | Data on any instance store volumes persists only during the life of the instance. |
+| Modifications                | The instance type, kernel, RAM disk, and user data can be changed while the instance is stopped.                                                            | Instance attributes are fixed for the life of an instance.                        |
+| Charges                      | You're charged for instance usage, Amazon EBS volume usage, and storing your AMI as an Amazon EBS snapshot.                                                 | You're charged for instance usage and storing your AMI in Amazon S3.              |
+| AMI creation/bundling        | Uses a single command/call                                                                                                                                  | Requires installation and use of AMI tools                                        |
+| Stopped state                | Can be placed in stopped state where instance is not running, but the root volume is persisted in Amazon EBS                                                | Cannot be in stopped state; instances are running or terminated                   |
+
 ### Instance Store-Backed AMIs
 
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-instance-store.html>
+
 ### EBS-Backed AMIs
+
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html>
 
 ## Packer Practices
 
