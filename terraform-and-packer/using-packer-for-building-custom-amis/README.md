@@ -403,9 +403,15 @@ The following table summarizes the important differences when using the two type
 
 ### Instance Store-Backed AMIs
 
+> To create an instance store-backed Linux AMI,
+> start from an instance that you've launched from an existing instance store-backed Linux AMI.
+
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-instance-store.html>
 
 ### EBS-Backed AMIs
+
+> To create an Amazon EBS-backed Linux AMI,
+> start from an instance that you've launched from an existing Amazon EBS-backed Linux AMI.
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html>
 
