@@ -408,12 +408,24 @@ The following table summarizes the important differences when using the two type
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-instance-store.html>
 
+- Launch EBS-Backed Instances from Instance Store-Backed AMIs? How? Is it possible?
+- Try from AWS Console
+- More likely the answer is NO
+- How about tutorial converting Instance Store AMI to EBS AMI
+- Instance cannot be stopped, (color grayed out)
+
 ### EBS-Backed AMIs
 
 > To create an Amazon EBS-backed Linux AMI,
 > start from an instance that you've launched from an existing Amazon EBS-backed Linux AMI.
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html>
+
+- Launch Instance Store-Backed Instances from EBS-Backed AMIs? How? Is it possible?
+- Try from AWS Console
+- More likely the answer is NO
+- How about tutorial converting EBS AMI to Instance Store AMI
+- Instance can be stopped.
 
 ## Packer Practices
 
