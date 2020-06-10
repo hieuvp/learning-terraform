@@ -358,6 +358,9 @@ or you can attach your root volume to a different running instance for debugging
 
 ### AMI Types
 
+AWS EBS Backed vs Instance Store Backed AMI's
+<https://www.youtube.com/watch?v=3XeTh_-Xb4g>
+
 All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
 The former means that the root device for an instance launched from the AMI is
 an Amazon EBS volume created from an Amazon EBS snapshot.
@@ -407,12 +410,36 @@ The following table summarizes the important differences when using the two type
 > start from an instance that you've launched from an existing instance store-backed Linux AMI.
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-instance-store.html>
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ami_create_instance_store.png>
 
 - Launch EBS-Backed Instances from Instance Store-Backed AMIs? How? Is it possible?
 - Try from AWS Console
 - More likely the answer is NO
 - How about tutorial converting Instance Store AMI to EBS AMI
+
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ConvertingS3toEBS.html>
+
 - Instance cannot be stopped, (color grayed out)
+- How to recognize `instance-store`, `ebs` type (take a screenshot)
+
+When you launch an instance, the root device volume contains the image used to boot the instance.
+When we introduced Amazon EC2,
+all AMIs were backed by Amazon EC2 instance store,
+which means the root device for an instance launched
+from the AMI is an instance store volume created
+from a template stored in Amazon S3.
+After we introduced Amazon EBS,
+we introduced AMIs that are backed by Amazon EBS.
+This means that the root device for an instance launched
+from the AMI is an Amazon EBS volume created
+from an Amazon EBS snapshot.
+
+You can choose between AMIs backed by Amazon EC2 instance store and AMIs backed by Amazon EBS.
+We recommend that you use AMIs backed by Amazon EBS,
+because they launch faster and use persistent storage.
+
+For more information about the device names Amazon EC2 uses for your root volumes,
+see Device naming on Linux instances.
 
 ### EBS-Backed AMIs
 
@@ -420,12 +447,16 @@ The following table summarizes the important differences when using the two type
 > start from an instance that you've launched from an existing Amazon EBS-backed Linux AMI.
 
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html>
+<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/running-instance.png>
 
 - Launch Instance Store-Backed Instances from EBS-Backed AMIs? How? Is it possible?
 - Try from AWS Console
 - More likely the answer is NO
 - How about tutorial converting EBS AMI to Instance Store AMI
 - Instance can be stopped.
+
+How do I create a instance store backed AMI, from EBS backed AMI?
+<https://serverfault.com/questions/571237/how-do-i-create-a-instance-store-backed-ami-from-ebs-backed-ami>
 
 ## Packer Practices
 

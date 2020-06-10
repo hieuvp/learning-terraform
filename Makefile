@@ -73,5 +73,7 @@ clean:
 .PHONY: export-drawio
 export-drawio:
 	@printf "\n"
-	scripts/export-drawio.sh
+	$(MAKEFILE_SCRIPT_PATH)/export-drawio.sh terraform-and-packer/using-packer-for-building-custom-amis/assets/amazon-ebs-volumes.drawio
+	$(MAKEFILE_SCRIPT_PATH)/export-drawio.sh terraform-and-packer/using-packer-for-building-custom-amis/assets/amazon-ec2-instance-store.drawio
+	$(MAKEFILE_SCRIPT_PATH)/export-drawio.sh terraform-and-packer/using-packer-for-building-custom-amis/assets/packer-terraform-aws.drawio
 	@printf "\n"
