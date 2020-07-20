@@ -52,6 +52,10 @@ git-pre-merge:
 	@printf "\n"
 
 	@printf "\n"
+	make export-drawio
+	@printf "\n"
+
+	@printf "\n"
 	make git-add
 	@printf "\n"
 
@@ -64,4 +68,12 @@ git-pre-merge:
 clean:
 	@printf "\n"
 	$(MAKEFILE_SCRIPT_PATH)/clean-terraform.sh
+	@printf "\n"
+
+.PHONY: export-drawio
+export-drawio:
+	@printf "\n"
+	$(MAKEFILE_SCRIPT_PATH)/export-drawio.sh terraform-and-packer/using-packer-for-building-custom-amis/assets/amazon-ebs-volumes.drawio
+	$(MAKEFILE_SCRIPT_PATH)/export-drawio.sh terraform-and-packer/using-packer-for-building-custom-amis/assets/amazon-ec2-instance-store.drawio
+	$(MAKEFILE_SCRIPT_PATH)/export-drawio.sh terraform-and-packer/using-packer-for-building-custom-amis/assets/packer-terraform-aws.drawio
 	@printf "\n"
